@@ -1,261 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="config file">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/Evaluatieoefening1.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/de_la_marche_jonathan_AO1.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/de_la_marche_jonathan_AO1_v2.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/de_la_marche_jonathan_AO1_v3.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/BasePlusCommissionEmployee.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/CommissionEmployee.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/Employee.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/HourlyEmployee.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/PayRollSystem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/SalariedEmployee.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/out/production/AO1/be/leerstad/exercise1/TestPayRollSystem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/Oefening Collections.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/de_la_marche_jonathan_AO2.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/lib/hamcrest-core-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/lib/junit-4.12.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Bike.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Car.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Motorcycle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Parking.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Person.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/Vehicle.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/VehicleComparator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/test/ParkingTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/test/PersonTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/parking/test/VehicleTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/Examination.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/Inscription.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/InscriptionResultComparator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/Session.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/Student.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/out/production/AO2/be/leerstad/evaluatieoefeningen/sessions/test/SessionTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/animation/auto.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/00 - Intro - HBO Graduaat Informatica Optie Programmeur.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/01 - Java Basics - JRE and JDK Tools.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/02 - Java Basics - Variables,literals and operators.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/03 - Java Basics - Classes and objects.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/04 - Java Basics - Flow control.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/05 - Java Basics - Packages.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/06 - Java Basics - Java and OOP.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/07 - Java Basics - Classes Initialization.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/08 - Java Basics - Abstract classes and interfaces.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/09 - Java Basics - Error handling.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/10 - Java Advanced - Test classes.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/11 - Java Advanced - Inner Classes.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/12 - Java Advanced - Logging.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/15 - Java Advanced - Collection FrameWork.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Cursus/19 - Java Advanced - IO.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/antlr-2.7.7.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/cdi-api-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/classmate-1.3.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/el-api-2.2.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/geronimo-jta_1.1_spec-1.1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/project-template.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/AO1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/BasePlusCommissionEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/CommissionEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/Employee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/HourlyEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/PayRollSystem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/SalariedEmployee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO1/src/be/leerstad/exercise1/TestPayRollSystem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/.idea/libraries/junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/AO2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Bike.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Motorcycle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Parking.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/Vehicle.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/VehicleComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/test/ParkingTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/test/PersonTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/parking/test/VehicleTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/Examination.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/Inscription.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/InscriptionResultComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/Session.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/Student.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../AO/AO2/src/be/leerstad/evaluatieoefeningen/sessions/test/SessionTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ConvenienceImplementations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/Animal.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/Cat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/Dog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/GenericClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/GenericsDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/generics/TwoGen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/iterator/IteratorDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/AsList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/CollectionBulkOperationDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/CollectionDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/CollectionToArrayOperationDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/LinkedListDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/list/SubListDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/map/MapDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/map/MultiMapExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/map/Name.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/map/SortedMapDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/ChassisNumberComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/DemoSorting.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/Garage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/IntegerComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/PersonsComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/SpecialSorter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/ordening/StringComparator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/HashSetDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/PersonDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/SetBulkOperations.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/SetDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/SortedSetDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/collections/set/TreeSetDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/coffee/Coffee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/coffee/CoffeeSize.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/coffee/CoffeeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/day/Day.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/day/EnumTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/enums/planet/Planet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/examples/NullPointerCatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/examples/NumberFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionFour.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionMaster.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionOne.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionThree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/ExceptionTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/exceptionGenerator/StackInvocation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/runtimeExceptions/Calculator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/runtimeExceptions/Calculator2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFailTest/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFailTest/BelowZeroException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFailTest/TestAccount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFinallyStatement/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFinallyStatement/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFinallyStatement/BelowZeroException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withFinallyStatement/TestBank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withTryCatchExceptions/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withTryCatchExceptions/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withTryCatchExceptions/BelowZeroException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withTryCatchExceptions/TestBank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withTryCatchExceptions/TooHighDebetException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withoutExceptions/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withoutExceptions/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exceptionhandling/withoutExceptions/TestBank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex1/GCD.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex1/GreatestCommonDivisor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex1/HelloWorld.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex1/PrimeNumberCheck.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex2/MoneyConverter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex2/MoneyConvertorStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex3/Employee.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex3/EmployeeStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex4/Box.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex4/BoxStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex4/Item.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex5/Text.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex5/TextStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex6/Text.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/exercises/ex6/TextStarter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/HelloWorld.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht01/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht02/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht03/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht04/InvalidTemperatureException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht04/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht05/InvalidTemperatureException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht05/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht05/Thermostat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht06/BelowZeroException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht06/InvalidTemperatureException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht06/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht06/Thermostat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht07/InvalidTemperatureException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht07/Temperature.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/opdracht07/Thermostat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/tdd/EmployeeEmail.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/tdd/test/EmployeeEmailTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/HelloWorldTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht01/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht02/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht03/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht04/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht05/AllTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht05/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht05/ThermostatTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht06/BelowZeroException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht06/GeneralTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht06/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht06/ThermostatTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht07/TemperatureTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht07/ThermostatParamTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/junit/test/opdracht07/ThermostatTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/parking/Car.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/parking/Parking.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/parking/test/CarTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/parking/test/ParkingTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/YieldingThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/animation/CarApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/daemon/SimpleDaemons.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/runnable/DemoRunnable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/runnable/Starter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/synchronizeddemo/RyanAndMonica.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/thread/DemoThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/examples/thread/Starter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/priority/CountingThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Code/threads/priority/Starter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/017f1a41-200d-45c4-902b-ebc06a188eeb.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/017f1a41-200d-45c4-902b-ebc06a188eeb/storage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/60217a92-1cfc-4cee-948b-ebc708be9b8e.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/60217a92-1cfc-4cee-948b-ebc708be9b8e/storage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Eindwerk.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-11-02.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-11-04.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-11-05.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-12-05.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-12-06.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-12-13.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2016-12-28.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2017-01-02.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2017-01-03.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2017-01-16.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/ProxyLog_2017-01-17.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2016-12-06.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2016-12-07.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2016-12-08.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2016-12-09.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2017-01-06.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2017-01-07.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/input/localhost_access_log.2017-01-09.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/config.properties" />
+    <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -447,7 +194,9 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -679,7 +428,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$/lib" />
     <property name="last.edited.regexp" value="10.120.230.78&#9;DOM1/HKJ&#9;-&#9;2017-01-17&#9;08:29:38&#9;-&#9;-&#9;10.120.8.101&#9;-&#9;80&#9;50&#9;136.0&#9;841&#9;http&#9;-&#9;http://www.vacature.com/vacstudio/push/blanc.gif&#9;VCache&#9;304&#9;" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -1150,8 +899,16 @@
       <updated>1485688304361</updated>
       <workItem from="1485688312908" duration="11070000" />
       <workItem from="1486321481537" duration="47000" />
-      <workItem from="1486321567069" duration="71000000" />
+      <workItem from="1486321567069" duration="71139000" />
     </task>
+    <task id="LOCAL-00001" summary="config file">
+      <created>1488058462084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1488058462084</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1187,15 +944,15 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82117000" />
+    <option name="totallyTimeSpent" value="82256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.50238097" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1207,7 +964,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969433" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.49761903" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />

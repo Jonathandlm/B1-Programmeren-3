@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<strategy>
+   <general name="DIRECTORY" value="D:\Documents\2 Graduaat Informatica\3e jaar\B1 Programmeren 3\Workspace\Sandbox\src\model"/>
+   <general name="ENTITYNAME_POSTFIX" value=""/>
+   <general name="ENTITYNAME_PREFIX" value=""/>
+   <general name="EQUALS" value="true"/>
+   <general name="EXTENDS" value=""/>
+   <general name="FIELD_SCOPE" value="private"/>
+   <general name="GENERICS" value="true"/>
+   <general name="GET_SCOPE" value="public"/>
+   <general name="IMPLEMENTS" value=""/>
+   <general name="JAVAFORMAT_INDENT" value="4"/>
+   <general name="JAVAFORMAT_LINE_SIZE" value="100"/>
+   <general name="JAVAFORMAT_NEWLINE_LBRACE" value="false"/>
+   <general name="JAVAFORMAT_NEWLINE_RBRACE" value="true"/>
+   <general name="JAVAFORMAT_SPACE_BEFORE_LBRACE" value="1"/>
+   <general name="JAVAFORMAT_SPACE_BEFORE_RBRACE" value="0"/>
+   <general name="JAVAFORMAT_USETAB" value="false"/>
+   <general name="JAVAFORMAT_WRAPLINES" value="true"/>
+   <general name="JDBC_DAOIMPL_PACKAGE" value="be.leerstad.eindwerk.jdbc"/>
+   <general name="JDBC_DAO_PACKAGE" value="be.leerstad.eindwerk.dao"/>
+   <general name="JDBC_GENERATE_FACTORY" value="true"/>
+   <general name="JDBC_GENERATE_JUNIT" value="true"/>
+   <general name="JDBC_JUNIT_PACKAGE" value="be.leerstad.eindwerk.test"/>
+   <general name="JUNIT_FOR_EJB3_USING_HIBERNATE" value="true"/>
+   <general name="JUNIT_HIBERNATE_HIDE_PASSWORD" value="true"/>
+   <general name="JUNIT_HIBERNATE_SHOW_SQL" value="true"/>
+   <general name="JUNIT_JDBC_HIDE_PASSWORD" value="true"/>
+   <general name="OUTPUT_FORMAT" value="JDBC_PLUS_DAO"/>
+   <general name="PACKAGE" value="be.leerstad.eindwerk"/>
+   <general name="SET_SCOPE" value="public"/>
+   <general name="TOSTRING" value="true"/>
+   <table name="logfiles" included="true" sequence="" inheritance="NONE"/>
+</strategy>
