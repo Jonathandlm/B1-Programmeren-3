@@ -61,14 +61,13 @@ public class SessionParser extends Parser{
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String logLine;
                 Session session;
-                List<Interaction> sessionList = logFile.getInteractions();
+                List<Session> sessionList = (ArrayList<Session>) logFile.getInteractions();
                 while ((logLine = br.readLine()) != null) {
                     session = parseLogLine(logLine);
                     if (session == null) continue;
                     boolean isNewSession = true;
-                    for (Interaction interaction : sessionList) {
-                        if (interaction.equals(session)) {
-                            Session s = (Session) interaction;
+                    for (Session s : sessionList) {
+                        if (s.equals(session)) {
                             s.add(session);
                             isNewSession = false;
                         }
@@ -76,7 +75,6 @@ public class SessionParser extends Parser{
                     if (isNewSession) sessionList.add(session);
                 }
                 logFile.setInteractions(sessionList);
-                sessionList.forEach(System.out::println);
             } catch (IOException e) {
                 LOG.log(Level.ERROR, "Unable to read " + fileName, e);
             }

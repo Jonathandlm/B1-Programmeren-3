@@ -9,6 +9,4 @@ public class regex {
         String domain = uri.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
     }
-
-
 }

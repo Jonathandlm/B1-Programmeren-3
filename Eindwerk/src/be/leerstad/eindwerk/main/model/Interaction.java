@@ -104,7 +104,7 @@ public abstract class Interaction {
 
         Interaction interaction = (Interaction) o;
 
-        return this.getTime().getTime() + this.getTotalTime() + getMaxTimeBetweenRequestsInMillisec()
+        return this.getTime().getTime() + this.getTotalTime() + MAX_TIME_BETWEEN_REQUESTS_IN_MILLISEC
                 >= interaction.getTime().getTime();
     }
 

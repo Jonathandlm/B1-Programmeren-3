@@ -7,7 +7,7 @@ import java.util.List;
 public class LogFile {
     private String logFile;
     private Date logFileDate;
-    private List<Interaction> interactions;
+    private List<? extends Interaction> interactions;
 
     public LogFile(){
         logFile = "";
@@ -35,10 +35,10 @@ public class LogFile {
         this.logFileDate = logFileDate;
     }
 
-    public List<Interaction> getInteractions() {
+    public List<? extends Interaction> getInteractions() {
         return interactions;
     }
-    public void setInteractions(List<Interaction> interactions) {
+    public void setInteractions(List<? extends Interaction> interactions) {
         this.interactions = interactions;
     }
 
