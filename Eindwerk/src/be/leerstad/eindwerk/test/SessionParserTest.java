@@ -3,14 +3,14 @@ package be.leerstad.eindwerk.test;
 import be.leerstad.eindwerk.main.business.SessionParser;
 import be.leerstad.eindwerk.main.model.Interaction;
 import be.leerstad.eindwerk.main.model.Session;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Time;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SessionParserTest {

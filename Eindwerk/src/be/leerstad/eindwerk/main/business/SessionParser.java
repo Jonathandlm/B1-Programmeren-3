@@ -3,8 +3,8 @@ package be.leerstad.eindwerk.main.business;
 import be.leerstad.eindwerk.main.model.Interaction;
 import be.leerstad.eindwerk.main.model.LogFile;
 import be.leerstad.eindwerk.main.model.Session;
-
 import be.leerstad.eindwerk.main.utils.regex;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -17,40 +17,36 @@ import java.sql.Date;
 import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SessionParser extends Parser{
     private static final Logger LOG = Logger.getLogger(SessionParser.class.getName());
-    private static final String REGEX = "^((?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
-            "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]))\\t" +         // Group 1:  Client IP
-            "(?:DOM\\d\\/([A-Z]{3}))\\t" +                                  // Group 2:  Client UserName
-            ".+\\t" +                                                       // No group: Client Agent
-            "(?:\\d{4}-\\d{2}-\\d{2})\\t" +                                 // No group: Log Date
-            "(\\d{2}:\\d{2}:\\d{2})\\t" +                                   // Group 3:  Log Time
-            ".+\\t" +                                                       // No group: Server Name
-            ".+\\t" +                                                       // No group: Referring Server
-            "((?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
-                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])|-)\\t" +   // Group 4:  Destination IP
-            "(?:(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
-                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])|-)\\t" +    // No group: Destination Host Name
-            "\\d{1,5}\\t" +                                                 // No group: Destination Port
-            "\\d{1,}\\t" +                                                  // No group: Processing Time
-            "(?:(\\d{1,})\\.0|-)\\t" +                                      // Group 5:  Bytes Received
-            "(\\d{1,}|-)\\t" +                                              // Group 6:  Bytes Sent
-            ".+\\t" +                                                       // No group: Protocol
-            "(?:OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|-)\\t" +     // No group: HTTP Method
-            "(.+)\\t" +                                                     // Group 7:  URL
-            "(?:0|\\S{4,11})\\t" +                                          // No group: Object Source
-            "(?:\\d{1,5})";                                                 // No group: Result Code
-    private static final Pattern PATTERN = Pattern.compile(REGEX);
 
-    private LogFile logFile;
-
-    public LogFile getLogFile() {
-        return logFile;
+    public SessionParser() {
+        super.REGEX = "^((?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]))\\t" +         // Group 1:  Client IP
+                "(?:DOM\\d\\/([A-Z]{3}))\\t" +                                  // Group 2:  Client UserName
+                ".+\\t" +                                                       // No group: Client Agent
+                "(?:\\d{4}-\\d{2}-\\d{2})\\t" +                                 // No group: Log Date
+                "(\\d{2}:\\d{2}:\\d{2})\\t" +                                   // Group 3:  Log Time
+                ".+\\t" +                                                       // No group: Server Name
+                ".+\\t" +                                                       // No group: Referring Server
+                "((?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])|-)\\t" +       // Group 4:  Destination IP
+                "(?:(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])|-)\\t" +       // No group: Destination Host Name
+                "\\d{1,5}\\t" +                                                 // No group: Destination Port
+                "\\d{1,}\\t" +                                                  // No group: Processing Time
+                "(?:(\\d{1,})\\.0|-)\\t" +                                      // Group 5:  Bytes Received
+                "(\\d{1,}|-)\\t" +                                              // Group 6:  Bytes Sent
+                ".+\\t" +                                                       // No group: Protocol
+                "(?:OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|-)\\t" +     // No group: HTTP Method
+                "(.+)\\t" +                                                     // Group 7:  URL
+                "(?:0|\\S{4,11})\\t" +                                          // No group: Object Source
+                "(?:\\d{1,5})";
+        super.PATTERN = Pattern.compile(REGEX);
     }
 
     @Override
@@ -61,7 +57,7 @@ public class SessionParser extends Parser{
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String logLine;
                 Session session;
-                List<Interaction> sessionList = logFile.getInteractions();
+                List<Interaction> sessionList = getLogFile().getInteractions();
                 while ((logLine = br.readLine()) != null) {
                     session = parseLogLine(logLine);
                     if (session == null) continue;
@@ -75,7 +71,7 @@ public class SessionParser extends Parser{
                     }
                     if (isNewSession) sessionList.add(session);
                 }
-                logFile.setInteractions(sessionList);
+                getLogFile().setInteractions(sessionList);
             } catch (IOException e) {
                 LOG.log(Level.ERROR, "Unable to read " + fileName, e);
             }
@@ -109,9 +105,10 @@ public class SessionParser extends Parser{
         }
 
         if (fileType.equals("ProxyLog") && fileExtension.equals("log")) {
-            logFile = new LogFile(fileName, Date.valueOf(fileDate));
+            setLogFile(new LogFile(fileName, Date.valueOf(fileDate)));
             return true;
         }
+        LOG.log(Level.ERROR, fileName + " is not a valid Session Logfile filename.");
         return false;
     }
 
@@ -126,7 +123,7 @@ public class SessionParser extends Parser{
 
         Session session;
         try {
-            session = new Session(logFile, m.group(1), Time.valueOf(m.group(3)),
+            session = new Session(getLogFile(), m.group(1), Time.valueOf(m.group(3)),
                     new Integer(m.group(5)) + new Integer(m.group(6)), m.group(2),
                     regex.getDomainName(m.group(7)));
         } catch (URISyntaxException | NullPointerException e) {
