@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/be/leerstad/eindwerk/test/VisitParserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/main/business/Parser.class" afterPath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/main/business/Parser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/main/business/SessionParser.class" afterPath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/main/business/SessionParser.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/test/SessionParserTest.class" afterPath="$PROJECT_DIR$/out/production/Eindwerk/be/leerstad/eindwerk/test/SessionParserTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/myLog.log" afterPath="$PROJECT_DIR$/log/myLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/Parser.java" afterPath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/SessionParser.java" afterPath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/SessionParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/VisitParser.java" afterPath="$PROJECT_DIR$/src/be/leerstad/eindwerk/main/business/VisitParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/be/leerstad/eindwerk/test/SessionParserTest.java" afterPath="$PROJECT_DIR$/src/be/leerstad/eindwerk/test/SessionParserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -206,10 +200,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1048,7 +1042,7 @@
       <workItem from="1485688312908" duration="11070000" />
       <workItem from="1486321481537" duration="47000" />
       <workItem from="1486321567069" duration="80288000" />
-      <workItem from="1488125467057" duration="11629000" />
+      <workItem from="1488125467057" duration="11678000" />
     </task>
     <task id="LOCAL-00001" summary="config file">
       <created>1488058462084</created>
@@ -1071,7 +1065,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488139452808</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="visit parser">
+      <created>1488144833801</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488144833801</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1107,10 +1108,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103034000" />
+    <option name="totallyTimeSpent" value="103083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1122,14 +1123,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33842796" sideWeight="0.50476193" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32980973" sideWeight="0.49642858" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34061137" sideWeight="0.49642858" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.49761903" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20833333" sideWeight="0.48471615" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.153125" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23809524" sideWeight="0.48471615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.175" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286026" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1922619" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1156,7 +1157,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="config file" />
     <MESSAGE value="config database" />
-    <option name="LAST_COMMIT_MESSAGE" value="config database" />
+    <MESSAGE value="visit parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="visit parser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
