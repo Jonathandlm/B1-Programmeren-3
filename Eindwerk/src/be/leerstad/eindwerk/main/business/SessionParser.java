@@ -57,17 +57,18 @@ public class SessionParser extends Parser{
     public void parseLogFile(File file) {
         String fileName = file.getName();
         if(isValidLogFile(fileName)) {
-            // TODO: Iterate over loglines and add sessions to logfile's set interactions
+            // TODO: Sessions zonder ip-adres en zonder user negeren
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String logLine;
                 Session session;
-                List<Session> sessionList = (ArrayList<Session>) logFile.getInteractions();
+                List<Interaction> sessionList = logFile.getInteractions();
                 while ((logLine = br.readLine()) != null) {
                     session = parseLogLine(logLine);
                     if (session == null) continue;
                     boolean isNewSession = true;
-                    for (Session s : sessionList) {
-                        if (s.equals(session)) {
+                    for (Interaction i : sessionList) {
+                        if (i.equals(session)) {
+                            Session s = (Session) i;
                             s.add(session);
                             isNewSession = false;
                         }

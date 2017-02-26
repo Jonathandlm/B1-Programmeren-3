@@ -33,3 +33,10 @@
 22 feb 2017 23:46 ERROR SessionParser:131 - Cannot parse URL: http://www.google;com/
 22 feb 2017 23:47 ERROR SessionParser:131 - Cannot parse URL: http://www.google;com/
 22 feb 2017 23:49 ERROR SessionParser:132 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:21 ERROR SessionParser:132 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:27 ERROR SessionParser:132 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:38 ERROR SessionParser:132 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:46 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:56 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 20:56 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 21:00 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/

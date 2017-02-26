@@ -1,15 +1,16 @@
 package be.leerstad.eindwerk.test;
 
 import be.leerstad.eindwerk.main.business.SessionParser;
-
+import be.leerstad.eindwerk.main.model.Interaction;
 import be.leerstad.eindwerk.main.model.Session;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Time;
 import java.util.List;
 
+import org.junit.Before;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SessionParserTest {
@@ -33,10 +34,11 @@ public class SessionParserTest {
     @Test
     public void testParseLogFile() {
         sessionParser.parseLogFile(path.toFile());
-        // assert size interactions = 5 of zo
-        List<Session> sessions = (List<Session>)sessionParser.getLogFile().getInteractions();
-        sessions.stream().forEach(System.out::println);
-        System.out.println(sessions.size());
+        List<Interaction> sessions = sessionParser.getLogFile().getInteractions();
+        assertEquals(6, sessions.size());
+        Session firstSession = new Session(sessionParser.getLogFile(),"10.120.230.78", new Time(30578000),
+                46437,"HKJ","vacature.com");
+        assertEquals(firstSession, sessions.get(0));
     }
 
 }
