@@ -38,3 +38,28 @@
 25 feb 2017 21:26 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
 25 feb 2017 21:45 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
 25 feb 2017 22:28 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 10:43 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 10:51 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:34 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:34 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:35 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:36 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:36 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:52 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:52 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:53 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 13:54 ERROR SessionParser:133 - Cannot parse URL: http://www.google;com/
+26 feb 2017 14:01 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:01 ERROR SessionParser:108 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).
+26 feb 2017 17:02 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:08 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:08 ERROR SessionParser:108 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).
+26 feb 2017 17:08 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:09 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:24 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:24 ERROR SessionParser:108 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).
+26 feb 2017 17:25 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:26 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 17:26 ERROR SessionParser:108 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).
+26 feb 2017 19:17 ERROR SessionParser:134 - Cannot parse URL: http://www.google;com/
+26 feb 2017 19:17 ERROR SessionParser:108 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).

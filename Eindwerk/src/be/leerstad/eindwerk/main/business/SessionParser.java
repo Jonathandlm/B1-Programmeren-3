@@ -76,6 +76,7 @@ public class SessionParser extends Parser{
                     if (isNewSession) sessionList.add(session);
                 }
                 logFile.setInteractions(sessionList);
+                sessionList.forEach(System.out::println);
             } catch (IOException e) {
                 LOG.log(Level.ERROR, "Unable to read " + fileName, e);
             }

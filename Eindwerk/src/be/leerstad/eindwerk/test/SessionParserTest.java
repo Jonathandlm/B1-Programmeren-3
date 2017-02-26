@@ -1,24 +1,26 @@
 package be.leerstad.eindwerk.test;
 
 import be.leerstad.eindwerk.main.business.SessionParser;
-
 import be.leerstad.eindwerk.main.model.Interaction;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import org.junit.Before;
+import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SessionParserTest {
     private SessionParser sessionParser;
-    private Path path = Paths.get(System.getProperty("user.dir"),"input","ProxyLog_2017-01-17.log");
+    private List<Interaction> sessions;
+    private Path path = Paths.get(System.getProperty("user.dir"),"input","ProxyLog_2016-11-02.log");
 
     @Before
     public void init() {
         sessionParser = new SessionParser();
+        sessions = sessionParser.getLogFile().getInteractions();
+        System.out.println("New session:\n" + sessions);
     }
 
     @Test
