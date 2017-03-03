@@ -47,14 +47,6 @@ public class Session extends Interaction {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + "\nSession{" +
-                "userId='" + userId + '\'' +
-                ", site='" + site + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -73,4 +65,13 @@ public class Session extends Interaction {
         result = 31 * result + site.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n\tSession{" +
+                "userId='" + userId + '\'' +
+                ", site='" + site + '\'' +
+                '}';
+    }
+
 }

@@ -53,7 +53,7 @@ public class SessionParser extends Parser{
     public void parseLogFile(File file) {
         String fileName = file.getName();
         if(isValidLogFile(fileName)) {
-            // TODO: Sessions zonder ip-adres en zonder user negeren
+            // Ignore Sessions without ip-address and without user (both "-")
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 String logLine;
                 Session session;
@@ -61,6 +61,7 @@ public class SessionParser extends Parser{
                 while ((logLine = br.readLine()) != null) {
                     session = parseLogLine(logLine);
                     if (session == null) continue;
+                    if ((session.getUserId().equals("-")) && (session.getIpAddress().equals("-"))) continue;
                     boolean isNewSession = true;
                     for (Interaction i : sessionList) {
                         if (i.equals(session)) {

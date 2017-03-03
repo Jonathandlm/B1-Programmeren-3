@@ -1,8 +1,8 @@
 package be.leerstad.eindwerk.main.business;
 
+import be.leerstad.eindwerk.main.model.Interaction;
 import be.leerstad.eindwerk.main.model.LogFile;
 import be.leerstad.eindwerk.main.model.Visit;
-
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -11,8 +11,10 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Date;
+import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,14 +22,16 @@ public class VisitParser extends Parser {
     private static final Logger LOG = Logger.getLogger(VisitParser.class.getName());
 
     public VisitParser() {
-        super.REGEX = "^((?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\.){3}" +
-                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])) " +   // Group 1: IP
-                "(\\S+) " +                                             // Group 2: username
-                "(\\S+) " +                                             // Group 3: remote user
-                "\\[([\\w:/]+\\s[+\\-]\\d{4})\\] " +                    // Group 4: date and time
-                "\"(\\S+ \\S+ \\S+)\" " +                               // Group 5: request
-                "(\\d{3}) " +                                           // Group 6: status
-                "(\\d+)";                                               // Group 7: transferred bytes
+        super.REGEX = "^(((?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]))\\." +                 // Group 2: School IP
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])) " +                   // Group 1: IP address
+                "(\\S+) " +                                                             // Group 3: username
+                "(\\S+) " +                                                             // Group 4: remote user
+                "\\[[\\w/]+:(2[0-3]|[0-1][0-9]:[0-5][0-9]:[0-5][0-9]) -?\\d{4}\\] " +   // Group 5: time
+                "(?:\\\"\\S+ \\/(\\w+)(?:\\/\\S*)? HTTP\\/\\d\\.\\d\\\") " +               // Group 6: site-app
+                "(?:\\d{3}) " +                                                         // No group: status
+                "(\\d+|-)";                                                             // Group 7: transferred bytes
         super.PATTERN = Pattern.compile(REGEX);
     }
 
@@ -35,9 +39,24 @@ public class VisitParser extends Parser {
     public void parseLogFile(File file) {
         String fileName = file.getName();
         if(isValidLogFile(fileName)) {
-            // TODO: Sessions zonder ip-adres en zonder user negeren
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-
+                String logLine;
+                Visit visit;
+                List<Interaction> visitList = getLogFile().getInteractions();
+                while ((logLine = br.readLine()) != null) {
+                    visit = parseLogLine(logLine);
+                    if (visit == null) continue;
+                    boolean isNewSession = true;
+                    for (Interaction i : visitList) {
+                        if (i.equals(visit)) {
+                            Visit s = (Visit) i;
+                            s.add(visit);
+                            isNewSession = false;
+                        }
+                    }
+                    if (isNewSession) visitList.add(visit);
+                }
+                getLogFile().setInteractions(visitList);
             } catch (IOException e) {
                 LOG.log(Level.ERROR, "Unable to read " + fileName, e);
             }
@@ -87,8 +106,15 @@ public class VisitParser extends Parser {
             throw new RuntimeException("Error parsing logline");
         }
 
-        // TODO: overload Model constructors
-        // m.group(i) als parameters in overladen constructor
-        return new Visit();
+        Visit visit;
+        try {
+            visit = new Visit(getLogFile(), m.group(1), Time.valueOf(m.group(5)),
+                    (m.group(7).equals("-") ? 0 : new Integer(m.group(7))),
+                    m.group(3), m.group(6), m.group(2));
+        } catch (NullPointerException e) {
+            LOG.log(Level.ERROR, "Cannot parse URL: " + m.group(7));
+            visit = null;
+        }
+        return visit;
     }
 }
