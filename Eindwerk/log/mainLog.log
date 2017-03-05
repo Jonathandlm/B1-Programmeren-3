@@ -1,0 +1,9 @@
+05 mrt 2017 16:36 ERROR SessionParser:127 - Cannot parse URL: http://www.google;com/
+05 mrt 2017 16:36 ERROR SessionParser:108 - Proxylog_2016-12-05.log is not a valid Session Logfile filename.
+05 mrt 2017 16:36 ERROR SessionParser:100 - ProxyLog_2016-13-05.log - Filename does not contain a valid date (yyyy-MM-dd).
+05 mrt 2017 16:36 ERROR SessionParser:108 - ProxyLog_2016-12-05.txt is not a valid Session Logfile filename.
+05 mrt 2017 16:36 ERROR VisitParser:96 - Localhost_access_log.2017-01-07.txt is not a valid Visit Logfile filename.
+05 mrt 2017 16:36 ERROR VisitParser:88 - localhost_access_log.2017-01-32.txt - Filename does not contain a valid date (yyyy-MM-dd).
+05 mrt 2017 16:36 ERROR VisitParser:88 - localhost_access_log.2017 01 07.txt - Filename does not contain a valid date (yyyy-MM-dd).
+05 mrt 2017 16:36 ERROR VisitParser:96 - localhost_access_log.2017-01-07.log is not a valid Visit Logfile filename.
+05 mrt 2017 16:36 ERROR VisitParser:88 - localhost_access_log.log.2017-01-07.txt - Filename does not contain a valid date (yyyy-MM-dd).

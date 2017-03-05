@@ -41,4 +41,9 @@ public class SessionParserTest {
         assertEquals(firstSession, sessions.get(0));
     }
 
+    //TODO: complete test
+    @Test
+    public void testParseLogLine() {
+
+    }
 }

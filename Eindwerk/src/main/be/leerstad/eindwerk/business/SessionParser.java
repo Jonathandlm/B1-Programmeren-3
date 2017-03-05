@@ -1,10 +1,9 @@
 package main.be.leerstad.eindwerk.business;
 
-import main.be.leerstad.eindwerk.model.Session;
 import main.be.leerstad.eindwerk.model.Interaction;
 import main.be.leerstad.eindwerk.model.LogFile;
-import main.be.leerstad.eindwerk.utils.regex;
-
+import main.be.leerstad.eindwerk.model.Session;
+import main.be.leerstad.eindwerk.utils.Regex;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -21,7 +20,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SessionParser extends Parser{
+public class SessionParser extends Parser<Session> {
     private static final Logger LOG = Logger.getLogger(SessionParser.class.getName());
 
     public SessionParser() {
@@ -62,15 +61,11 @@ public class SessionParser extends Parser{
                     session = parseLogLine(logLine);
                     if (session == null) continue;
                     if ((session.getUserId().equals("-")) && (session.getIpAddress().equals("-"))) continue;
-                    boolean isNewSession = true;
-                    for (Interaction i : sessionList) {
-                        if (i.equals(session)) {
-                            Session s = (Session) i;
-                            s.add(session);
-                            isNewSession = false;
-                        }
-                    }
-                    if (isNewSession) sessionList.add(session);
+                    if (sessionList.contains(session)) {
+                        int index = sessionList.indexOf(session);
+                        Session s = (Session) sessionList.get(index);
+                        s.concatenate(session);
+                    } else sessionList.add(session);
                 }
                 getLogFile().setInteractions(sessionList);
             } catch (IOException e) {
@@ -126,7 +121,7 @@ public class SessionParser extends Parser{
         try {
             session = new Session(getLogFile(), m.group(1), Time.valueOf(m.group(3)),
                     new Integer(m.group(5)) + new Integer(m.group(6)), m.group(2),
-                    regex.getDomainName(m.group(7)));
+                    Regex.getDomainName(m.group(7)));
         } catch (URISyntaxException | NullPointerException e) {
             LOG.log(Level.ERROR, "Cannot parse URL: " + m.group(7));
             session = null;

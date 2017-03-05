@@ -2,7 +2,7 @@ package main.be.leerstad.eindwerk.model;
 
 import java.sql.Time;
 
-public class Session extends Interaction {
+public class Session extends Interaction<Session> {
     private String userId;
     private String site;
 
@@ -39,7 +39,8 @@ public class Session extends Interaction {
         this.site = site;
     }
 
-    public Session add(Session session) {
+    @Override
+    public Session concatenate(Session session) {
         this.setTotalTime((int) (session.getTime().getTime() - this.getTime().getTime()));
         this.setTransferredBytes(this.getTransferredBytes() + session.getTransferredBytes());
         this.setNumberOfRequests(this.getNumberOfRequests() + 1);

@@ -2,7 +2,7 @@ package main.be.leerstad.eindwerk.model;
 
 import java.sql.Time;
 
-public class Visit extends Interaction{
+public class Visit extends Interaction<Visit> {
     private String user;
     private String siteApplicationId;
     private String ipSchool;
@@ -51,7 +51,8 @@ public class Visit extends Interaction{
         this.ipSchool = ipSchool;
     }
 
-    public Visit add(Visit visit) {
+    @Override
+    public Visit concatenate(Visit visit) {
         this.setTotalTime((int) (visit.getTime().getTime() - this.getTime().getTime()));
         this.setTransferredBytes(this.getTransferredBytes() + visit.getTransferredBytes());
         this.setNumberOfRequests(this.getNumberOfRequests() + 1);

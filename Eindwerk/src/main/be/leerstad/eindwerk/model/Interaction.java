@@ -2,7 +2,7 @@ package main.be.leerstad.eindwerk.model;
 
 import java.sql.Time;
 
-public abstract class Interaction {
+public abstract class Interaction<T> {
     private static final int MAX_TIME_BETWEEN_REQUESTS_IN_MILLISEC = 20*60*1000;
 
     private String id;
@@ -96,6 +96,8 @@ public abstract class Interaction {
     public void setNumberOfRequests(Integer numberOfRequests) {
         this.numberOfRequests = numberOfRequests;
     }
+
+    public abstract T concatenate(T interaction);
 
     @Override
     public boolean equals(Object o) {

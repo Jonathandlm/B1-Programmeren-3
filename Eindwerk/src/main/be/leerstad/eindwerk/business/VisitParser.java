@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class VisitParser extends Parser {
+public class VisitParser extends Parser<Visit> {
     private static final Logger LOG = Logger.getLogger(VisitParser.class.getName());
 
     public VisitParser() {
@@ -46,15 +46,11 @@ public class VisitParser extends Parser {
                 while ((logLine = br.readLine()) != null) {
                     visit = parseLogLine(logLine);
                     if (visit == null) continue;
-                    boolean isNewSession = true;
-                    for (Interaction i : visitList) {
-                        if (i.equals(visit)) {
-                            Visit s = (Visit) i;
-                            s.add(visit);
-                            isNewSession = false;
-                        }
-                    }
-                    if (isNewSession) visitList.add(visit);
+                    if (visitList.contains(visit)) {
+                        int index = visitList.indexOf(visit);
+                        Visit v = (Visit) visitList.get(index);
+                        v.concatenate(visit);
+                    } else visitList.add(visit);
                 }
                 getLogFile().setInteractions(visitList);
             } catch (IOException e) {
