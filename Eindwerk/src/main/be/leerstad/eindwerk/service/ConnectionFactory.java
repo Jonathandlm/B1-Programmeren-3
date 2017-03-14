@@ -1,4 +1,4 @@
-package main.be.leerstad.eindwerk.service;
+package be.leerstad.eindwerk.service;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -41,18 +41,21 @@ public class ConnectionFactory {
 
         return connection;
     }
+
     public static void closeResultSet (ResultSet resultSet){
         try { if ( resultSet != null ) resultSet.close (); }
         catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to close result set " + e);
         }
     }
+
     public static void closeStatement (Statement statement){
         try { if ( statement != null ) statement.close (); }
         catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to close statement " + e);
         }
     }
+
     public static void closeConnection (Connection connection){
         try { if ( connection != null ) connection.close (); }
         catch (SQLException e) {

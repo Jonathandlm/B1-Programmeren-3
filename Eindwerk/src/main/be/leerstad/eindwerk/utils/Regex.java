@@ -1,4 +1,4 @@
-package main.be.leerstad.eindwerk.utils;
+package be.leerstad.eindwerk.utils;
 
 import java.net.URI;
 import java.net.URISyntaxException;

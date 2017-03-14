@@ -1,10 +1,8 @@
-package main.be.leerstad.eindwerk.service;
+package be.leerstad.eindwerk.service;
 
-import main.be.leerstad.eindwerk.model.Interaction;
+public interface InteractionDAO<T> {
 
-public interface InteractionDAO {
-
-    void saveInteraction(Interaction interaction);
-    Interaction loadInteraction(Integer interactionId);
+    void saveInteraction(T interaction);
+    T loadInteraction(Integer interactionId);
 
 }

@@ -11,5 +11,4 @@ import org.junit.runners.Suite;
         VisitParserTest.class
 })
 public class AllTests {
-
 }

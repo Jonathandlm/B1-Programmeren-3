@@ -57,8 +57,9 @@
     </key>
     <column id="23" parent="9" name="SessionID">
       <Position>1</Position>
-      <DataType>varchar(50)|0</DataType>
+      <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
     </column>
     <column id="24" parent="9" name="LogFile">
       <Position>2</Position>

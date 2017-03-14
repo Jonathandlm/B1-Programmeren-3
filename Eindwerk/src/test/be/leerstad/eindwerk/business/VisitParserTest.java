@@ -1,8 +1,7 @@
 package be.leerstad.eindwerk.business;
 
-import main.be.leerstad.eindwerk.business.VisitParser;
-import main.be.leerstad.eindwerk.model.Interaction;
-import main.be.leerstad.eindwerk.model.Visit;
+import be.leerstad.eindwerk.model.Interaction;
+import be.leerstad.eindwerk.model.Visit;
 import org.junit.Before;
 import org.junit.Test;
 

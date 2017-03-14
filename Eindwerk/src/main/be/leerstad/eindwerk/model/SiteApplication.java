@@ -1,4 +1,4 @@
-package main.be.leerstad.eindwerk.model;
+package be.leerstad.eindwerk.model;
 
 public class SiteApplication {
     private int applicationId;

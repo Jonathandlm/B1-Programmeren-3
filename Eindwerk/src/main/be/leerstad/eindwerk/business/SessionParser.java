@@ -1,9 +1,9 @@
-package main.be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business;
 
-import main.be.leerstad.eindwerk.model.Interaction;
-import main.be.leerstad.eindwerk.model.LogFile;
-import main.be.leerstad.eindwerk.model.Session;
-import main.be.leerstad.eindwerk.utils.Regex;
+import be.leerstad.eindwerk.model.Interaction;
+import be.leerstad.eindwerk.model.LogFile;
+import be.leerstad.eindwerk.model.Session;
+import be.leerstad.eindwerk.utils.Regex;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 

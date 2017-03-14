@@ -1,6 +1,6 @@
-package main.be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business;
 
-import main.be.leerstad.eindwerk.model.LogFile;
+import be.leerstad.eindwerk.model.LogFile;
 
 import java.io.File;
 import java.util.regex.Pattern;

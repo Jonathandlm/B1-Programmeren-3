@@ -1,8 +1,7 @@
 package be.leerstad.eindwerk.business;
 
-import main.be.leerstad.eindwerk.business.SessionParser;
-import main.be.leerstad.eindwerk.model.Interaction;
-import main.be.leerstad.eindwerk.model.Session;
+import be.leerstad.eindwerk.model.Interaction;
+import be.leerstad.eindwerk.model.Session;
 import org.junit.Before;
 import org.junit.Test;
 
