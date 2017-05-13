@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.model;
 
-import java.sql.Time;
+import java.time.LocalTime;
 
 public class Visit extends Interaction<Visit> {
     private String user;
@@ -14,7 +14,7 @@ public class Visit extends Interaction<Visit> {
         this.ipSchool = "";
     }
 
-    public Visit(LogFile logFile, String ipAddress, Time time, Integer transferredBytes, String user,
+    public Visit(LogFile logFile, String ipAddress, LocalTime time, Integer transferredBytes, String user,
                  String siteApplicationId, String ipSchool) {
         super(logFile, ipAddress, time, transferredBytes);
         this.user = user;
@@ -22,7 +22,7 @@ public class Visit extends Interaction<Visit> {
         this.ipSchool = ipSchool;
     }
 
-    public Visit(String id, LogFile logFile, String ipAddress, Time time, Integer totalTime, Integer transferredBytes,
+    public Visit(String id, LogFile logFile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
                    Integer numberOfRequests, String user, String siteApplicationId, String ipSchool) {
         super(id, logFile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
         this.user = user;
@@ -49,14 +49,6 @@ public class Visit extends Interaction<Visit> {
     }
     public void setIpSchool(String ipSchool) {
         this.ipSchool = ipSchool;
-    }
-
-    @Override
-    public Visit concatenate(Visit visit) {
-        this.setTotalTime((int) (visit.getTime().getTime() - this.getTime().getTime()));
-        this.setTransferredBytes(this.getTransferredBytes() + visit.getTransferredBytes());
-        this.setNumberOfRequests(this.getNumberOfRequests() + 1);
-        return this;
     }
 
     @Override

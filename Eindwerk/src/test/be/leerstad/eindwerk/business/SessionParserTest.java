@@ -7,12 +7,13 @@ import org.junit.Test;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.Time;
+import java.time.LocalTime;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class SessionParserTest {
+
     private SessionParser sessionParser;
     private Path path = Paths.get(System.getProperty("user.dir"),"input","ProxyLog_2017-01-17.log");
 
@@ -22,21 +23,12 @@ public class SessionParserTest {
     }
 
     @Test
-    public void testIsValidLogFile() {
-        assertTrue(sessionParser.isValidLogFile(path.getFileName().toString()));
-        assertTrue(sessionParser.isValidLogFile("ProxyLog_2016-12-05.log"));
-        assertFalse(sessionParser.isValidLogFile("Proxylog_2016-12-05.log"));
-        assertFalse(sessionParser.isValidLogFile("ProxyLog_2016-13-05.log"));
-        assertFalse(sessionParser.isValidLogFile("ProxyLog_2016-12-05.txt"));
-    }
-
-    @Test
     public void testParseLogFile() {
         sessionParser.parseLogFile(path.toFile());
         List<Interaction> sessions = sessionParser.getLogFile().getInteractions();
         assertEquals(6, sessions.size());
-        Session firstSession = new Session(sessionParser.getLogFile(),"10.120.230.78", new Time(30578000),
-                46437,"HKJ","vacature.com");
+        Session firstSession = new Session(sessionParser.getLogFile(),"10.120.230.78",
+                LocalTime.parse("08:29:38"),46437,"HKJ","vacature.com");
         assertEquals(firstSession, sessions.get(0));
     }
 

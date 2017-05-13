@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>cvo</user-name>
+      <introspection-schemas>*:loganalyser</introspection-schemas>
       <resolve-scope>sys:</resolve-scope>
+      <unqualified-resolve-schemas>sys:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>

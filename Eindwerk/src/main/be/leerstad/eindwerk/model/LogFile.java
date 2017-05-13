@@ -1,6 +1,8 @@
 package be.leerstad.eindwerk.model;
 
-import java.sql.Date;
+import be.leerstad.eindwerk.utils.Regex;
+
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,13 @@ public class LogFile {
 
     public LogFile(){
         logFile = "";
-        logFileDate = Date.valueOf("2000-01-01");
+        logFileDate = new Date();
+        interactions = new ArrayList<>();
+    }
+
+    public LogFile(String logFile){
+        this.logFile = logFile;
+        this.logFileDate = Regex.getLogFileDate(logFile);
         interactions = new ArrayList<>();
     }
 

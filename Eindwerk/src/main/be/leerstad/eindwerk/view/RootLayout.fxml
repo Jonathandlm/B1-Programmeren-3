@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import org.controlsfx.control.StatusBar?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="be.leerstad.eindwerk.view.RootLayoutController">
+    <top>
+        <MenuBar layoutY="2.0">
+            <Menu text="_File">
+                <Menu text="_Open...">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/open.png" />
+                        </ImageView>
+                    </graphic>
+                    <MenuItem accelerator="Shortcut+F" onAction="#openFile" text="Open _Files" />
+                    <MenuItem accelerator="Shortcut+D" onAction="#openDirectory" text="Open _Directory" />
+                </Menu>
+                <MenuItem accelerator="Shortcut+X" onAction="#exitProgram" text="E_xit">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/exit.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+            </Menu>
+            <Menu text="_View">
+                <MenuItem accelerator="Shortcut+R" onAction="#generateReports" text="_Reports">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/report.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+                <MenuItem accelerator="Shortcut+S" onAction="#generateStats" text="_Stats">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/stats.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+            </Menu>
+            <Menu text="_Help">
+                <MenuItem accelerator="F1" onAction="#openHelp" text="_Help">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/help.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+                <MenuItem accelerator="Shortcut+I" onAction="#openInfo" text="_Info">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/about.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+    </center>
+    <bottom>
+        <StatusBar fx:id="statusBar" text="Some status!" />
+    </bottom>
+</BorderPane>

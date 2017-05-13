@@ -1,15 +1,16 @@
 package be.leerstad.eindwerk.model;
 
-import java.sql.Time;
+import java.time.Duration;
+import java.time.LocalTime;
 
-public abstract class Interaction<T> {
-    private static final int MAX_TIME_BETWEEN_REQUESTS_IN_MILLISEC = 20*60*1000;
+public abstract class Interaction<T extends Interaction> {
+    private static final int MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES = 20;
 
     private String id;
     private LogFile logFile;
     private String ipAddress;
-    private Time time;
-    private Integer totalTime;
+    private LocalTime time;
+    private long totalTimeInSec;
     private Integer transferredBytes;
     private Integer numberOfRequests;
 
@@ -17,35 +18,35 @@ public abstract class Interaction<T> {
         this.id = "";
         this.logFile = new LogFile();
         this.ipAddress = "";
-        this.time = new Time(0);
-        this.totalTime = 1;
+        this.time = LocalTime.now();
+        this.totalTimeInSec = 1;
         this.transferredBytes = 0;
         this.numberOfRequests = 1;
     }
 
-    public Interaction(LogFile logFile, String ipAddress, Time time, Integer transferredBytes) {
+    public Interaction(LogFile logFile, String ipAddress, LocalTime time, Integer transferredBytes) {
         this.id = "";
         this.logFile = logFile;
         this.ipAddress = ipAddress;
         this.time = time;
-        this.totalTime = 1;
+        this.totalTimeInSec = 1;
         this.transferredBytes = transferredBytes;
         this.numberOfRequests = 1;
     }
 
-    public Interaction(String id, LogFile logFile, String ipAddress, Time time, Integer totalTime,
+    public Interaction(String id, LogFile logFile, String ipAddress, LocalTime time, Integer totalTimeInSec,
                        Integer transferredBytes, Integer numberOfRequests) {
         this.id = id;
         this.logFile = logFile;
         this.ipAddress = ipAddress;
         this.time = time;
-        this.totalTime = totalTime;
+        this.totalTimeInSec = totalTimeInSec;
         this.transferredBytes = transferredBytes;
         this.numberOfRequests = numberOfRequests;
     }
 
     public static int getMaxTimeBetweenRequestsInMillisec() {
-        return MAX_TIME_BETWEEN_REQUESTS_IN_MILLISEC;
+        return MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES;
     }
 
     public String getId() {
@@ -69,18 +70,18 @@ public abstract class Interaction<T> {
         this.ipAddress = ipAddress;
     }
 
-    public Time getTime() {
+    public LocalTime getTime() {
         return time;
     }
-    public void setTime(Time time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
 
-    public Integer getTotalTime() {
-        return totalTime;
+    public long getTotalTimeInSec() {
+        return totalTimeInSec;
     }
-    public void setTotalTime(Integer totalTime) {
-        this.totalTime = totalTime;
+    public void setTotalTimeInSec(long totalTimeInSec) {
+        this.totalTimeInSec = totalTimeInSec;
     }
 
     public Integer getTransferredBytes() {
@@ -97,7 +98,11 @@ public abstract class Interaction<T> {
         this.numberOfRequests = numberOfRequests;
     }
 
-    public abstract T concatenate(T interaction);
+    public void concatenate(T interaction) {
+        this.setTotalTimeInSec(Duration.between(this.getTime(), interaction.getTime()).getSeconds());
+        this.setTransferredBytes(this.getTransferredBytes() + interaction.getTransferredBytes());
+        this.setNumberOfRequests(this.getNumberOfRequests() + 1);
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -106,8 +111,8 @@ public abstract class Interaction<T> {
 
         Interaction interaction = (Interaction) o;
 
-        return this.getTime().getTime() + this.getTotalTime() + MAX_TIME_BETWEEN_REQUESTS_IN_MILLISEC
-                >= interaction.getTime().getTime();
+        return Duration.between(this.getTime().plusSeconds(this.getTotalTimeInSec()), interaction.getTime()).toMinutes()
+                <= MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES ;
     }
 
     @Override
@@ -122,7 +127,7 @@ public abstract class Interaction<T> {
                 ", logFile=" + logFile +
                 ", ipAddress='" + ipAddress + '\'' +
                 ", time=" + time +
-                ", totalTime=" + totalTime +
+                ", totalTimeInSec=" + totalTimeInSec +
                 ", transferredBytes=" + transferredBytes +
                 ", numberOfRequests=" + numberOfRequests +
                 '}';

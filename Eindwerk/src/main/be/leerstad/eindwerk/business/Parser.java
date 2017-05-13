@@ -18,6 +18,5 @@ public abstract class Parser<T> {
     }
 
     public abstract void parseLogFile(File file);
-    public abstract boolean isValidLogFile(String fileName);
     public abstract T parseLogLine(String logline);
 }

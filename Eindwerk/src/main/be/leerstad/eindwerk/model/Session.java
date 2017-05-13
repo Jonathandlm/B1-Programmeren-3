@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.model;
 
-import java.sql.Time;
+import java.time.LocalTime;
 
 public class Session extends Interaction<Session> {
     private String userId;
@@ -12,13 +12,13 @@ public class Session extends Interaction<Session> {
         this.site = "";
     }
 
-    public Session(LogFile logFile, String ipAddress, Time time, Integer transferredBytes, String userId, String site) {
+    public Session(LogFile logFile, String ipAddress, LocalTime time, Integer transferredBytes, String userId, String site) {
         super(logFile, ipAddress, time, transferredBytes);
         this.userId = userId;
         this.site = site;
     }
 
-    public Session(String id, LogFile logFile, String ipAddress, Time time, Integer totalTime, Integer transferredBytes,
+    public Session(String id, LogFile logFile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
                    Integer numberOfRequests, String userId, String site) {
         super(id, logFile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
         this.userId = userId;
@@ -37,14 +37,6 @@ public class Session extends Interaction<Session> {
     }
     public void setSite(String site) {
         this.site = site;
-    }
-
-    @Override
-    public Session concatenate(Session session) {
-        this.setTotalTime((int) (session.getTime().getTime() - this.getTime().getTime()));
-        this.setTransferredBytes(this.getTransferredBytes() + session.getTransferredBytes());
-        this.setNumberOfRequests(this.getNumberOfRequests() + 1);
-        return this;
     }
 
     @Override
