@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/loganalyser.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/LogAnalyser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/DAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/DAOException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/utils/DateUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogfileView.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAO.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/d2bfb4f2-0edd-4ab7-8338-b59ab895a931.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/d2bfb4f2-0edd-4ab7-8338-b59ab895a931.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Eindwerk.iml" afterPath="$PROJECT_DIR$/Eindwerk.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/dbLog.log" afterPath="$PROJECT_DIR$/log/dbLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/mainLog.log" afterPath="$PROJECT_DIR$/log/mainLog.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Eindwerk/config.properties" afterPath="$PROJECT_DIR$/out/production/Eindwerk/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/config.properties" afterPath="$PROJECT_DIR$/resources/config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/ParseFactory.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/ParseFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/Parser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/Parser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/SessionParser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/SessionParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/VisitParser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/VisitParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Session.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Session.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Visit.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Visit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAO.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/SessionParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/SessionParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/VisitParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/VisitParserTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/LogAnalyser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/LogFile.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Logfile.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/utils/Regex.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/utils/RegexUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/logo.png" afterPath="$PROJECT_DIR$/resources/logo.png" />
     </list>
     <list id="59dbbfd2-df14-4c1a-9bd6-1fd2b30db9ba" name="Rejected commit: Default" comment="connectionfactory, refactored loggers, generics in parsers and interactions, interactions concatenate" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1370,7 +1333,7 @@
       <workItem from="1493320826858" duration="43000" />
       <workItem from="1493320907999" duration="30590000" />
       <workItem from="1494442324992" duration="615000" />
-      <workItem from="1494528456451" duration="84950000" />
+      <workItem from="1494528456451" duration="84997000" />
     </task>
     <task id="LOCAL-00001" summary="config file">
       <created>1488058462084</created>
@@ -1442,7 +1405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494668234641</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="vanalles voor laatste les">
+      <created>1494949580090</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494949580090</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1478,7 +1448,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309817000" />
+    <option name="totallyTimeSpent" value="309864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1537,7 +1507,8 @@
     <MESSAGE value="main view" />
     <MESSAGE value="logger config update" />
     <MESSAGE value="added ParseFactory&#10;renamed Main to LogAnalyser&#10;updated Tests, RootLayout, Parsers, Models &amp; Regex" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ParseFactory&#10;renamed Main to LogAnalyser&#10;updated Tests, RootLayout, Parsers, Models &amp; Regex" />
+    <MESSAGE value="vanalles voor laatste les" />
+    <option name="LAST_COMMIT_MESSAGE" value="vanalles voor laatste les" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
