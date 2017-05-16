@@ -25,9 +25,9 @@ public class SessionParserTest {
     @Test
     public void testParseLogFile() {
         sessionParser.parseLogFile(path.toFile());
-        List<Interaction> sessions = sessionParser.getLogFile().getInteractions();
+        List<Interaction> sessions = sessionParser.getLogfile().getInteractions();
         assertEquals(6, sessions.size());
-        Session firstSession = new Session(sessionParser.getLogFile(),"10.120.230.78",
+        Session firstSession = new Session(sessionParser.getLogfile(),"10.120.230.78",
                 LocalTime.parse("08:29:38"),46437,"HKJ","vacature.com");
         assertEquals(firstSession, sessions.get(0));
     }

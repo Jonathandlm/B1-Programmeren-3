@@ -2,21 +2,22 @@ package be.leerstad.eindwerk.model;
 
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.UUID;
 
 public abstract class Interaction<T extends Interaction> {
     private static final int MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES = 20;
 
-    private String id;
-    private LogFile logFile;
+    private UUID id;
+    private Logfile logfile;
     private String ipAddress;
     private LocalTime time;
-    private long totalTimeInSec;
+    private Integer totalTimeInSec;
     private Integer transferredBytes;
     private Integer numberOfRequests;
 
     public Interaction() {
-        this.id = "";
-        this.logFile = new LogFile();
+        this.id = UUID.randomUUID();
+        this.logfile = new Logfile();
         this.ipAddress = "";
         this.time = LocalTime.now();
         this.totalTimeInSec = 1;
@@ -24,9 +25,9 @@ public abstract class Interaction<T extends Interaction> {
         this.numberOfRequests = 1;
     }
 
-    public Interaction(LogFile logFile, String ipAddress, LocalTime time, Integer transferredBytes) {
-        this.id = "";
-        this.logFile = logFile;
+    public Interaction(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes) {
+        this.id = UUID.randomUUID();
+        this.logfile = logfile;
         this.ipAddress = ipAddress;
         this.time = time;
         this.totalTimeInSec = 1;
@@ -34,10 +35,10 @@ public abstract class Interaction<T extends Interaction> {
         this.numberOfRequests = 1;
     }
 
-    public Interaction(String id, LogFile logFile, String ipAddress, LocalTime time, Integer totalTimeInSec,
+    public Interaction(String id, Logfile logfile, String ipAddress, LocalTime time, Integer totalTimeInSec,
                        Integer transferredBytes, Integer numberOfRequests) {
-        this.id = id;
-        this.logFile = logFile;
+        this.id = UUID.fromString(id);
+        this.logfile = logfile;
         this.ipAddress = ipAddress;
         this.time = time;
         this.totalTimeInSec = totalTimeInSec;
@@ -50,17 +51,17 @@ public abstract class Interaction<T extends Interaction> {
     }
 
     public String getId() {
-        return id;
+        return id.toString();
     }
     public void setId(String id) {
-        this.id = id;
+        this.id = UUID.fromString(id);
     }
 
-    public LogFile getLogFile() {
-        return logFile;
+    public Logfile getLogfile() {
+        return logfile;
     }
-    public void setLogFile(LogFile logFile) {
-        this.logFile = logFile;
+    public void setLogfile(Logfile logfile) {
+        this.logfile = logfile;
     }
 
     public String getIpAddress() {
@@ -80,7 +81,7 @@ public abstract class Interaction<T extends Interaction> {
     public long getTotalTimeInSec() {
         return totalTimeInSec;
     }
-    public void setTotalTimeInSec(long totalTimeInSec) {
+    public void setTotalTimeInSec(Integer totalTimeInSec) {
         this.totalTimeInSec = totalTimeInSec;
     }
 
@@ -99,7 +100,7 @@ public abstract class Interaction<T extends Interaction> {
     }
 
     public void concatenate(T interaction) {
-        this.setTotalTimeInSec(Duration.between(this.getTime(), interaction.getTime()).getSeconds());
+        this.setTotalTimeInSec((int) Duration.between(this.getTime(), interaction.getTime()).getSeconds());
         this.setTransferredBytes(this.getTransferredBytes() + interaction.getTransferredBytes());
         this.setNumberOfRequests(this.getNumberOfRequests() + 1);
     }
@@ -124,7 +125,7 @@ public abstract class Interaction<T extends Interaction> {
     public String toString() {
         return "Interaction{" +
                 "id='" + id + '\'' +
-                ", logFile=" + logFile +
+                ", logfile=" + logfile +
                 ", ipAddress='" + ipAddress + '\'' +
                 ", time=" + time +
                 ", totalTimeInSec=" + totalTimeInSec +

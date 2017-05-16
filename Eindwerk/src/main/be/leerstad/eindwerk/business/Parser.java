@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.business;
 
-import be.leerstad.eindwerk.model.LogFile;
+import be.leerstad.eindwerk.model.Logfile;
 
 import java.io.File;
 import java.util.regex.Pattern;
@@ -8,15 +8,15 @@ import java.util.regex.Pattern;
 public abstract class Parser<T> {
     protected String REGEX;
     protected Pattern PATTERN;
-    private LogFile logFile;
+    private Logfile logfile;
 
-    public LogFile getLogFile() {
-        return logFile;
+    public Logfile getLogfile() {
+        return logfile;
     }
-    public void setLogFile(LogFile logFile) {
-        this.logFile = logFile;
+    public void setLogfile(Logfile logfile) {
+        this.logfile = logfile;
     }
 
-    public abstract void parseLogFile(File file);
+    public abstract Logfile parseLogFile(File file);
     public abstract T parseLogLine(String logline);
 }

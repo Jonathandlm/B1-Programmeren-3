@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.business;
 
-import be.leerstad.eindwerk.utils.Regex;
+import be.leerstad.eindwerk.utils.DateUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -30,7 +30,7 @@ public class ParseFactory {
         String fileDate = fileName.substring(positionUnderscore + 1, positionDot);
         String fileExtension = fileName.substring(positionDot + 1);
 
-        if(Regex.getLogFileDate(fileDate) == null) {
+        if(DateUtil.check(fileDate) == null) {
             return false;
         }
 
@@ -55,7 +55,7 @@ public class ParseFactory {
         String fileDate = fileName.substring(positionFirstDot + 1, positionLastDot);
         String fileExtension = fileName.substring(positionLastDot + 1);
 
-        if(Regex.getLogFileDate(fileDate) == null) {
+        if(DateUtil.check(fileDate) == null) {
             return false;
         }
 

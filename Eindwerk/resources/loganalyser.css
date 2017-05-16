@@ -1,0 +1,7 @@
+.root {
+    -fx-font: 14px "Helvetica";
+}
+
+.h1 {
+	-fx-font-size: 2em;
+}

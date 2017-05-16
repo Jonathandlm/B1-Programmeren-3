@@ -1,29 +1,29 @@
 package be.leerstad.eindwerk.model;
 
-import be.leerstad.eindwerk.utils.Regex;
+import be.leerstad.eindwerk.utils.DateUtil;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LogFile {
+public class Logfile {
     private String logFile;
-    private Date logFileDate;
+    private LocalDate logFileDate;
     private List<Interaction> interactions;
 
-    public LogFile(){
+    public Logfile(){
         logFile = "";
-        logFileDate = new Date();
+        logFileDate = LocalDate.now();
         interactions = new ArrayList<>();
     }
 
-    public LogFile(String logFile){
+    public Logfile(String logFile){
         this.logFile = logFile;
-        this.logFileDate = Regex.getLogFileDate(logFile);
+        this.logFileDate = DateUtil.parse(logFile);
         interactions = new ArrayList<>();
     }
 
-    public LogFile(String logFile, Date logFileDate){
+    public Logfile(String logFile, LocalDate logFileDate){
         this.logFile = logFile;
         this.logFileDate = logFileDate;
         interactions = new ArrayList<>();
@@ -36,10 +36,10 @@ public class LogFile {
         this.logFile = logFile;
     }
 
-    public Date getLogFileDate() {
+    public LocalDate getLogFileDate() {
         return logFileDate;
     }
-    public void setLogFileDate(Date logFileDate) {
+    public void setLogFileDate(LocalDate logFileDate) {
         this.logFileDate = logFileDate;
     }
 
@@ -50,12 +50,16 @@ public class LogFile {
         this.interactions = interactions;
     }
 
+    public void addInteraction(Interaction interaction) {
+        this.interactions.add(interaction);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        LogFile that = (LogFile) o;
+        Logfile that = (Logfile) o;
 
         if (logFile != null ? !logFile.equals(that.logFile) : that.logFile != null) return false;
         if (logFileDate != null ? !logFileDate.equals(that.logFileDate) : that.logFileDate != null) return false;

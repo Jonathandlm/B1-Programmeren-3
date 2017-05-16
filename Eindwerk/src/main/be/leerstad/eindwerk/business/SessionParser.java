@@ -1,9 +1,9 @@
 package be.leerstad.eindwerk.business;
 
 import be.leerstad.eindwerk.model.Interaction;
-import be.leerstad.eindwerk.model.LogFile;
+import be.leerstad.eindwerk.model.Logfile;
 import be.leerstad.eindwerk.model.Session;
-import be.leerstad.eindwerk.utils.Regex;
+import be.leerstad.eindwerk.utils.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -41,24 +41,26 @@ public class SessionParser extends Parser<Session> {
                 ".+\\t" +                                                       // No group: Protocol
                 "(?:OPTIONS|GET|HEAD|POST|PUT|DELETE|TRACE|CONNECT|-)\\t" +     // No group: HTTP Method
                 "(.+)\\t" +                                                     // Group 7:  URL
-                "(?:0|\\S{4,11})\\t" +                                          // No group: Object Source
+                "(?:0|\\S{4,11}|-)\\t" +                                        // No group: Object Source
                 "(?:\\d{1,5})";
         super.PATTERN = Pattern.compile(REGEX);
     }
 
     @Override
-    public void parseLogFile(File file) {
+    public Logfile parseLogFile(File file) {
         String fileName = file.getName();
-        setLogFile(new LogFile(fileName));
+        setLogfile(new Logfile(fileName));
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String logLine;
             Session session;
-            List<Interaction> sessionList = getLogFile().getInteractions();
+            List<Interaction> sessionList = getLogfile().getInteractions();
             while ((logLine = br.readLine()) != null) {
                 session = parseLogLine(logLine);
+                // Ignore invalid loglines
                 if (session == null) continue;
                 // Ignore Sessions without ip-address and without user (both "-")
                 if ((session.getUserId().equals("-")) && (session.getIpAddress().equals("-"))) continue;
+                // Equal sessions are put together, i.e. sessions within time limit
                 if (sessionList.contains(session)) {
                     int index = sessionList.indexOf(session);
                     Session s = (Session) sessionList.get(index);
@@ -67,11 +69,12 @@ public class SessionParser extends Parser<Session> {
                     sessionList.add(session);
                 }
             }
-            getLogFile().setInteractions(sessionList);
+            getLogfile().setInteractions(sessionList);
             LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + sessionList.size() + " sessions.");
         } catch (IOException e) {
             LOG.log(Level.ERROR, "Unable to read " + fileName, e);
         }
+        return getLogfile();
     }
 
     @Override
@@ -85,9 +88,9 @@ public class SessionParser extends Parser<Session> {
         }
 
         try {
-            session = new Session(getLogFile(), m.group(1), LocalTime.parse(m.group(3)),
+            session = new Session(getLogfile(), m.group(1), LocalTime.parse(m.group(3)),
                     new Integer(m.group(5)) + new Integer(m.group(6)), m.group(2),
-                    Regex.getDomainName(m.group(7)));
+                    RegexUtil.getDomainName(m.group(7)));
         } catch (URISyntaxException | NullPointerException e) {
             LOG.log(Level.ERROR, "Cannot parse URL: " + m.group(7));
             session = null;

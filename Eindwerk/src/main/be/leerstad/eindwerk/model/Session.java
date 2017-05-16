@@ -12,15 +12,15 @@ public class Session extends Interaction<Session> {
         this.site = "";
     }
 
-    public Session(LogFile logFile, String ipAddress, LocalTime time, Integer transferredBytes, String userId, String site) {
-        super(logFile, ipAddress, time, transferredBytes);
+    public Session(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes, String userId, String site) {
+        super(logfile, ipAddress, time, transferredBytes);
         this.userId = userId;
         this.site = site;
     }
 
-    public Session(String id, LogFile logFile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
+    public Session(String id, Logfile logfile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
                    Integer numberOfRequests, String userId, String site) {
-        super(id, logFile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
+        super(id, logfile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
         this.userId = userId;
         this.site = site;
     }

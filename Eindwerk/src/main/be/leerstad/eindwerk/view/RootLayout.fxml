@@ -8,10 +8,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import org.controlsfx.control.StatusBar?>
 
-<BorderPane prefHeight="600.0" prefWidth="1000.0"
+<BorderPane prefHeight="800.0" prefWidth="1200.0"
             xmlns="http://javafx.com/javafx/8.0.111"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="be.leerstad.eindwerk.view.RootLayoutController">
+            fx:controller="be.leerstad.eindwerk.view.RootLayoutController"
+            styleClass="root">
     <top>
         <MenuBar layoutY="2.0">
             <Menu text="_File">
@@ -24,6 +25,13 @@
                     <MenuItem accelerator="Shortcut+F" onAction="#openFile" text="Open _Files" />
                     <MenuItem accelerator="Shortcut+D" onAction="#openDirectory" text="Open _Directory" />
                 </Menu>
+                <MenuItem accelerator="Shortcut+C" onAction="#clearDatabase" text="_Clear Database">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <Image url="/icons/warning.png" />
+                        </ImageView>
+                    </graphic>
+                </MenuItem>
                 <MenuItem accelerator="Shortcut+X" onAction="#exitProgram" text="E_xit">
                     <graphic>
                         <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
