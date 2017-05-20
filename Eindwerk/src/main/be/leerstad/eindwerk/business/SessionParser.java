@@ -1,8 +1,6 @@
 package be.leerstad.eindwerk.business;
 
-import be.leerstad.eindwerk.model.Interaction;
-import be.leerstad.eindwerk.model.Logfile;
-import be.leerstad.eindwerk.model.Session;
+import be.leerstad.eindwerk.model.*;
 import be.leerstad.eindwerk.utils.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -13,6 +11,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -47,34 +46,34 @@ public class SessionParser extends Parser<Session> {
     }
 
     @Override
-    public Logfile parseLogFile(File file) {
+    public List<Session> parseLogFile(File file) {
+        List<Session> sessions = new ArrayList<>();
         String fileName = file.getName();
         setLogfile(new Logfile(fileName));
+
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String logLine;
             Session session;
-            List<Interaction> sessionList = getLogfile().getInteractions();
+
             while ((logLine = br.readLine()) != null) {
                 session = parseLogLine(logLine);
                 // Ignore invalid loglines
                 if (session == null) continue;
                 // Ignore Sessions without ip-address and without user (both "-")
-                if ((session.getUserId().equals("-")) && (session.getIpAddress().equals("-"))) continue;
+                if ((session.getUser().getName().equals("-")) && (session.getIpAddress().equals("-"))) continue;
                 // Equal sessions are put together, i.e. sessions within time limit
-                if (sessionList.contains(session)) {
-                    int index = sessionList.indexOf(session);
-                    Session s = (Session) sessionList.get(index);
+                if (sessions.contains(session)) {
+                    int index = sessions.indexOf(session);
+                    Session s = sessions.get(index);
                     s.concatenate(session);
-                } else {
-                    sessionList.add(session);
-                }
+                } else sessions.add(session);
             }
-            getLogfile().setInteractions(sessionList);
-            LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + sessionList.size() + " sessions.");
+            LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + sessions.size() + " sessions.");
+
         } catch (IOException e) {
             LOG.log(Level.ERROR, "Unable to read " + fileName, e);
         }
-        return getLogfile();
+        return sessions;
     }
 
     @Override
@@ -89,14 +88,36 @@ public class SessionParser extends Parser<Session> {
 
         try {
             session = new Session(getLogfile(), m.group(1), LocalTime.parse(m.group(3)),
-                    new Integer(m.group(5)) + new Integer(m.group(6)), m.group(2),
-                    RegexUtil.getDomainName(m.group(7)));
+                    new Integer(m.group(5)) + new Integer(m.group(6)), getUserFromCache(m.group(2)),
+                    getSiteFromCache(RegexUtil.getDomainName(m.group(7))));
         } catch (URISyntaxException | NullPointerException e) {
-            LOG.log(Level.ERROR, "Cannot parse URL: " + m.group(7));
+            LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
             session = null;
         }
 
         return session;
     }
+
+    private User getUserFromCache(String userId) {
+        return LogAnalyser.getInstance().getUserCache().stream()
+                .filter(user -> user.getUserId().equals(userId))
+                .findFirst()
+                .orElse(new User(userId));
+    }
+
+    private Site getSiteFromCache(String url) {
+        List<Site> cache = LogAnalyser.getInstance().getSiteCache();
+        int newId = cache.stream().map(Site::getSiteId).max(Integer::compareTo).orElse(0) + 1;
+        return cache.stream()
+                .filter(site -> site.getSite().equals(url))
+                .findFirst()
+                .orElse(updateSiteCache(new Site(newId, url)));
+    }
+
+    private Site updateSiteCache(Site site) {
+        LogAnalyser.getInstance().getSiteCache().add(site);
+        return site;
+    }
+
 
 }

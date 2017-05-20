@@ -30,7 +30,7 @@ public class App extends Application {
     private ObservableList<LogfileView> logfileData;
 
     public App() {
-        logAnalyserView = new LogAnalyserView();
+        logAnalyserView = LogAnalyserView.getInstance();
         logfileData = observableArrayList(logAnalyserView.getAllLogfileViews());
     }
 

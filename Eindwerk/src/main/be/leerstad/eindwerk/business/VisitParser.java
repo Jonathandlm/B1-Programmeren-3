@@ -1,8 +1,7 @@
 package be.leerstad.eindwerk.business;
 
-import be.leerstad.eindwerk.model.Interaction;
-import be.leerstad.eindwerk.model.Logfile;
-import be.leerstad.eindwerk.model.Visit;
+import be.leerstad.eindwerk.model.*;
+import be.leerstad.eindwerk.utils.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -11,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,47 +20,46 @@ public class VisitParser extends Parser<Visit> {
     private static final Logger LOG = Logger.getLogger(VisitParser.class.getName());
 
     public VisitParser() {
-        super.REGEX = "^(((?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
-                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9]))\\." +                 // Group 2: School IP
+        super.REGEX = "^((?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
                 "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
-                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])) " +                   // Group 1: IP address
-                "(\\S+) " +                                                             // Group 3: username
-                "(\\S+) " +                                                             // Group 4: remote user
-                "\\[[\\w/]+:((?:2[0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]) -?\\d{4}\\] " +   // Group 5: time
-                "(?:\\\"\\S+ \\/(ELO|HOI|\\S*)(?:\\/\\S*)? HTTP\\/\\d\\.\\d\\\") " +    // Group 6: site-app
-                "(?:\\d{3}) " +                                                         // No group: status
-                "(\\d+|-)";                                                             // Group 7: transferred bytes
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\." +
+                "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])) " +                      // Group 1: IP address
+                "(\\S+) " +                                                                // Group 2: username
+                "(\\S+) " +                                                                // Group 3: remote user
+                "\\[[\\w/]+:((?:2[0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]) -?\\d{4}\\] " +  // Group 4: time
+                "(?:\\\"\\S+ (\\S*) HTTP\\/\\d\\.\\d\\\") " +                              // Group 5: site-app
+                "(?:\\d{3}) " +                                                            // No group: status
+                "(\\d+|-)";                                                                // Group 6: transferred bytes
         super.PATTERN = Pattern.compile(REGEX);
     }
 
     @Override
-    public Logfile parseLogFile(File file) {
+    public List<Visit> parseLogFile(File file) {
+        List<Visit> visits = new ArrayList<>();
         String fileName = file.getName();
         setLogfile(new Logfile(fileName));
+        
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String logLine;
             Visit visit;
-            List<Interaction> visitList = getLogfile().getInteractions();
 
             while ((logLine = br.readLine()) != null) {
                 visit = parseLogLine(logLine);
                 // Ignore invalid loglines
                 if (visit == null) continue;
                 // Equal visits are put together, i.e. visits within time limit
-                if (visitList.contains(visit)) {
-                    int index = visitList.indexOf(visit);
-                    Visit v = (Visit) visitList.get(index);
+                if (visits.contains(visit)) {
+                    int index = visits.indexOf(visit);
+                    Visit v = visits.get(index);
                     v.concatenate(visit);
-                } else visitList.add(visit);
+                } else visits.add(visit);
             }
-
-            getLogfile().setInteractions(visitList);
-            LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + visitList.size() + " visits.");
+            LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + visits.size() + " visits.");
 
         } catch (IOException e) {
             LOG.log(Level.ERROR, "Unable to read " + fileName, e);
         }
-        return getLogfile();
+        return visits;
     }
 
     @Override
@@ -74,17 +73,39 @@ public class VisitParser extends Parser<Visit> {
         }
 
         try {
-            visit = new Visit(getLogfile(), m.group(1), LocalTime.parse(m.group(5)),
-                    (m.group(7).equals("-") ? 0 : new Integer(m.group(7))),
-                    m.group(3),
-                    (m.group(6).equals("ELO") || m.group(6).equals("HOI") ? m.group(6) : "ROOT") ,
-                    m.group(2));
+            visit = new Visit(getLogfile(), m.group(1), LocalTime.parse(m.group(4)),
+                    (m.group(6).equals("-") ? 0 : new Integer(m.group(6))),
+                    m.group(2),
+                    getSiteApplicationFromCache(RegexUtil.getApplication(m.group(5))),
+                    getSchoolFromCache(m.group(1)));
 
         } catch (NullPointerException e) {
-            LOG.log(Level.ERROR, "Cannot parse URL: " + m.group(7));
+            LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
             visit = null;
         }
 
         return visit;
     }
+
+    private School getSchoolFromCache(String ipAddress) {
+        return LogAnalyser.getInstance().getSchoolCache().stream()
+                .filter(school -> school.getIpAddress().equals(ipAddress))
+                .findFirst()
+                .orElse(new School(ipAddress));
+    }
+
+    private SiteApplication getSiteApplicationFromCache(String application) {
+        List<SiteApplication> cache = LogAnalyser.getInstance().getSiteApplicationCache();
+        int newId = cache.stream().map(SiteApplication::getApplicationId).max(Integer::compareTo).orElse(0) + 1;
+        return cache.stream()
+                .filter(siteApplication -> siteApplication.getApplication().equals(application))
+                .findFirst()
+                .orElse(updateSiteApplicationCache(new SiteApplication(newId, application)));
+    }
+
+    private SiteApplication updateSiteApplicationCache(SiteApplication siteApplication) {
+        LogAnalyser.getInstance().getSiteApplicationCache().add(siteApplication);
+        return siteApplication;
+    }
+
 }

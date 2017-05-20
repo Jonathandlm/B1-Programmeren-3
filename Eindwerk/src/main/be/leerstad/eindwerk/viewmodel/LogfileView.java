@@ -1,20 +1,18 @@
 package be.leerstad.eindwerk.viewmodel;
 
-import be.leerstad.eindwerk.model.LogAnalyser;
 import be.leerstad.eindwerk.model.Logfile;
-import javafx.beans.property.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 
 public class LogfileView extends Logfile {
 
     private final StringProperty name;
     private final ObjectProperty<LocalDate> date;
-    private ListProperty<LogfileView> logfileViews;
 
     public LogfileView() {
         this(null, null);
@@ -31,7 +29,11 @@ public class LogfileView extends Logfile {
     public LogfileView(String name, LocalDate date) {
         this.name = new SimpleStringProperty(name);
         this.date = new SimpleObjectProperty<>(date);
-        this.logfileViews = new SimpleListProperty<>();
+    }
+
+    public LogfileView(String name, LocalDate date, List<Logfile> list) {
+        this.name = new SimpleStringProperty(name);
+        this.date = new SimpleObjectProperty<>(date);
     }
 
     public String getName() {
@@ -54,16 +56,4 @@ public class LogfileView extends Logfile {
         return date;
     }
 
-    public ObservableList<LogfileView> getLogfileViews() {
-        return logfileViews.get();
-    }
-
-    public ListProperty<LogfileView> logfileViewsProperty() {
-        LogAnalyser logAnalyser = new LogAnalyser();
-        List<LogfileView> tempList = new ArrayList<>();
-        logAnalyser.getAllLogfiles().forEach(
-                logfile -> tempList.add(new LogfileView(logfile)));
-        logfileViews.set(FXCollections.observableArrayList(tempList));
-        return logfileViews;
-    }
 }

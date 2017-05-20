@@ -30,7 +30,7 @@ public class ParseFactory {
         String fileDate = fileName.substring(positionUnderscore + 1, positionDot);
         String fileExtension = fileName.substring(positionDot + 1);
 
-        if(DateUtil.check(fileDate) == null) {
+        if(DateUtil.parseDate(fileDate) == null) {
             return false;
         }
 
@@ -55,7 +55,7 @@ public class ParseFactory {
         String fileDate = fileName.substring(positionFirstDot + 1, positionLastDot);
         String fileExtension = fileName.substring(positionLastDot + 1);
 
-        if(DateUtil.check(fileDate) == null) {
+        if(DateUtil.parseDate(fileDate) == null) {
             return false;
         }
 

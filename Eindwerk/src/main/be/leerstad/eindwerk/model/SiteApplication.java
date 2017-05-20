@@ -4,6 +4,15 @@ public class SiteApplication {
     private int applicationId;
     private String application;
 
+    public SiteApplication() {
+        this(0,"");
+    }
+
+    public SiteApplication(int applicationId, String application) {
+        this.applicationId = applicationId;
+        this.application = application;
+    }
+
     public int getApplicationId() {
         return applicationId;
     }
@@ -36,5 +45,10 @@ public class SiteApplication {
         int result = applicationId;
         result = 31 * result + (application != null ? application.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "SiteApplication{" + application + '}';
     }
 }

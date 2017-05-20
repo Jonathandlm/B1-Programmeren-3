@@ -1,17 +1,15 @@
 package be.leerstad.eindwerk.service;
 
+import be.leerstad.eindwerk.model.Logfile;
+
 import java.util.List;
 
 public interface InteractionDAO<T> {
 
     List<T> getInteractions();
 
-    T getInteraction(String id);
+    void deleteInteraction(Logfile logfile);
 
-    void insertInteraction(T interaction);
-
-    void deleteInteraction(T interaction);
-
-    void updateInteraction(T interaction);
+    void deleteInteractions(List<Logfile> logfiles);
 
 }

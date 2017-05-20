@@ -4,30 +4,30 @@ import java.time.LocalTime;
 
 public class Visit extends Interaction<Visit> {
     private String user;
-    private String siteApplicationId;
-    private String ipSchool;
+    private SiteApplication siteApplication;
+    private School school;
 
     public Visit() {
         super();
         this.user = "";
-        this.siteApplicationId = "";
-        this.ipSchool = "";
+        this.siteApplication = new SiteApplication();
+        this.school = new School();
     }
 
     public Visit(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes, String user,
-                 String siteApplicationId, String ipSchool) {
+                 SiteApplication siteApplication, School school) {
         super(logfile, ipAddress, time, transferredBytes);
         this.user = user;
-        this.siteApplicationId = siteApplicationId;
-        this.ipSchool = ipSchool;
+        this.siteApplication = siteApplication;
+        this.school = school;
     }
 
     public Visit(String id, Logfile logfile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
-                 Integer numberOfRequests, String user, String siteApplicationId, String ipSchool) {
+                 Integer numberOfRequests, String user, SiteApplication siteApplication, School school) {
         super(id, logfile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
         this.user = user;
-        this.siteApplicationId = siteApplicationId;
-        this.ipSchool = ipSchool;
+        this.siteApplication = siteApplication;
+        this.school = school;
     }
 
     public String getUser() {
@@ -37,18 +37,18 @@ public class Visit extends Interaction<Visit> {
         this.user = user;
     }
 
-    public String getSiteApplicationId() {
-        return siteApplicationId;
+    public SiteApplication getSiteApplication() {
+        return siteApplication;
     }
-    public void setSiteApplicationId(String siteApplicationId) {
-        this.siteApplicationId = siteApplicationId;
+    public void setSiteApplication(SiteApplication siteApplication) {
+        this.siteApplication = siteApplication;
     }
 
-    public String getIpSchool() {
-        return ipSchool;
+    public School getSchool() {
+        return school;
     }
-    public void setIpSchool(String ipSchool) {
-        this.ipSchool = ipSchool;
+    public void setSchool(School school) {
+        this.school = school;
     }
 
     @Override
@@ -60,16 +60,16 @@ public class Visit extends Interaction<Visit> {
         Visit visit = (Visit) o;
 
         if (!user.equals(visit.user)) return false;
-        if (!siteApplicationId.equals(visit.siteApplicationId)) return false;
-        return ipSchool.equals(visit.ipSchool);
+        if (!siteApplication.equals(visit.siteApplication)) return false;
+        return school.equals(visit.school);
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + user.hashCode();
-        result = 31 * result + siteApplicationId.hashCode();
-        result = 31 * result + ipSchool.hashCode();
+        result = 31 * result + siteApplication.hashCode();
+        result = 31 * result + school.hashCode();
         return result;
     }
 
@@ -77,8 +77,8 @@ public class Visit extends Interaction<Visit> {
     public String toString() {
         return super.toString() + "\n\tVisit{" +
                 "user='" + user + '\'' +
-                ", siteApplicationId='" + siteApplicationId + '\'' +
-                ", ipSchool='" + ipSchool + '\'' +
+                ", siteApplication='" + siteApplication + '\'' +
+                ", school='" + school + '\'' +
                 '}';
     }
 }

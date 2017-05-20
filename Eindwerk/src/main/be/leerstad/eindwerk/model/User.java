@@ -6,6 +6,21 @@ public class User {
     private String firstName;
     private String cat;
 
+    public User() {
+        this("");
+    }
+
+    public User(String userId) {
+        this(userId, null, null, null);
+    }
+
+    public User(String userId, String name, String firstName, String cat) {
+        this.userId = userId;
+        this.name = name;
+        this.firstName = firstName;
+        this.cat = cat;
+    }
+
     public String getUserId() {
         return userId;
     }
@@ -39,22 +54,18 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User that = (User) o;
+        User user = (User) o;
 
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        if (firstName != null ? !firstName.equals(that.firstName) : that.firstName != null) return false;
-        if (cat != null ? !cat.equals(that.cat) : that.cat != null) return false;
-
-        return true;
+        return userId.equals(user.userId);
     }
 
     @Override
     public int hashCode() {
-        int result = userId != null ? userId.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
-        result = 31 * result + (cat != null ? cat.hashCode() : 0);
-        return result;
+        return userId.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + userId + '}';
     }
 }

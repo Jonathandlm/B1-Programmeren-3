@@ -1,11 +1,29 @@
 package be.leerstad.eindwerk.model;
 
+import be.leerstad.eindwerk.utils.RegexUtil;
+
 public class School {
     private String ipAddress;
     private String site;
     private String street;
     private String zip;
     private String city;
+
+    public School() {
+        this("");
+    }
+
+    public School(String ipAddress) {
+        this(RegexUtil.getNetworkAddress(ipAddress), null, null, null, null);
+    }
+
+    public School(String ipAddress, String site, String street, String zip, String city) {
+        this.ipAddress = ipAddress;
+        this.site = site;
+        this.street = street;
+        this.zip = zip;
+        this.city = city;
+    }
 
     public String getIpAddress() {
         return ipAddress;
@@ -47,24 +65,22 @@ public class School {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        School that = (School) o;
+        School school = (School) o;
 
-        if (ipAddress != null ? !ipAddress.equals(that.ipAddress) : that.ipAddress != null) return false;
-        if (site != null ? !site.equals(that.site) : that.site != null) return false;
-        if (street != null ? !street.equals(that.street) : that.street != null) return false;
-        if (zip != null ? !zip.equals(that.zip) : that.zip != null) return false;
-        if (city != null ? !city.equals(that.city) : that.city != null) return false;
+        if (!(ipAddress == null || school.ipAddress == null))
+            if (RegexUtil.getNetworkAddress(ipAddress).equals(RegexUtil.getNetworkAddress(school.ipAddress)))
+                return true;
+        return false;
 
-        return true;
     }
 
     @Override
     public int hashCode() {
-        int result = ipAddress != null ? ipAddress.hashCode() : 0;
-        result = 31 * result + (site != null ? site.hashCode() : 0);
-        result = 31 * result + (street != null ? street.hashCode() : 0);
-        result = 31 * result + (zip != null ? zip.hashCode() : 0);
-        result = 31 * result + (city != null ? city.hashCode() : 0);
-        return result;
+        return ipAddress.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "School{" + site + '}';
     }
 }

@@ -1,7 +1,8 @@
 package be.leerstad.eindwerk.business;
 
-import be.leerstad.eindwerk.model.Interaction;
 import be.leerstad.eindwerk.model.Session;
+import be.leerstad.eindwerk.model.Site;
+import be.leerstad.eindwerk.model.User;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,11 +25,11 @@ public class SessionParserTest {
 
     @Test
     public void testParseLogFile() {
-        sessionParser.parseLogFile(path.toFile());
-        List<Interaction> sessions = sessionParser.getLogfile().getInteractions();
+        List<Session> sessions = sessionParser.parseLogFile(path.toFile());
         assertEquals(6, sessions.size());
         Session firstSession = new Session(sessionParser.getLogfile(),"10.120.230.78",
-                LocalTime.parse("08:29:38"),46437,"HKJ","vacature.com");
+                LocalTime.parse("08:29:38"),46437,new User("HKJ"),
+                new Site(1,"vacature.com"));
         assertEquals(firstSession, sessions.get(0));
     }
 

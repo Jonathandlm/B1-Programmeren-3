@@ -3,39 +3,39 @@ package be.leerstad.eindwerk.model;
 import java.time.LocalTime;
 
 public class Session extends Interaction<Session> {
-    private String userId;
-    private String site;
+    private User user;
+    private Site site;
 
     public Session() {
         super();
-        this.userId = "";
-        this.site = "";
+        this.user = new User();
+        this.site = new Site();
     }
 
-    public Session(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes, String userId, String site) {
+    public Session(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes, User user, Site site) {
         super(logfile, ipAddress, time, transferredBytes);
-        this.userId = userId;
+        this.user = user;
         this.site = site;
     }
 
     public Session(String id, Logfile logfile, String ipAddress, LocalTime time, Integer totalTime, Integer transferredBytes,
-                   Integer numberOfRequests, String userId, String site) {
+                   Integer numberOfRequests, User user, Site site) {
         super(id, logfile, ipAddress, time, totalTime, transferredBytes, numberOfRequests);
-        this.userId = userId;
+        this.user = user;
         this.site = site;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getSite() {
+    public Site getSite() {
         return site;
     }
-    public void setSite(String site) {
+    public void setSite(Site site) {
         this.site = site;
     }
 
@@ -47,14 +47,14 @@ public class Session extends Interaction<Session> {
 
         Session session = (Session) o;
 
-        if (userId != null ? !userId.equals(session.userId) : session.userId != null) return false;
+        if (user != null ? !user.equals(session.user) : session.user != null) return false;
         return site.equals(session.site);
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        result = 31 * result + (user != null ? user.hashCode() : 0);
         result = 31 * result + site.hashCode();
         return result;
     }
@@ -62,7 +62,7 @@ public class Session extends Interaction<Session> {
     @Override
     public String toString() {
         return super.toString() + "\n\tSession{" +
-                "userId='" + userId + '\'' +
+                "user='" + user + '\'' +
                 ", site='" + site + '\'' +
                 '}';
     }

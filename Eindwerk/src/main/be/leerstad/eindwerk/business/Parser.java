@@ -1,8 +1,10 @@
 package be.leerstad.eindwerk.business;
 
+import be.leerstad.eindwerk.model.LogAnalyser;
 import be.leerstad.eindwerk.model.Logfile;
 
 import java.io.File;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public abstract class Parser<T> {
@@ -17,6 +19,11 @@ public abstract class Parser<T> {
         this.logfile = logfile;
     }
 
-    public abstract Logfile parseLogFile(File file);
+    public abstract List<T> parseLogFile(File file);
     public abstract T parseLogLine(String logline);
+
+    public boolean isDuplicateLogFile(String fileName) {
+        return LogAnalyser.getInstance().getInteractions().stream().anyMatch(
+                interaction -> interaction.getLogfile().getLogFile().equals(fileName));
+    }
 }

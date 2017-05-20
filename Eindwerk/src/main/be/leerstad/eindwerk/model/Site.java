@@ -4,6 +4,15 @@ public class Site {
     private int siteId;
     private String site;
 
+    public Site() {
+        this(0,"");
+    }
+
+    public Site(int siteId, String site) {
+        this.siteId = siteId;
+        this.site = site;
+    }
+
     public int getSiteId() {
         return siteId;
     }
@@ -37,4 +46,10 @@ public class Site {
         result = 31 * result + (site != null ? site.hashCode() : 0);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Site{" + site + '}';
+    }
+
 }

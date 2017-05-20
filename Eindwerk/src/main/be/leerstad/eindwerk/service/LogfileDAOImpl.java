@@ -1,6 +1,7 @@
 package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.Logfile;
+import be.leerstad.eindwerk.utils.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -11,15 +12,14 @@ import java.util.List;
 public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
     private static final Logger LOG = Logger.getLogger(LogfileDAOImpl.class.getName());
     private static final String GET_ALL_LOGFILES = "SELECT * from logfiles";
-    private static final String INSERT_LOGFILE = "INSERT INTO logfiles (LogFile, LogFileDate) VALUES (?, ?)";
-    private static final String DELETE_LOGFILE = "DELETE FROM logfiles WHERE LogFile = ?";
+    private static final String INSERT_LOGFILE = "INSERT INTO logfiles (LogFile, LogFileDate) VALUES (?,?)";
 
     private static LogfileDAOImpl instance;
 
     private LogfileDAOImpl() {
     }
 
-    public static LogfileDAOImpl getInstance() {
+    public synchronized static LogfileDAOImpl getInstance() {
         if (instance == null) {
             instance = new LogfileDAOImpl();
         }
@@ -37,10 +37,7 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
         ) {
 
             while (resultSet.next()) {
-                Logfile logfile = new Logfile();
-                logfile.setLogFile(resultSet.getString("LogFile"));
-                logfile.setLogFileDate(resultSet.getDate("LogFileDate").toLocalDate());
-                logfiles.add(logfile);
+                logfiles.add(MySqlUtil.getLogfileResult(resultSet));
             }
 
         } catch (SQLException e) {
@@ -53,13 +50,19 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
     }
 
     @Override
-    public Logfile getLogfile(String id) {
-        return null;
-    }
-
-    @Override
     public void insertLogfile(Logfile logfile) {
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOGFILE)
+        ) {
+            MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
+            preparedStatement.executeUpdate();
 
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_LOGFILE, e);
+        } catch (Exception e) {
+            LOG.log(Level.ERROR, "Unable to insert logfile " + logfile, e);
+        }
     }
 
     @Override
@@ -69,10 +72,11 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_LOGFILE)
         ) {
             for (Logfile logfile : logfiles) {
-                preparedStatement.setString(1, logfile.getLogFile());
-                preparedStatement.setDate(2, Date.valueOf(logfile.getLogFileDate()));
+                MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
                 preparedStatement.executeUpdate();
             }
+
+            LOG.log(Level.DEBUG, "Successfully inserted " + logfiles.size() + " logfiles.");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
@@ -81,14 +85,4 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
         }
     }
 
-
-    @Override
-    public void deleteLogfile(Logfile logfile) {
-
-    }
-
-    @Override
-    public void updateLogfile(Logfile logfile) {
-
-    }
 }

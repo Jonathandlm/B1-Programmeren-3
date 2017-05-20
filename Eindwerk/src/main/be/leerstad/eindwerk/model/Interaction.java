@@ -5,7 +5,7 @@ import java.time.LocalTime;
 import java.util.UUID;
 
 public abstract class Interaction<T extends Interaction> {
-    private static final int MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES = 20;
+    private static final int TIMEOUT_IN_MINUTES = 20;
 
     private UUID id;
     private Logfile logfile;
@@ -46,10 +46,6 @@ public abstract class Interaction<T extends Interaction> {
         this.numberOfRequests = numberOfRequests;
     }
 
-    public static int getMaxTimeBetweenRequestsInMillisec() {
-        return MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES;
-    }
-
     public String getId() {
         return id.toString();
     }
@@ -78,7 +74,7 @@ public abstract class Interaction<T extends Interaction> {
         this.time = time;
     }
 
-    public long getTotalTimeInSec() {
+    public Integer getTotalTimeInSec() {
         return totalTimeInSec;
     }
     public void setTotalTimeInSec(Integer totalTimeInSec) {
@@ -113,7 +109,7 @@ public abstract class Interaction<T extends Interaction> {
         Interaction interaction = (Interaction) o;
 
         return Duration.between(this.getTime().plusSeconds(this.getTotalTimeInSec()), interaction.getTime()).toMinutes()
-                <= MAX_TIME_BETWEEN_REQUESTS_IN_MINUTES ;
+                <= TIMEOUT_IN_MINUTES;
     }
 
     @Override

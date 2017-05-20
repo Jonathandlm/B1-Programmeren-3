@@ -21,13 +21,12 @@ public class LogAnalyserDAOImpl extends BaseDAO implements LogAnalyserDAO {
     private LogAnalyserDAOImpl() {
     }
 
-    public static LogAnalyserDAOImpl getInstance() {
+    public synchronized static LogAnalyserDAOImpl getInstance() {
         if (instance == null) {
             instance = new LogAnalyserDAOImpl();
         }
         return instance;
     }
-
 
     @Override
     public void clearDatabase() {
@@ -39,7 +38,7 @@ public class LogAnalyserDAOImpl extends BaseDAO implements LogAnalyserDAO {
                 statement.execute(TRUNCATE_TABLES + s);
                 LOG.log(Level.DEBUG, "Database table " + s + " cleared");
             }
-            LOG.log(Level.DEBUG, "Database tables cleared");
+            LOG.log(Level.DEBUG, "All database tables cleared");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
