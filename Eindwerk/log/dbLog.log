@@ -2923,3 +2923,65 @@ java.sql.SQLException: Can not issue data manipulation statements with executeQu
 20 mei 2017 14:01 DEBUG VisitDAOImpl:116 - Successfully inserted 0 visits.
 20 mei 2017 14:01 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
 20 mei 2017 14:01 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:20 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:20 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:23 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:23 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:28 DEBUG SessionDAOImpl:116 - Successfully inserted 0 sessions.
+20 mei 2017 14:28 DEBUG VisitDAOImpl:116 - Successfully inserted 19 visits.
+20 mei 2017 14:28 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:28 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-06.txt
+20 mei 2017 14:29 DEBUG SessionDAOImpl:116 - Successfully inserted 335 sessions.
+20 mei 2017 14:29 DEBUG VisitDAOImpl:116 - Successfully inserted 120 visits.
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-06.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-07.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-08.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-09.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-06.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-07.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-09.txt
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-11-04.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-11-05.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-05.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-06.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-13.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-28.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-02.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-03.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-16.log
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-17.log
+20 mei 2017 14:31 DEBUG SessionDAOImpl:116 - Successfully inserted 335 sessions.
+20 mei 2017 14:31 DEBUG VisitDAOImpl:116 - Successfully inserted 120 visits.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:32 DEBUG SessionDAOImpl:116 - Successfully inserted 0 sessions.
+20 mei 2017 14:32 DEBUG VisitDAOImpl:116 - Successfully inserted 0 visits.
+20 mei 2017 14:32 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:32 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared

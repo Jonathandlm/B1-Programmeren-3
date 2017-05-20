@@ -29579,3 +29579,267 @@ java.sql.SQLException: Can not issue data manipulation statements with executeQu
 20 mei 2017 14:01 DEBUG VisitDAOImpl:116 - Successfully inserted 0 visits.
 20 mei 2017 14:01 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
 20 mei 2017 14:01 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:20 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:20 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:20 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:21 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:23 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:23 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:23 DEBUG DateUtil:44 - log.2016-12-06 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:23 DEBUG ParseFactory:63 - localhost_access_log.2016-12-06.txt is a valid Visit Logfile filename.
+20 mei 2017 14:28 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-06.txt: 19 visits.
+20 mei 2017 14:28 DEBUG SessionDAOImpl:116 - Successfully inserted 0 sessions.
+20 mei 2017 14:28 DEBUG VisitDAOImpl:116 - Successfully inserted 19 visits.
+20 mei 2017 14:28 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:28 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2016-12-06 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2016-12-06.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-06.txt
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-06.txt: 19 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2016-12-07 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2016-12-07.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-07.txt: 17 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2016-12-08 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2016-12-08.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-08.txt: 14 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2016-12-09 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2016-12-09.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-09.txt: 17 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2017-01-06 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2017-01-06.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-06.txt: 19 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2017-01-07 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2017-01-07.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-07.txt: 17 visits.
+20 mei 2017 14:29 DEBUG DateUtil:44 - log.2017-01-09 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:29 DEBUG ParseFactory:63 - localhost_access_log.2017-01-09.txt is a valid Visit Logfile filename.
+20 mei 2017 14:29 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-09.txt: 17 visits.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-11-02.log is a valid Session Logfile filename.
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: vip.megaproxy.com:443
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-02.log: 0 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-11-04.log is a valid Session Logfile filename.
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://www.microsoft.com/isapi/CTRedir.asp?type=CT&source=WWW&sPage=Flyout_S3_Node3|Left%20Nav||Developers%20%28MSDN%29&tPage=http://msdn.microsoft.com/
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-04.log: 7 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-11-05.log is a valid Session Logfile filename.
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: webmail.aol.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: webmail.aol.com:443
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-05.log: 20 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-12-05.log is a valid Session Logfile filename.
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.redcorp.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adi/N339.JavaDevelopersJournal.com/B48753.15%20;sz=150x400;ord=[timestamp]?
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adj/N339.JavaDevelopersJournal.com/B48753.15%20;abr=!ie;sz=150x400;ord=[timestamp]?
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/ad/N884.javadevelopersjournal/B941977.2;sz=468x60;ord=[timestamp]?
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.half.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/Nieuws/inc/RouteHeadline.asp?art={A857B47A-731C-4405-A47E-BF64577C5465}
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/nieuws/Buitenland/default.asp?art={A857B47A-731C-4405-A47E-BF64577C5465}
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.half.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: lc2.law13.hotmail.passport.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: lc2.law13.hotmail.passport.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/nieuws/Buitenland/default.asp?art={3F3143BE-050B-43FD-BFF5-7D616F4AA662}
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: loginnet.passport.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adi/N477.Intel_Rydium_Network_/B958702.4;sz=160x600;ord=[timestamp]?
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-05.log: 227 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-12-06.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-06.log: 1 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-12-13.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-13.log: 17 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2016-12-28.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-28.log: 3 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2017-01-02.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-02.log: 4 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2017-01-03.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-03.log: 10 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2017-01-16.log is a valid Session Logfile filename.
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-16.log: 40 sessions.
+20 mei 2017 14:29 DEBUG ParseFactory:38 - ProxyLog_2017-01-17.log is a valid Session Logfile filename.
+20 mei 2017 14:29  WARN SessionParser:94 - Cannot parse URL: http://www.google;com/
+20 mei 2017 14:29 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-17.log: 6 sessions.
+20 mei 2017 14:29 DEBUG SessionDAOImpl:116 - Successfully inserted 335 sessions.
+20 mei 2017 14:29 DEBUG VisitDAOImpl:116 - Successfully inserted 120 visits.
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:29 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:30 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2016-12-06 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2016-12-06.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-06.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-06.txt: 19 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2016-12-07 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2016-12-07.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-07.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-07.txt: 17 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2016-12-08 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2016-12-08.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-08.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-08.txt: 14 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2016-12-09 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2016-12-09.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2016-12-09.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2016-12-09.txt: 17 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2017-01-06 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2017-01-06.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-06.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-06.txt: 19 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2017-01-07 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2017-01-07.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-07.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-07.txt: 17 visits.
+20 mei 2017 14:31 DEBUG DateUtil:44 - log.2017-01-09 is not a valid date or has incorrect format (yyyy-MM-dd).
+20 mei 2017 14:31 DEBUG ParseFactory:63 - localhost_access_log.2017-01-09.txt is a valid Visit Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: localhost_access_log.2017-01-09.txt
+20 mei 2017 14:31 DEBUG VisitParser:57 - Parsed logfile localhost_access_log.2017-01-09.txt: 17 visits.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-11-02.log is a valid Session Logfile filename.
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: vip.megaproxy.com:443
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-02.log: 0 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-11-04.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-11-04.log
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://www.microsoft.com/isapi/CTRedir.asp?type=CT&source=WWW&sPage=Flyout_S3_Node3|Left%20Nav||Developers%20%28MSDN%29&tPage=http://msdn.microsoft.com/
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-04.log: 7 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-11-05.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-11-05.log
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: webmail.aol.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: webmail.aol.com:443
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-05.log: 20 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-12-05.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-05.log
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.redcorp.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adi/N339.JavaDevelopersJournal.com/B48753.15%20;sz=150x400;ord=[timestamp]?
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adj/N339.JavaDevelopersJournal.com/B48753.15%20;abr=!ie;sz=150x400;ord=[timestamp]?
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/ad/N884.javadevelopersjournal/B941977.2;sz=468x60;ord=[timestamp]?
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.half.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/Nieuws/inc/RouteHeadline.asp?art={A857B47A-731C-4405-A47E-BF64577C5465}
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/nieuws/Buitenland/default.asp?art={A857B47A-731C-4405-A47E-BF64577C5465}
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.half.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: lc2.law13.hotmail.passport.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: lc2.law13.hotmail.passport.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://www.gva.be/nieuws/Buitenland/default.asp?art={3F3143BE-050B-43FD-BFF5-7D616F4AA662}
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: loginnet.passport.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: www.vmware.com:443
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://ad.doubleclick.net/adi/N477.Intel_Rydium_Network_/B958702.4;sz=160x600;ord=[timestamp]?
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-05.log: 227 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-12-06.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-06.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-06.log: 1 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-12-13.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-13.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-13.log: 17 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2016-12-28.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2016-12-28.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-12-28.log: 3 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2017-01-02.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-02.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-02.log: 4 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2017-01-03.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-03.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-03.log: 10 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2017-01-16.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-16.log
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-16.log: 40 sessions.
+20 mei 2017 14:31 DEBUG ParseFactory:38 - ProxyLog_2017-01-17.log is a valid Session Logfile filename.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:91 - Successfully deleted all interactions in Filename: ProxyLog_2017-01-17.log
+20 mei 2017 14:31  WARN SessionParser:94 - Cannot parse URL: http://www.google;com/
+20 mei 2017 14:31 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2017-01-17.log: 6 sessions.
+20 mei 2017 14:31 DEBUG SessionDAOImpl:116 - Successfully inserted 335 sessions.
+20 mei 2017 14:31 DEBUG VisitDAOImpl:116 - Successfully inserted 120 visits.
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:31 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:32 DEBUG ParseFactory:38 - ProxyLog_2016-11-02.log is a valid Session Logfile filename.
+20 mei 2017 14:32  WARN SessionParser:94 - Cannot parse URL: vip.megaproxy.com:443
+20 mei 2017 14:32 DEBUG SessionParser:71 - Parsed logfile ProxyLog_2016-11-02.log: 0 sessions.
+20 mei 2017 14:32 DEBUG SessionDAOImpl:116 - Successfully inserted 0 sessions.
+20 mei 2017 14:32 DEBUG VisitDAOImpl:116 - Successfully inserted 0 visits.
+20 mei 2017 14:32 DEBUG InteractionDAOImpl:54 - Successfully retrieved all visits
+20 mei 2017 14:32 DEBUG InteractionDAOImpl:60 - Successfully retrieved all sessions
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+20 mei 2017 14:32 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
