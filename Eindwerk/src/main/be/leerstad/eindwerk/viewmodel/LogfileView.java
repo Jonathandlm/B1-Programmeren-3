@@ -7,7 +7,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 import java.time.LocalDate;
-import java.util.List;
 
 public class LogfileView extends Logfile {
 
@@ -23,15 +22,10 @@ public class LogfileView extends Logfile {
     }
 
     public LogfileView(Logfile logfile) {
-        this(logfile.getLogFile(), logfile.getLogFileDate());
+        this(logfile.getLogfile(), logfile.getLogfileDate());
     }
 
     public LogfileView(String name, LocalDate date) {
-        this.name = new SimpleStringProperty(name);
-        this.date = new SimpleObjectProperty<>(date);
-    }
-
-    public LogfileView(String name, LocalDate date, List<Logfile> list) {
         this.name = new SimpleStringProperty(name);
         this.date = new SimpleObjectProperty<>(date);
     }

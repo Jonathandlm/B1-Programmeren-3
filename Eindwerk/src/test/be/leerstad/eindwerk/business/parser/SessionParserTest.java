@@ -1,4 +1,4 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
 import be.leerstad.eindwerk.model.Session;
 import be.leerstad.eindwerk.model.Site;
@@ -25,7 +25,7 @@ public class SessionParserTest {
 
     @Test
     public void testParseLogFile() {
-        List<Session> sessions = sessionParser.parseLogFile(path.toFile());
+        List<Session> sessions = sessionParser.parseLogfile(path.toFile());
         assertEquals(6, sessions.size());
         Session firstSession = new Session(sessionParser.getLogfile(),"10.120.230.78",
                 LocalTime.parse("08:29:38"),46437,new User("HKJ"),

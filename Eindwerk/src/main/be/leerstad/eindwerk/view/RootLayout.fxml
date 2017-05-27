@@ -8,11 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import org.controlsfx.control.StatusBar?>
 
-<BorderPane prefHeight="800.0" prefWidth="1200.0"
-            xmlns="http://javafx.com/javafx/8.0.111"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="be.leerstad.eindwerk.view.RootLayoutController"
-            styleClass="root">
+<BorderPane prefHeight="800.0" prefWidth="1200.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.leerstad.eindwerk.view.RootLayoutController">
     <top>
         <MenuBar layoutY="2.0">
             <Menu text="_File">
@@ -77,6 +73,6 @@
     <center>
     </center>
     <bottom>
-        <StatusBar fx:id="statusBar" text="Some status!" />
+        <StatusBar fx:id="statusBar" text="Ready..." />
     </bottom>
 </BorderPane>

@@ -1,7 +1,7 @@
 package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.SiteApplication;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -10,7 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDAO {
 
@@ -48,8 +50,8 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_SITEAPPLICATIONS, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get siteApplications ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return siteApplications;
@@ -77,8 +79,8 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_SITEAPPLICATION, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get siteApplication with id: " + applicationId, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return siteApplication;
@@ -98,8 +100,8 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_SITEAPPLICATION, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert " + siteApplication, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -119,9 +121,32 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_SITEAPPLICATION, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert siteApplications ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
+    }
+
+    @Override
+    public Map<Integer,String> fillCache() {
+        Map<Integer,String> cache = new HashMap<>();
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SITEAPPLICATIONS);
+                ResultSet resultSet = preparedStatement.executeQuery()
+        ) {
+
+            while (resultSet.next()) {
+                cache.put(resultSet.getInt("ApplicationID"), resultSet.getString("Application"));
+            }
+
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_SITEAPPLICATIONS, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
+        }
+
+        return cache;
     }
 
 }

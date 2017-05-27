@@ -1,4 +1,4 @@
-package be.leerstad.eindwerk.utils;
+package be.leerstad.eindwerk.util;
 
 import be.leerstad.eindwerk.model.*;
 
@@ -7,8 +7,8 @@ import java.sql.*;
 public class MySqlUtil {
 
     public static void setPreparedLogfileStatement(Logfile logfile, PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setString(1, logfile.getLogFile());
-        preparedStatement.setDate(2, Date.valueOf(logfile.getLogFileDate()));
+        preparedStatement.setString(1, logfile.getLogfile());
+        preparedStatement.setDate(2, Date.valueOf(logfile.getLogfileDate()));
     }
 
     public static void setPreparedSchoolStatement(School school, PreparedStatement preparedStatement) throws SQLException {
@@ -21,7 +21,7 @@ public class MySqlUtil {
 
     public static void setPreparedSessionStatement(Session session, PreparedStatement preparedStatement) throws SQLException {
         preparedStatement.setString(1, session.getId());
-        preparedStatement.setString(2, session.getLogfile().getLogFile());
+        preparedStatement.setString(2, session.getLogfile().getLogfile());
         preparedStatement.setString(3, session.getIpAddress());
         preparedStatement.setTime(4, Time.valueOf(session.getTime()));
         preparedStatement.setInt(5, session.getTotalTimeInSec());
@@ -50,7 +50,7 @@ public class MySqlUtil {
 
     public static void setPreparedVisitStatement(Visit visit, PreparedStatement preparedStatement) throws SQLException {
         preparedStatement.setString(1, visit.getId());
-        preparedStatement.setString(2, visit.getLogfile().getLogFile());
+        preparedStatement.setString(2, visit.getLogfile().getLogfile());
         preparedStatement.setString(3, visit.getIpAddress());
         preparedStatement.setTime(4, Time.valueOf(visit.getTime()));
         preparedStatement.setInt(5, visit.getTotalTimeInSec());

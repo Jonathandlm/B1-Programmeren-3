@@ -1,7 +1,7 @@
 package be.leerstad.eindwerk.view;
 
 import be.leerstad.eindwerk.App;
-import be.leerstad.eindwerk.utils.DateUtil;
+import be.leerstad.eindwerk.util.DateUtil;
 import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
 import be.leerstad.eindwerk.viewmodel.LogfileView;
 import javafx.fxml.FXML;
@@ -38,10 +38,10 @@ public class LogfileOverviewController {
         nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         dateColumn.setCellValueFactory(cellData -> cellData.getValue().dateProperty());
 
-        // Clear person details.
+        // Clear logfile details.
         showLogfileDetails(null);
 
-        // Listen for selection changes and show the person details when changed.
+        // Listen for selection changes and show the logfile details when changed.
         logfileTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showLogfileDetails(newValue));
     }

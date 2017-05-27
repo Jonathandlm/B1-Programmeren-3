@@ -1,4 +1,4 @@
-package be.leerstad.eindwerk.utils;
+package be.leerstad.eindwerk.util;
 
 import org.junit.Test;
 

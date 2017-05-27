@@ -1,7 +1,7 @@
 package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.User;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -10,7 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserDAOImpl extends BaseDAO implements UserDAO {
 
@@ -18,6 +20,7 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
     private static final String GET_ALL_USERS = "SELECT * FROM users";
     private static final String GET_USER = "SELECT * FROM users WHERE UserID = ?";
     private static final String INSERT_USER = "INSERT INTO users (UserID, Name, FirstName, Cat) VALUES (?,?,?,?)";
+    private static final String DELETE_USER = "DELETE FROM users WHERE UserID = ?";
 
     private static UserDAOImpl instance;
 
@@ -47,8 +50,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_USERS, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get users ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return users;
@@ -76,8 +79,8 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_USER, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get user with IP Address: " + userId, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return user;
@@ -97,29 +100,51 @@ public class UserDAOImpl extends BaseDAO implements UserDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_USER, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert " + user, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
     @Override
-    public void insertUsers(List<User> users) {
+    public void deleteUser(String userId) {
         try (
                 Connection connection = getConnection();
-                PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USER)
+                PreparedStatement preparedStatement = connection.prepareStatement(DELETE_USER)
         ) {
-            for (User user : users) {
-                MySqlUtil.setPreparedUserStatement(user, preparedStatement);
 
-                preparedStatement.executeUpdate();
-            }
+            preparedStatement.setString(1, userId);
+            preparedStatement.executeUpdate();
 
-            LOG.log(Level.DEBUG, "Successfully inserted " + users.size() + " users.");
+            LOG.log(Level.DEBUG, "Successfully deleted user with User ID " + userId);
 
         } catch (SQLException e) {
-            LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_USER, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert users ", e);
+            LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
+
+    @Override
+    public Map<String,User> fillCache() {
+        Map<String,User> cache = new HashMap<>();
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_USERS);
+                ResultSet resultSet = preparedStatement.executeQuery()
+        ) {
+
+            while (resultSet.next()) {
+                cache.put(resultSet.getString("UserID"), MySqlUtil.getUserResult(resultSet));
+            }
+
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_USERS, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
+        }
+
+        return cache;
+    }
+
 }

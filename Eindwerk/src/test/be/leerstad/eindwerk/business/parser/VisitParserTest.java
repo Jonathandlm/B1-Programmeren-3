@@ -1,4 +1,4 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
 import be.leerstad.eindwerk.model.Visit;
 import org.junit.Before;
@@ -38,7 +38,7 @@ public class VisitParserTest {
     //TODO: complete test
     @Test
     public void testParseLogFile() {
-        visitParser.parseLogFile(path.toFile());
+        visitParser.parseLogfile(path.toFile());
         //List<Interaction> visits = visitParser.getLogfile().getInteractions();
         //visits.forEach(System.out::println);
         //assertEquals(6, sessions.size());

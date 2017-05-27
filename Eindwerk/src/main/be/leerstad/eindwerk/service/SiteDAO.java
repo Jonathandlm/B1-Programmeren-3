@@ -3,6 +3,7 @@ package be.leerstad.eindwerk.service;
 import be.leerstad.eindwerk.model.Site;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SiteDAO {
     
@@ -14,4 +15,5 @@ public interface SiteDAO {
 
     void insertSites(List<Site> sites);
 
+    Map<Integer,String> fillCache();
 }

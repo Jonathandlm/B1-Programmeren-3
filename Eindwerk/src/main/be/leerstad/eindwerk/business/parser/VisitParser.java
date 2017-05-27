@@ -1,7 +1,10 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
-import be.leerstad.eindwerk.model.*;
-import be.leerstad.eindwerk.utils.RegexUtil;
+import be.leerstad.eindwerk.business.cache.SchoolCache;
+import be.leerstad.eindwerk.business.cache.SiteApplicationCache;
+import be.leerstad.eindwerk.model.Logfile;
+import be.leerstad.eindwerk.model.Visit;
+import be.leerstad.eindwerk.util.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -34,7 +37,7 @@ public class VisitParser extends Parser<Visit> {
     }
 
     @Override
-    public List<Visit> parseLogFile(File file) {
+    public List<Visit> parseLogfile(File file) {
         List<Visit> visits = new ArrayList<>();
         String fileName = file.getName();
         setLogfile(new Logfile(fileName));
@@ -76,8 +79,8 @@ public class VisitParser extends Parser<Visit> {
             visit = new Visit(getLogfile(), m.group(1), LocalTime.parse(m.group(4)),
                     (m.group(6).equals("-") ? 0 : new Integer(m.group(6))),
                     m.group(2),
-                    getSiteApplicationFromCache(RegexUtil.getApplication(m.group(5))),
-                    getSchoolFromCache(m.group(1)));
+                    SiteApplicationCache.getInstance().getSiteApplication(RegexUtil.getApplication(m.group(5))),
+                    SchoolCache.getInstance().getSchool(RegexUtil.getNetworkAddress(m.group(1))));
 
         } catch (NullPointerException e) {
             LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
@@ -85,27 +88,6 @@ public class VisitParser extends Parser<Visit> {
         }
 
         return visit;
-    }
-
-    private School getSchoolFromCache(String ipAddress) {
-        return LogAnalyser.getInstance().getSchoolCache().stream()
-                .filter(school -> school.getIpAddress().equals(ipAddress))
-                .findFirst()
-                .orElse(new School(ipAddress));
-    }
-
-    private SiteApplication getSiteApplicationFromCache(String application) {
-        List<SiteApplication> cache = LogAnalyser.getInstance().getSiteApplicationCache();
-        int newId = cache.stream().map(SiteApplication::getApplicationId).max(Integer::compareTo).orElse(0) + 1;
-        return cache.stream()
-                .filter(siteApplication -> siteApplication.getApplication().equals(application))
-                .findFirst()
-                .orElse(updateSiteApplicationCache(new SiteApplication(newId, application)));
-    }
-
-    private SiteApplication updateSiteApplicationCache(SiteApplication siteApplication) {
-        LogAnalyser.getInstance().getSiteApplicationCache().add(siteApplication);
-        return siteApplication;
     }
 
 }

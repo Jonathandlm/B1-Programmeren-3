@@ -1,17 +1,19 @@
 package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.Logfile;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
     private static final Logger LOG = Logger.getLogger(LogfileDAOImpl.class.getName());
-    private static final String GET_ALL_LOGFILES = "SELECT * from logfiles";
+    private static final String GET_ALL_LOGFILES = "SELECT * FROM logfiles ORDER BY LogfileDate DESC";
     private static final String INSERT_LOGFILE = "INSERT INTO logfiles (LogFile, LogFileDate) VALUES (?,?)";
 
     private static LogfileDAOImpl instance;
@@ -42,8 +44,8 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get logfiles ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return logfiles;
@@ -60,8 +62,8 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_LOGFILE, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert logfile " + logfile, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -80,9 +82,32 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert logfiles ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
+    }
+
+    @Override
+    public Map<String, Logfile> fillCache() {
+        Map<String,Logfile> cache = new HashMap<>();
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_LOGFILES);
+                ResultSet resultSet = preparedStatement.executeQuery()
+        ) {
+
+            while (resultSet.next()) {
+                cache.put(resultSet.getString("Logfile"), MySqlUtil.getLogfileResult(resultSet));
+            }
+
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_LOGFILES, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
+        }
+
+        return cache;
     }
 
 }

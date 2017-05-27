@@ -1,7 +1,10 @@
 package be.leerstad.eindwerk.service;
 
-import be.leerstad.eindwerk.model.*;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.model.Interaction;
+import be.leerstad.eindwerk.model.Logfile;
+import be.leerstad.eindwerk.model.Session;
+import be.leerstad.eindwerk.model.Visit;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -59,12 +62,10 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
 
             LOG.log(Level.DEBUG, "Successfully retrieved all sessions");
 
-        } catch (SQLException sqle) {
-            LOG.log(Level.ERROR, "Unable to execute statement ", sqle);
-        } catch (DAOException daoe) {
-            LOG.log(Level.ERROR, "Unable to get connection ", daoe);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get interactions ", e);
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return interactions;
@@ -83,17 +84,17 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
                 PreparedStatement preparedStatementVisits = connection.prepareStatement(DELETE_VISIT)
         ) {
 
-            preparedStatementSessions.setString(1, logfile.getLogFile());
+            preparedStatementSessions.setString(1, logfile.getLogfile());
             preparedStatementSessions.executeUpdate();
-            preparedStatementVisits.setString(1, logfile.getLogFile());
+            preparedStatementVisits.setString(1, logfile.getLogfile());
             preparedStatementVisits.executeUpdate();
 
-            LOG.log(Level.DEBUG, "Successfully deleted all interactions in " + logfile);
+            LOG.log(Level.DEBUG, "Successfully deleted all interactions from " + logfile);
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to delete all interactions in " + logfile, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -109,9 +110,9 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
                 PreparedStatement preparedStatementVisits = connection.prepareStatement(DELETE_VISIT)
         ) {
             for (Logfile logfile : logfiles) {
-                preparedStatementSessions.setString(1, logfile.getLogFile());
+                preparedStatementSessions.setString(1, logfile.getLogfile());
                 preparedStatementSessions.executeUpdate();
-                preparedStatementVisits.setString(1, logfile.getLogFile());
+                preparedStatementVisits.setString(1, logfile.getLogfile());
                 preparedStatementVisits.executeUpdate();
             }
 
@@ -119,8 +120,8 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to delete interactions " , e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -137,4 +138,5 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
                 .map(Visit.class::cast)
                 .collect(Collectors.toList());
     }
+
 }

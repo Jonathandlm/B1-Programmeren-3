@@ -2,7 +2,7 @@ package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.*;
 import be.leerstad.eindwerk.model.Visit;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -11,7 +11,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
@@ -56,8 +58,8 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get visits ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return visits;
@@ -87,8 +89,8 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statements ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert " + visit, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -117,8 +119,8 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert visits " , e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -137,8 +139,8 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to delete visits in " + logfile, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -158,9 +160,31 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to delete visits " , e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
+    
+    @Override
+    public Map<String, Visit> fillCache() {
+        Map<String,Visit> cache = new HashMap<>();
 
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_VISITS);
+                ResultSet resultSet = preparedStatement.executeQuery()
+        ) {
+
+            while (resultSet.next()) {
+                cache.put(resultSet.getString("VisitID"), MySqlUtil.getVisitResult(resultSet));
+            }
+
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_VISITS, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
+        }
+
+        return cache;
+    }
 }

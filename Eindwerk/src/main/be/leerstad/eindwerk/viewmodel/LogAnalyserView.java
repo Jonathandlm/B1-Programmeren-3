@@ -1,22 +1,21 @@
 package be.leerstad.eindwerk.viewmodel;
 
-import be.leerstad.eindwerk.model.LogAnalyser;
-import be.leerstad.eindwerk.model.Logfile;
+import be.leerstad.eindwerk.business.cache.LogfileCache;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LogAnalyserView {
 
-    private List<Logfile> logfiles;
+    private LogfileCache logfileCache;
     private List<LogfileView> logfileViews;
 
     private static LogAnalyserView instance;
 
     private LogAnalyserView() {
-        this.logfiles = LogAnalyser.getInstance().getLogfileCache();
+        this.logfileCache = LogfileCache.getInstance();
         this.logfileViews = new ArrayList<>();
-        logfiles.forEach(logfile -> logfileViews.add(new LogfileView(logfile)));
+        logfileCache.forEach(logfile -> logfileViews.add(new LogfileView(logfile)));
     }
 
     public synchronized static LogAnalyserView getInstance() {
@@ -28,8 +27,7 @@ public class LogAnalyserView {
 
     public List<LogfileView> getAllLogfileViews() {
         logfileViews.clear();
-        this.logfiles = LogAnalyser.getInstance().getLogfileCache();
-        logfiles.forEach(logfile -> logfileViews.add(new LogfileView(logfile)));
+        logfileCache.forEach(logfile -> logfileViews.add(new LogfileView(logfile)));
         return logfileViews;
     }
 }

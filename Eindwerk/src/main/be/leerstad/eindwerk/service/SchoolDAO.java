@@ -3,6 +3,7 @@ package be.leerstad.eindwerk.service;
 import be.leerstad.eindwerk.model.School;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SchoolDAO {
 
@@ -12,6 +13,7 @@ public interface SchoolDAO {
 
     void insertSchool(School school);
 
-    void insertSchools(List<School> schools);
+    void deleteSchool(String ipAddress);
 
+    Map<String,School> fillCache();
 }

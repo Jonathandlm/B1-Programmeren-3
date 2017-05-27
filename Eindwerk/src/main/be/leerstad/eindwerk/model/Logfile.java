@@ -1,38 +1,38 @@
 package be.leerstad.eindwerk.model;
 
-import be.leerstad.eindwerk.utils.DateUtil;
+import be.leerstad.eindwerk.util.DateUtil;
 
 import java.time.LocalDate;
 
 public class Logfile {
-    private String logFile;
-    private LocalDate logFileDate;
+    private String logfile;
+    private LocalDate logfileDate;
 
     public Logfile(){
         this("", LocalDate.now());
     }
 
-    public Logfile(String logFile){
-        this(logFile, DateUtil.parseLogfileDate(logFile));
+    public Logfile(String logfile){
+        this(logfile, DateUtil.parseLogfileDate(logfile));
     }
 
-    public Logfile(String logFile, LocalDate logFileDate){
-        this.logFile = logFile;
-        this.logFileDate = logFileDate;
+    public Logfile(String logfile, LocalDate logfileDate){
+        this.logfile = logfile;
+        this.logfileDate = logfileDate;
     }
 
-    public String getLogFile() {
-        return logFile;
+    public String getLogfile() {
+        return logfile;
     }
-    public void setLogFile(String logFile) {
-        this.logFile = logFile;
+    public void setLogfile(String logfile) {
+        this.logfile = logfile;
     }
 
-    public LocalDate getLogFileDate() {
-        return logFileDate;
+    public LocalDate getLogfileDate() {
+        return logfileDate;
     }
-    public void setLogFileDate(LocalDate logFileDate) {
-        this.logFileDate = logFileDate;
+    public void setLogfileDate(LocalDate logfileDate) {
+        this.logfileDate = logfileDate;
     }
 
     @Override
@@ -40,18 +40,18 @@ public class Logfile {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Logfile logfile = (Logfile) o;
+        Logfile other = (Logfile) o;
 
-        return logFile.equals(logfile.logFile);
+        return logfile.equals(other.logfile);
     }
 
     @Override
     public int hashCode() {
-        return logFile.hashCode();
+        return logfile.hashCode();
     }
 
     @Override
     public String toString() {
-        return "Filename: " + logFile;
+        return "Logfile: " + logfile;
     }
 }

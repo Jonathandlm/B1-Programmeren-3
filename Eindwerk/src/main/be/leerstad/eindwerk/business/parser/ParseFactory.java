@@ -1,6 +1,6 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
-import be.leerstad.eindwerk.utils.DateUtil;
+import be.leerstad.eindwerk.util.DateUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 

@@ -16,23 +16,11 @@ public abstract class Interaction<T extends Interaction> {
     private Integer numberOfRequests;
 
     public Interaction() {
-        this.id = UUID.randomUUID();
-        this.logfile = new Logfile();
-        this.ipAddress = "";
-        this.time = LocalTime.now();
-        this.totalTimeInSec = 1;
-        this.transferredBytes = 0;
-        this.numberOfRequests = 1;
+        this(new Logfile(), "", LocalTime.now(), 0);
     }
 
     public Interaction(Logfile logfile, String ipAddress, LocalTime time, Integer transferredBytes) {
-        this.id = UUID.randomUUID();
-        this.logfile = logfile;
-        this.ipAddress = ipAddress;
-        this.time = time;
-        this.totalTimeInSec = 1;
-        this.transferredBytes = transferredBytes;
-        this.numberOfRequests = 1;
+        this(UUID.randomUUID().toString(), logfile, ipAddress, time, 1, transferredBytes, 1);
     }
 
     public Interaction(String id, Logfile logfile, String ipAddress, LocalTime time, Integer totalTimeInSec,

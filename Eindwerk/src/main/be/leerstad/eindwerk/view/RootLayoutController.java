@@ -1,14 +1,16 @@
 package be.leerstad.eindwerk.view;
 
 import be.leerstad.eindwerk.App;
-import be.leerstad.eindwerk.business.ParseFactory;
-import be.leerstad.eindwerk.business.Parser;
+import be.leerstad.eindwerk.business.cache.LogfileCache;
+import be.leerstad.eindwerk.business.parser.ParseFactory;
+import be.leerstad.eindwerk.business.parser.Parser;
 import be.leerstad.eindwerk.model.Interaction;
-import be.leerstad.eindwerk.model.LogAnalyser;
 import be.leerstad.eindwerk.service.InteractionDAOImpl;
 import be.leerstad.eindwerk.service.LogAnalyserDAOImpl;
+import be.leerstad.eindwerk.util.PropertyUtil;
 import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
 import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
@@ -24,10 +26,11 @@ import java.util.Optional;
 
 public class RootLayoutController {
 
-    public StatusBar statusBar;
     private App app;
     private LogAnalyserView logAnalyserView;
-    private LogAnalyser logAnalyser;
+
+    @FXML
+    private StatusBar statusBar;
 
     public void setApp(App app) {
         this.app = app;
@@ -37,39 +40,41 @@ public class RootLayoutController {
         this.logAnalyserView = logAnalyserView;
     }
 
-    // TODO
+    @FXML
+    private void initialize() {
+
+    }
+
     public void openFile() {
-        FileChooser chooser = new FileChooser();
-        chooser.setTitle("Open file(s)");
-        chooser.setInitialDirectory(new File("input"));
-        chooser.getExtensionFilters().addAll(
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open file(s)");
+        fileChooser.setInitialDirectory(PropertyUtil.getFileLocation("INPUT_FILE_LOCATION"));
+        fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("All files", "*.*"),
                 new FileChooser.ExtensionFilter("Sessions", "*.log"),
                 new FileChooser.ExtensionFilter("Visits", "*.txt")
         );
-        List<File> files = chooser.showOpenMultipleDialog(statusBar.getScene().getWindow());
+        List<File> files = fileChooser.showOpenMultipleDialog(app.getPrimaryStage().getScene().getWindow());
         if (files != null) {
             InteractionDAOImpl.getInstance().insertInteractions(parse(files));
-            LogAnalyser.getInstance().refreshCaches();
+            //LogAnalyser.getInstance().refreshCaches();
             statusBar.setText("File(s) successfully opened!");
         }
     }
 
-    // TODO
     public void openDirectory() {
-        DirectoryChooser chooser = new DirectoryChooser();
-        chooser.setTitle("Open directory");
-        chooser.setInitialDirectory(new File("input"));
-        File dir = chooser.showDialog(statusBar.getScene().getWindow());
-        File[] files = dir.listFiles();
-        if (files != null) {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Open directory");
+        directoryChooser.setInitialDirectory(PropertyUtil.getFileLocation("INPUT_DIRECTORY_LOCATION"));
+        File directory = directoryChooser.showDialog(app.getPrimaryStage().getScene().getWindow());
+        if (directory != null) {
+            File[] files = directory.listFiles();
             InteractionDAOImpl.getInstance().insertInteractions(parse(Arrays.asList(files)));
-            LogAnalyser.getInstance().refreshCaches();
+            //LogAnalyser.getInstance().refreshCaches();
             statusBar.setText("Directory successfully opened!");
         }
     }
 
-    // TODO
     public void clearDatabase() {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Confirm clear database");
@@ -97,18 +102,22 @@ public class RootLayoutController {
 
     // TODO
     public void generateReports() {
+        app.showReportChooser();
     }
 
     // TODO
     public void generateStats() {
+        app.showStatistics();
     }
 
     // TODO
     public void openInfo() {
+        app.showInformation();
     }
 
     // TODO
     public void openHelp() {
+        app.showHelp();
     }
 
     private List<Interaction> parse(List<File> files) {
@@ -119,13 +128,13 @@ public class RootLayoutController {
         for (File file : files) {
             fileName = file.getName();
             parser = parseFactory.getType(fileName);
-            if (parser.isDuplicateLogFile(fileName)) {
+            if (LogfileCache.getInstance().containsKey(fileName)) {
                 if (!confirmLogfileUpdate()) continue;
                 else {
                     InteractionDAOImpl.getInstance().deleteInteraction(fileName);
                 }
             }
-            interactions.addAll(parser.parseLogFile(file));
+            interactions.addAll(parser.parseLogfile(file));
         }
         return interactions;
     }
@@ -146,4 +155,5 @@ public class RootLayoutController {
         return result.get() == buttonTypeOk;
 
     }
+
 }

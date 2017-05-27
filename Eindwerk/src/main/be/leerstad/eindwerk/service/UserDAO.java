@@ -3,6 +3,7 @@ package be.leerstad.eindwerk.service;
 import be.leerstad.eindwerk.model.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserDAO {
 
@@ -12,6 +13,7 @@ public interface UserDAO {
 
     void insertUser(User user);
 
-    void insertUsers(List<User> users);
+    void deleteUser(String userId);
 
+    Map<String,User> fillCache();
 }

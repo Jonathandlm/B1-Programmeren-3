@@ -1,7 +1,9 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
+import be.leerstad.eindwerk.business.cache.SiteCache;
+import be.leerstad.eindwerk.business.cache.UserCache;
 import be.leerstad.eindwerk.model.*;
-import be.leerstad.eindwerk.utils.RegexUtil;
+import be.leerstad.eindwerk.util.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -46,7 +48,7 @@ public class SessionParser extends Parser<Session> {
     }
 
     @Override
-    public List<Session> parseLogFile(File file) {
+    public List<Session> parseLogfile(File file) {
         List<Session> sessions = new ArrayList<>();
         String fileName = file.getName();
         setLogfile(new Logfile(fileName));
@@ -77,19 +79,20 @@ public class SessionParser extends Parser<Session> {
     }
 
     @Override
-    public Session parseLogLine(String logline) {
-        Matcher m = PATTERN.matcher(logline);
+    public Session parseLogLine(String logLine) {
+        Matcher m = PATTERN.matcher(logLine);
         Session session;
 
         if (!m.find()) {
-            LOG.log(Level.ERROR, "Cannot parse logline: " + logline);
+            LOG.log(Level.ERROR, "Cannot parse logline: " + logLine);
             throw new RuntimeException("Error parsing logline");
         }
 
         try {
             session = new Session(getLogfile(), m.group(1), LocalTime.parse(m.group(3)),
-                    new Integer(m.group(5)) + new Integer(m.group(6)), getUserFromCache(m.group(2)),
-                    getSiteFromCache(RegexUtil.getDomainName(m.group(7))));
+                    new Integer(m.group(5)) + new Integer(m.group(6)),
+                    UserCache.getInstance().getUser(m.group(2)),
+                    SiteCache.getInstance().getSite(RegexUtil.getDomainName(m.group(7))));
         } catch (URISyntaxException | NullPointerException e) {
             LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
             session = null;
@@ -97,27 +100,5 @@ public class SessionParser extends Parser<Session> {
 
         return session;
     }
-
-    private User getUserFromCache(String userId) {
-        return LogAnalyser.getInstance().getUserCache().stream()
-                .filter(user -> user.getUserId().equals(userId))
-                .findFirst()
-                .orElse(new User(userId));
-    }
-
-    private Site getSiteFromCache(String url) {
-        List<Site> cache = LogAnalyser.getInstance().getSiteCache();
-        int newId = cache.stream().map(Site::getSiteId).max(Integer::compareTo).orElse(0) + 1;
-        return cache.stream()
-                .filter(site -> site.getSite().equals(url))
-                .findFirst()
-                .orElse(updateSiteCache(new Site(newId, url)));
-    }
-
-    private Site updateSiteCache(Site site) {
-        LogAnalyser.getInstance().getSiteCache().add(site);
-        return site;
-    }
-
 
 }

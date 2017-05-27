@@ -1,5 +1,9 @@
-package be.leerstad.eindwerk.business;
+package be.leerstad.eindwerk.business.parser;
 
+import be.leerstad.eindwerk.business.parser.ParseFactory;
+import be.leerstad.eindwerk.business.parser.Parser;
+import be.leerstad.eindwerk.business.parser.SessionParser;
+import be.leerstad.eindwerk.business.parser.VisitParser;
 import org.junit.Before;
 import org.junit.Test;
 

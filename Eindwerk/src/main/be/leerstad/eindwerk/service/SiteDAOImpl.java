@@ -1,7 +1,7 @@
 package be.leerstad.eindwerk.service;
 
 import be.leerstad.eindwerk.model.Site;
-import be.leerstad.eindwerk.utils.MySqlUtil;
+import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -10,7 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
@@ -47,8 +49,8 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_SITES, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get sites ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return sites;
@@ -76,8 +78,8 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_SITE, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to get site with id: " + applicationId, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
 
         return site;
@@ -97,8 +99,8 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_SITE, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert " + site, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
     }
 
@@ -118,9 +120,32 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_SITE, e);
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Unable to insert sites ", e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
         }
+    }
+
+    @Override
+    public Map<Integer,String> fillCache() {
+        Map<Integer,String> cache = new HashMap<>();
+
+        try (
+                Connection connection = getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SITES);
+                ResultSet resultSet = preparedStatement.executeQuery()
+        ) {
+
+            while (resultSet.next()) {
+                cache.put(resultSet.getInt("SiteID"), resultSet.getString("Site"));
+            }
+
+        } catch (SQLException e) {
+            LOG.log(Level.ERROR, "Unable to execute statement " + GET_ALL_SITES, e);
+        } catch (DAOException e) {
+            LOG.log(Level.ERROR, "Unable to get connection ", e);
+        }
+
+        return cache;
     }
 
 }

@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.model;
 
-import be.leerstad.eindwerk.utils.RegexUtil;
+import be.leerstad.eindwerk.util.RegexUtil;
 
 public class School {
     private String ipAddress;
@@ -10,11 +10,11 @@ public class School {
     private String city;
 
     public School() {
-        this("");
+        this("10.110.c.d");
     }
 
     public School(String ipAddress) {
-        this(RegexUtil.getNetworkAddress(ipAddress), null, null, null, null);
+        this(RegexUtil.getNetworkAddress(ipAddress), "UNKNOWN", null, null, null);
     }
 
     public School(String ipAddress, String site, String street, String zip, String city) {
@@ -81,6 +81,6 @@ public class School {
 
     @Override
     public String toString() {
-        return "School{" + site + '}';
+        return "School{" + site + " (" + ipAddress + ")}";
     }
 }

@@ -1,11 +1,14 @@
-package be.leerstad.eindwerk.utils;
+package be.leerstad.eindwerk.util;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,6 +23,11 @@ public class DateUtil {
     private static final Pattern DATE_REGEX_PATTERN = Pattern.compile(DATE_LOGFILE_REGEX);
 
     public static LocalDate parseLogfileDate(String fileName) {
+        if (fileName == null) {
+            LOG.log(Level.ERROR, "Filename is null.");
+            return null;
+        }
+
         Matcher matcher = DATE_REGEX_PATTERN.matcher(fileName);
         if (matcher.find()) {
             String date = matcher.group();
@@ -38,6 +46,11 @@ public class DateUtil {
     }
 
     public static LocalDate parseDate(String fileDate) {
+        if (fileDate == null) {
+            LOG.log(Level.ERROR, "Date is null.");
+            return null;
+        }
+
         try {
             return LocalDate.parse(fileDate, DATE_LOGFILE_FORMATTER);
         } catch (DateTimeParseException e) {
@@ -49,8 +62,15 @@ public class DateUtil {
 
     public static String format(LocalDate date) {
         if (date == null) {
+            LOG.log(Level.ERROR, "Date is null.");
             return null;
         }
         return DATE_GUI_FORMATTER.format(date);
+    }
+
+    public static String today() {
+        Date today = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE d MMM yyyy", new Locale("nl", "BE"));
+        return formatter.format(today);
     }
 }

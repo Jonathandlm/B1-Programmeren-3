@@ -3,6 +3,7 @@ package be.leerstad.eindwerk.service;
 import be.leerstad.eindwerk.model.SiteApplication;
 
 import java.util.List;
+import java.util.Map;
 
 public interface SiteApplicationDAO {
 
@@ -14,4 +15,5 @@ public interface SiteApplicationDAO {
 
     void insertSiteApplications(List<SiteApplication> siteApplications);
 
+    Map<Integer,String> fillCache();
 }
