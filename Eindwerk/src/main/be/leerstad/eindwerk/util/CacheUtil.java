@@ -2,7 +2,6 @@ package be.leerstad.eindwerk.util;
 
 import be.leerstad.eindwerk.business.cache.ICache;
 import be.leerstad.eindwerk.model.Interaction;
-import org.apache.log4j.Logger;
 
 import java.time.Year;
 import java.time.YearMonth;
@@ -11,7 +10,8 @@ import java.util.TreeSet;
 
 public class CacheUtil {
 
-    private static final Logger LOG = Logger.getLogger(CacheUtil.class.getName());
+    private CacheUtil() {
+    }
 
     public static Set<YearMonth> getMonthsFromCache(ICache<?, ? extends Interaction> cache) {
         Set<YearMonth> months = new TreeSet<>();

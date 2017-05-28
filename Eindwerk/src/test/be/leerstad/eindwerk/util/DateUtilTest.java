@@ -17,6 +17,7 @@ import static org.powermock.api.mockito.PowerMockito.whenNew;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(DateUtil.class)
 public class DateUtilTest {
+
     private LocalDate testDate;
 
     @Before

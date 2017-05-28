@@ -20,7 +20,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 @PrepareForTest(Logfile.class)
 public class LogfileTest {
 
-    private String filename1;
+    private String filename;
     private LocalDate mockDate;
     private LocalDate logfileDate;
     private Logfile logfileEmptyConstructor;
@@ -37,10 +37,10 @@ public class LogfileTest {
         when(LocalDate.of(anyInt(), anyInt(), anyInt())).thenReturn(logfileDate);
         when(LocalDate.parse(anyString(), any())).thenReturn(logfileDate);
         
-        filename1 = "ProxyLog_2016-12-06.log";
+        filename = "ProxyLog_2016-12-06.log";
         logfileEmptyConstructor = new Logfile();
-        logfileBasicConstructor = new Logfile(filename1);
-        logfileCompleteConstructor = new Logfile(filename1, logfileDate);
+        logfileBasicConstructor = new Logfile(filename);
+        logfileCompleteConstructor = new Logfile(filename, logfileDate);
     }
 
     @Test
@@ -51,13 +51,13 @@ public class LogfileTest {
 
     @Test
     public void testBasicConstructor() {
-        assertEquals(logfileBasicConstructor.getLogfile(), filename1);
+        assertEquals(logfileBasicConstructor.getLogfile(), filename);
         assertEquals(logfileBasicConstructor.getLogfileDate(), logfileDate);
     }
 
     @Test
     public void testCompleteConstructor() {
-        assertEquals(logfileCompleteConstructor.getLogfile(), filename1);
+        assertEquals(logfileCompleteConstructor.getLogfile(), filename);
         assertEquals(logfileCompleteConstructor.getLogfileDate(), logfileDate);
     }
 
@@ -65,11 +65,21 @@ public class LogfileTest {
     public void testGetLogfile() throws NoSuchFieldException, IllegalAccessException {
         final Field field = logfileEmptyConstructor.getClass().getDeclaredField("logfile");
         field.setAccessible(true);
-        field.set(logfileEmptyConstructor, filename1);
+        field.set(logfileEmptyConstructor, filename);
 
         final String result = logfileEmptyConstructor.getLogfile();
 
-        assertEquals("field wasn't retrieved properly", result, filename1);
+        assertEquals("field wasn't retrieved properly", result, filename);
+    }
+
+    @Test
+    public void testSetLogfile() throws NoSuchFieldException, IllegalAccessException {
+        logfileEmptyConstructor.setLogfile(filename);
+
+        final Field field = logfileEmptyConstructor.getClass().getDeclaredField("logfile");
+        field.setAccessible(true);
+
+        assertEquals("field wasn't set properly", field.get(logfileEmptyConstructor), filename);
     }
 
     @Test
@@ -84,13 +94,23 @@ public class LogfileTest {
     }
 
     @Test
+    public void testSetLogfileDate() throws NoSuchFieldException, IllegalAccessException {
+        logfileEmptyConstructor.setLogfileDate(logfileDate);
+
+        final Field field = logfileEmptyConstructor.getClass().getDeclaredField("logfileDate");
+        field.setAccessible(true);
+
+        assertEquals("field wasn't set properly", field.get(logfileEmptyConstructor), logfileDate);
+    }
+
+    @Test
     public void testEquals() {
         Logfile logfileEmptyConstructor2 = new Logfile();
         Logfile logfileEmptyConstructor3 = new Logfile();
-        Logfile logfileBasicConstructor2 = new Logfile(filename1);
-        Logfile logfileBasicConstructor3 = new Logfile(filename1);
-        Logfile logfileCompleteConstructor2 = new Logfile(filename1, logfileDate);
-        Logfile logfileCompleteConstructor3 = new Logfile(filename1, logfileDate);
+        Logfile logfileBasicConstructor2 = new Logfile(filename);
+        Logfile logfileBasicConstructor3 = new Logfile(filename);
+        Logfile logfileCompleteConstructor2 = new Logfile(filename, logfileDate);
+        Logfile logfileCompleteConstructor3 = new Logfile(filename, logfileDate);
 
         // Rule 1: reflexive
         assertTrue(logfileEmptyConstructor.equals(logfileEmptyConstructor));
@@ -127,25 +147,41 @@ public class LogfileTest {
         assertFalse(logfileEmptyConstructor.equals("a string"));
         assertFalse(logfileBasicConstructor.equals("a string"));
         assertFalse(logfileCompleteConstructor.equals("a string"));
+
+        // Changing logfile should change equals
+        logfileEmptyConstructor2.setLogfile(filename);
+        assertFalse(logfileEmptyConstructor.equals(logfileEmptyConstructor2));
     }
 
     @Test
     public void testHashCode() {
         Logfile logfileEmptyConstructor2 = new Logfile();
+        Logfile logfileEmptyConstructor3 = new Logfile();
         
         assertEquals(logfileEmptyConstructor.hashCode(), logfileEmptyConstructor.hashCode());
         assertTrue(logfileEmptyConstructor.equals(logfileEmptyConstructor2));
         assertEquals(logfileEmptyConstructor.hashCode(), logfileEmptyConstructor2.hashCode());
+        assertEquals(logfileEmptyConstructor.hashCode(), logfileEmptyConstructor3.hashCode());
         assertNotEquals(logfileEmptyConstructor.hashCode(), logfileBasicConstructor.hashCode());
+
+        // Changing Date shouldn't change hashcode
+        logfileEmptyConstructor2.setLogfileDate(logfileDate);
+        assertEquals(logfileEmptyConstructor.hashCode(), logfileEmptyConstructor2.hashCode());
+        assertNotEquals(logfileEmptyConstructor2.hashCode(), logfileBasicConstructor.hashCode());
+
+        // Changing filename should change hashcode
+        logfileEmptyConstructor3.setLogfile(filename);
+        assertNotEquals(logfileEmptyConstructor.hashCode(), logfileEmptyConstructor3.hashCode());
+        assertEquals(logfileEmptyConstructor3.hashCode(), logfileBasicConstructor.hashCode());
     }
 
     @Test
     public void testToString() {
         assertEquals(logfileEmptyConstructor.toString(), "");
         assertEquals(logfileEmptyConstructor.toString(), logfileEmptyConstructor.getLogfile());
-        assertEquals(logfileBasicConstructor.toString(), filename1);
+        assertEquals(logfileBasicConstructor.toString(), filename);
         assertEquals(logfileBasicConstructor.toString(), logfileBasicConstructor.getLogfile());
-        assertEquals(logfileCompleteConstructor.toString(), filename1);
+        assertEquals(logfileCompleteConstructor.toString(), filename);
         assertEquals(logfileCompleteConstructor.toString(), logfileCompleteConstructor.getLogfile());
     }
 

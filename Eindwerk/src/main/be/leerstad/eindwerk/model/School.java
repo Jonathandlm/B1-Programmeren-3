@@ -14,11 +14,11 @@ public class School {
     }
 
     public School(String ipAddress) {
-        this(RegexUtil.getNetworkAddress(ipAddress), "UNKNOWN", null, null, null);
+        this(ipAddress, "UNKNOWN", null, null, null);
     }
 
     public School(String ipAddress, String site, String street, String zip, String city) {
-        this.ipAddress = ipAddress;
+        this.ipAddress = RegexUtil.getNetworkAddress(ipAddress);
         this.site = site;
         this.street = street;
         this.zip = zip;
