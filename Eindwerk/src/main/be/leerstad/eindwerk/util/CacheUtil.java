@@ -8,8 +8,7 @@ import java.time.YearMonth;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class CacheUtil {
-
+public final class CacheUtil {
     private CacheUtil() {
     }
 

@@ -19,6 +19,7 @@ public class UserCacheTest {
     private User testUser;
     private String userId1;
     private String userId2;
+    private int userCount;
 
     @Before
     public void resetSingleton() throws NoSuchFieldException, IllegalAccessException {
@@ -35,12 +36,16 @@ public class UserCacheTest {
         user1 = new User(userId1);
         user2 = new User(userId2);  // New user
         user3 = new User();         // New user
+        userCount = UserDAOImpl.getInstance().getUsers().size();
     }
 
     @After
     public void tearDown() {
         if (UserCache.getInstance().containsKey(userId2)) {
             UserDAOImpl.getInstance().deleteUser(userId2);
+        }
+        if (UserCache.getInstance().containsKey("")) {
+            UserDAOImpl.getInstance().deleteUser("");
         }
     }
 
@@ -122,7 +127,7 @@ public class UserCacheTest {
         UserCache userCache = UserCache.getInstance();
         Collection<User> users = userCache.values();
         assertNotNull(users);
-        assertEquals(users.size(), 207);
+        assertEquals(users.size(), userCount);
 
         userCache.put(userId1, user1);
         userCache.put(userId2, user2);
@@ -130,7 +135,7 @@ public class UserCacheTest {
 
         users = userCache.values();
         assertNotNull(users);
-        assertEquals(users.size(), 209);
+        assertEquals(users.size(), userCount + 2);
         assertTrue(users.contains(user1));
         assertTrue(users.contains(user2));
         assertTrue(users.contains(user3));
@@ -177,6 +182,9 @@ public class UserCacheTest {
         // The put method overwrites the previous value associated with the given key.
         userCache.put(userId1, user2);
         assertEquals(userCache.size(), 3);
+
+        userCache.fill();
+        assertEquals(userCache.size(), userCount);
     }
 
     @Test
@@ -196,19 +204,19 @@ public class UserCacheTest {
         assertEquals(userCache.size(), 0);
 
         userCache.fill();
-        assertEquals(userCache.size(), 207);
+        assertEquals(userCache.size(), userCount);
 
         // Insert a user in database
         UserDAOImpl.getInstance().insertUser(user2);
         userCache.fill();
-        assertEquals(userCache.size(), 208);
+        assertEquals(userCache.size(), userCount + 1);
         assertTrue(userCache.containsValue(user1));
         assertTrue(userCache.containsValue(user2));
         assertFalse(userCache.containsValue(user3));
 
         // Filling the cache again with the same data, gives the same result
         userCache.fill();
-        assertEquals(userCache.size(), 208);
+        assertEquals(userCache.size(), userCount + 1);
         assertTrue(userCache.containsValue(user1));
         assertTrue(userCache.containsValue(user2));
         assertFalse(userCache.containsValue(user3));

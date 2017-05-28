@@ -12,7 +12,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class DateUtil {
+public final class DateUtil {
 
     private static final Logger LOG = Logger.getLogger(DateUtil.class.getName());
     private static final String DATE_LOGFILE_PATTERN = "yyyy-MM-dd";
@@ -21,6 +21,9 @@ public class DateUtil {
     private static final DateTimeFormatter DATE_GUI_FORMATTER = DateTimeFormatter.ofPattern(DATE_GUI_PATTERN);
     private static final String DATE_LOGFILE_REGEX = "(\\d{4}-\\d{2}-\\d{2})";
     private static final Pattern DATE_REGEX_PATTERN = Pattern.compile(DATE_LOGFILE_REGEX);
+
+    private DateUtil() {
+    }
 
     public static LocalDate parseLogfileDate(String fileName) {
         if (fileName == null) {

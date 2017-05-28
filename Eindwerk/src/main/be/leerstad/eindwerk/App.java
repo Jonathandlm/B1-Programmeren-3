@@ -66,11 +66,11 @@ public class App extends Application {
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(App.class.getResource("/be/leerstad/eindwerk/view/RootLayout.fxml"));
+            loader.setLocation(getClass().getResource("/be/leerstad/eindwerk/view/RootLayout.fxml"));
             rootLayout = loader.load();
 
             Scene scene = new Scene(rootLayout);
-            scene.getStylesheets().add(getClass().getResource("/loganalyser.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("/css/loganalyser.css").toExternalForm());
 
             primaryStage.setScene(scene);
             primaryStage.getIcons().add(new Image("/logo.png"));

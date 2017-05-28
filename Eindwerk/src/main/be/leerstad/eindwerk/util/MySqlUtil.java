@@ -4,7 +4,9 @@ import be.leerstad.eindwerk.model.*;
 
 import java.sql.*;
 
-public class MySqlUtil {
+public final class MySqlUtil {
+    private MySqlUtil() {
+    }
 
     public static void setPreparedLogfileStatement(Logfile logfile, PreparedStatement preparedStatement) throws SQLException {
         preparedStatement.setString(1, logfile.getLogfile());

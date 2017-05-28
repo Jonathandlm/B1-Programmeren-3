@@ -55,7 +55,7 @@ public class VisitTest {
         when(UUID.fromString(anyString())).thenReturn(specificUuid);
         when(UUID.fromString("66d4f844-f4f4-4d90-bd4b-dcdcf16827be")).thenReturn(mockUuid);
 
-        logfile = new Logfile("ProxyLog_2016-11-04.log");
+        logfile = new Logfile("localhost_access_log.2016-12-06.txt");
         ipAddress = "192.168.1.1";
         totalTimeInSec = 60;
         transferredBytes = 123456;

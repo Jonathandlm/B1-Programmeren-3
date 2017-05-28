@@ -33,32 +33,26 @@ import java.util.Map;
 public class Printer {
 
     private static final Logger LOG = Logger.getLogger(Printer.class.getName());
-    private static final String TEMPLATE_FILENAME = PropertyUtil.getFileLocation("PDF_TEMPLATE_LOCATION").getName();
-
-    private PdfDocument sourcePdfDocument;
-    private PdfDocument pdfDoc;
-    private Document doc;
-    private Rectangle bodyRectangle;
-    private Chart chart;
+    private static final String TEMPLATE_FILENAME = PropertyUtil.getFileLocation("PDF_TEMPLATE_LOCATION").getPath();
 
     public void createPdfFromTemplate(String destination, String title, Map<String, ?> data) throws Exception {
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-        sourcePdfDocument = new PdfDocument(new PdfReader(TEMPLATE_FILENAME), new PdfWriter(baos));
+        PdfDocument sourcePdfDocument = new PdfDocument(new PdfReader(TEMPLATE_FILENAME), new PdfWriter(baos));
 
         PdfAcroForm pdfAcroForm = PdfAcroForm.getAcroForm(sourcePdfDocument, true);
         Map<String, PdfFormField> pdfFormFieldMap = pdfAcroForm.getFormFields();
         pdfFormFieldMap.get("title").setValue(title).setJustification(PdfFormField.ALIGN_CENTER);
         pdfFormFieldMap.get("date").setValue(DateUtil.today()).setJustification(PdfFormField.ALIGN_RIGHT);
-        bodyRectangle = pdfAcroForm.getField("body").getWidgets().get(0).getRectangle().toRectangle();
+        Rectangle bodyRectangle = pdfAcroForm.getField("body").getWidgets().get(0).getRectangle().toRectangle();
         pdfAcroForm.flattenFields();
 
         sourcePdfDocument.close();
         sourcePdfDocument = new PdfDocument(new PdfReader(new ByteArrayInputStream(baos.toByteArray())));
 
-        pdfDoc = new PdfDocument(new PdfWriter(destination));
-        doc = new Document(pdfDoc);
+        PdfDocument pdfDoc = new PdfDocument(new PdfWriter(destination));
+        Document doc = new Document(pdfDoc);
 
         pdfDoc.addEventHandler(PdfDocumentEvent.END_PAGE, new Pagination(sourcePdfDocument.getFirstPage().copyAsFormXObject(pdfDoc)));
 

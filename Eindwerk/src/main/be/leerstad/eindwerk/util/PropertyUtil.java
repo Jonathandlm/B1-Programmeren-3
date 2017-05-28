@@ -12,14 +12,15 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class PropertyUtil {
+public final class PropertyUtil {
 
     private static final Logger LOG = Logger.getLogger(PropertyUtil.class.getName());
 
+    private PropertyUtil() {
+    }
+
     public static Connection getConnectionProperties() throws DAOException {
-
         Properties properties = new Properties();
-
         Connection connection;
 
         try {
@@ -49,35 +50,16 @@ public class PropertyUtil {
     }
 
     public static File getFileLocation(String propertyKey) {
-
         Properties properties = new Properties();
-
-        File file;
 
         try {
             properties.load(PropertyUtil.class.getResourceAsStream("/config.properties"));
-            file = new File(properties.getProperty(propertyKey));
-
+            return new File(properties.getProperty(propertyKey));
         } catch (IOException e) {
-            file = new File(System.getProperty("user.home"));
             LOG.log(Level.ERROR, "Unable to load properties file: " + e);
+        } catch (NullPointerException e) {
+            LOG.log(Level.ERROR, "Unable to find property key: " + propertyKey);
         }
-
-        return file;
-
-    }
-
-    public static Properties getProperties() {
-
-        Properties properties = new Properties();
-
-        try {
-            properties.load(PropertyUtil.class.getResourceAsStream("/config.properties"));
-
-        } catch (IOException e) {
-            LOG.log(Level.ERROR, "Unable to find properties file: " + e);
-        }
-
-        return properties;
+        return new File(System.getProperty("user.home"));
     }
 }

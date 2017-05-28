@@ -10,9 +10,12 @@ import java.nio.file.Paths;
 
 import static java.util.regex.Pattern.quote;
 
-public class RegexUtil {
+public final class RegexUtil {
 
     private static final Logger LOG = Logger.getLogger(RegexUtil.class.getName());
+
+    private RegexUtil() {
+    }
 
     public static String getDomainName(String url) throws URISyntaxException {
         URI uri = new URI(url);
@@ -21,19 +24,18 @@ public class RegexUtil {
     }
 
     public static String getApplication(String serverPath) {
-        // Parameters after '?' are dropped with '?'
-        Path path = Paths.get(serverPath.split("\\?")[0]);
         try {
+            // Parameters after '?' are dropped with '?'
+            Path path = Paths.get(serverPath.split("\\?")[0]);
             // If first part is a filename or empty String, return 'root', otherwise return first directory
             String app = path.getName(0).toString();
             return (app.contains(".") || app.equals("")) ? "root" : app;
-        } catch (IllegalArgumentException iae) {
-            // If no first part, return 'root'
-            return "root";
-        } catch (Exception e) {
-            LOG.log(Level.ERROR, "Cannot resolve site application from " + serverPath);
+        } catch (IllegalArgumentException e) {
+            return "root"; // If no first part, return 'root'
+        } catch (NullPointerException e) {
+            LOG.log(Level.ERROR, "Cannot resolve site application from null");
+            return null;
         }
-        return null;
     }
 
     public static String getNetworkAddress(String ipAddress) {
@@ -48,10 +50,16 @@ public class RegexUtil {
             return null;
         }
 
-        for (String octet : octets) {
-            if (octet.equals("c") || octet.equals("d")) continue;
-            short sh = Short.parseShort(octet);
-            if (sh > 255 || sh < 0) {
+        for (int i = 0; i < 4; i++) {
+            if (i == 2 && octets[i].equals("c")) continue;
+            if (i == 3 && octets[i].equals("d")) continue;
+            try {
+                short sh = Short.parseShort(octets[i]);
+                if (sh > 255 || sh < 0) {
+                    LOG.log(Level.ERROR, "Invalid IP Address: " + ipAddress);
+                    return null;
+                }
+            } catch (NumberFormatException e) {
                 LOG.log(Level.ERROR, "Invalid IP Address: " + ipAddress);
                 return null;
             }
@@ -69,5 +77,4 @@ public class RegexUtil {
 
         return stringBuilder.toString();
     }
-
 }

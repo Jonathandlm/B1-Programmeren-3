@@ -24,7 +24,7 @@ public class DateUtilTest {
     public void setUp() {
         testDate = LocalDate.of(2017,5,30);
     }
-    
+
     @Test
     public void testParseLogfileDate() {
         assertNull(DateUtil.parseLogfileDate(null));
@@ -55,7 +55,6 @@ public class DateUtilTest {
         assertNull(DateUtil.parseDate("text2017-05-30"));
         assertNull(DateUtil.parseDate("2017-05-30text"));
         assertEquals(DateUtil.parseDate("2017-05-30"), testDate);
-
     }
 
     @Test
