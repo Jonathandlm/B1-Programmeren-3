@@ -1,6 +1,5 @@
-package be.leerstad.eindwerk;
+package be.leerstad.eindwerk.util;
 
-import be.leerstad.eindwerk.util.DateUtilTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

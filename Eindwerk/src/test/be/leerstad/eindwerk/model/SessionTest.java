@@ -19,8 +19,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(Session.class)
 public class SessionTest {
-    
-    private LocalTime mockTime;
+
     private Session sessionEmptyConstructor;
     private Session sessionBasicConstructor;
     private Session sessionCompleteConstructor;
@@ -28,13 +27,13 @@ public class SessionTest {
     private UUID specificUuid;
     private Logfile logfile;
     private String ipAddress;
+    private LocalTime mockTime;
     private LocalTime time;
     private Integer totalTimeInSec;
     private Integer transferredBytes;
     private Integer numberOfRequests;
     private User user;
     private Site site;
-    private Field timeoutField;
     private int timeout;
 
     @Before
@@ -66,7 +65,7 @@ public class SessionTest {
         sessionCompleteConstructor = new Session(specificUuid.toString(), logfile, ipAddress, time, totalTimeInSec,
                 transferredBytes, numberOfRequests, user, site);
 
-        timeoutField = sessionBasicConstructor.getClass().getSuperclass().getDeclaredField("TIMEOUT_IN_MINUTES");
+        Field timeoutField = sessionBasicConstructor.getClass().getSuperclass().getDeclaredField("TIMEOUT_IN_MINUTES");
         timeoutField.setAccessible(true);
         timeout = timeoutField.getInt(sessionBasicConstructor);
     }
@@ -415,8 +414,8 @@ public class SessionTest {
     @Test
     public void testToString() {
         String sessionCompleteConstructorToString = "Interaction{id='" + specificUuid +
-                "', logfile=" + logfile +
-                ", ipAddress='" + ipAddress +
+                "', logfile='" + logfile +
+                "', ipAddress='" + ipAddress +
                 "', time=" + time +
                 ", totalTimeInSec=" + totalTimeInSec +
                 ", transferredBytes=" + transferredBytes +

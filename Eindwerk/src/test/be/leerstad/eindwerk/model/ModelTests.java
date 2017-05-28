@@ -1,7 +1,5 @@
-package be.leerstad.eindwerk;
+package be.leerstad.eindwerk.model;
 
-import be.leerstad.eindwerk.model.SessionTest;
-import be.leerstad.eindwerk.model.VisitTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

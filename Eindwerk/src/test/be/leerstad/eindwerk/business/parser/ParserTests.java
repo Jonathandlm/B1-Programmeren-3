@@ -1,8 +1,5 @@
-package be.leerstad.eindwerk;
+package be.leerstad.eindwerk.business.parser;
 
-import be.leerstad.eindwerk.business.parser.ParseFactoryTest;
-import be.leerstad.eindwerk.business.parser.SessionParserTest;
-import be.leerstad.eindwerk.business.parser.VisitParserTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

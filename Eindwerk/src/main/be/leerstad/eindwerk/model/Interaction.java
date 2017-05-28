@@ -108,10 +108,10 @@ public abstract class Interaction<T extends Interaction> {
     @Override
     public String toString() {
         return "Interaction{" +
-                "id='" + id + '\'' +
-                ", logfile=" + logfile +
-                ", ipAddress='" + ipAddress + '\'' +
-                ", time=" + time +
+                "id='" + id +
+                "', logfile='" + logfile +
+                "', ipAddress='" + ipAddress +
+                "', time=" + time +
                 ", totalTimeInSec=" + totalTimeInSec +
                 ", transferredBytes=" + transferredBytes +
                 ", numberOfRequests=" + numberOfRequests +

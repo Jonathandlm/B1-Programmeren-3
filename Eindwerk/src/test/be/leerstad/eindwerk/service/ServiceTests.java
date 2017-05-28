@@ -1,7 +1,5 @@
-package be.leerstad.eindwerk;
+package be.leerstad.eindwerk.service;
 
-import be.leerstad.eindwerk.service.BaseDAOTest;
-import be.leerstad.eindwerk.service.DAOExceptionTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

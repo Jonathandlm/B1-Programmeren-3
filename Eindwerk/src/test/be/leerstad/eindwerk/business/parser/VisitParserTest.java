@@ -32,7 +32,7 @@ public class VisitParserTest {
         assertEquals(visit.getNumberOfRequests(), Integer.valueOf(1));
         assertEquals(visit.getUser(), "-");
         assertEquals(visit.getSiteApplication().getApplication(), "ELO");
-        assertEquals(visit.getSchool(), "10.120.c.d");
+        assertEquals(visit.getSchool().getIpAddress(), "10.120.c.d");
     }
 
     //TODO: complete test

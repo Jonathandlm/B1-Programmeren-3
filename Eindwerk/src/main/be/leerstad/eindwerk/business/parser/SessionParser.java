@@ -2,7 +2,8 @@ package be.leerstad.eindwerk.business.parser;
 
 import be.leerstad.eindwerk.business.cache.SiteCache;
 import be.leerstad.eindwerk.business.cache.UserCache;
-import be.leerstad.eindwerk.model.*;
+import be.leerstad.eindwerk.model.Logfile;
+import be.leerstad.eindwerk.model.Session;
 import be.leerstad.eindwerk.util.RegexUtil;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;

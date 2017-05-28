@@ -11,7 +11,6 @@ import java.time.LocalTime;
 import java.util.UUID;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertNotEquals;
 import static org.mockito.Matchers.anyInt;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
@@ -447,8 +446,8 @@ public class VisitTest {
     @Test
     public void testToString() {
         String visitCompleteConstructorToString = "Interaction{id='" + specificUuid +
-                "', logfile=" + logfile +
-                ", ipAddress='" + ipAddress +
+                "', logfile='" + logfile +
+                "', ipAddress='" + ipAddress +
                 "', time=" + time +
                 ", totalTimeInSec=" + totalTimeInSec +
                 ", transferredBytes=" + transferredBytes +

@@ -1,6 +1,6 @@
 package be.leerstad.eindwerk.service;
 
-import be.leerstad.eindwerk.model.*;
+import be.leerstad.eindwerk.model.Logfile;
 import be.leerstad.eindwerk.model.Visit;
 import be.leerstad.eindwerk.util.MySqlUtil;
 import org.apache.log4j.Level;

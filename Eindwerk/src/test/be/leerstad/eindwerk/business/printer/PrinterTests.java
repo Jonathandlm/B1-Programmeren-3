@@ -1,6 +1,5 @@
-package be.leerstad.eindwerk;
+package be.leerstad.eindwerk.business.printer;
 
-import be.leerstad.eindwerk.business.printer.PrinterTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

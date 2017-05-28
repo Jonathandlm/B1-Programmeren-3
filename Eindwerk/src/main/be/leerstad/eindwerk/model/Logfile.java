@@ -24,15 +24,9 @@ public class Logfile {
     public String getLogfile() {
         return logfile;
     }
-    public void setLogfile(String logfile) {
-        this.logfile = logfile;
-    }
 
-    public LocalDate getLogfileDate() {
+    public LocalDate getLogfileDate(){
         return logfileDate;
-    }
-    public void setLogfileDate(LocalDate logfileDate) {
-        this.logfileDate = logfileDate;
     }
 
     @Override
@@ -52,6 +46,6 @@ public class Logfile {
 
     @Override
     public String toString() {
-        return "Logfile: " + logfile;
+        return logfile;
     }
 }

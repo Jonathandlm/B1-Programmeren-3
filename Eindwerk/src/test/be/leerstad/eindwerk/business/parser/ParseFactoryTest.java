@@ -1,15 +1,9 @@
 package be.leerstad.eindwerk.business.parser;
 
-import be.leerstad.eindwerk.business.parser.ParseFactory;
-import be.leerstad.eindwerk.business.parser.Parser;
-import be.leerstad.eindwerk.business.parser.SessionParser;
-import be.leerstad.eindwerk.business.parser.VisitParser;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 
 public class ParseFactoryTest {
