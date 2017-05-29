@@ -74,7 +74,7 @@ public class Query {
 
         sessionCache.values().stream().filter(session -> year.equals(Year.from(session.getLogfile().getLogfileDate())))
                 .collect(groupingBy(session -> session.getLogfile().getLogfileDate().getMonth().toString(), summingInt(mapper)))
-                .entrySet().stream().sorted(Map.Entry.comparingByValue(reverseOrder())).limit(10)
+                .entrySet().stream().sorted(Map.Entry.comparingByValue(reverseOrder()))
                 .forEachOrdered(x -> result.put(x.getKey(), x.getValue()));
 
         return result;

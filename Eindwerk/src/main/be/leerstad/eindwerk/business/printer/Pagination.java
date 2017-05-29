@@ -20,7 +20,6 @@ public class Pagination implements IEventHandler {
 
     @Override
     public void handleEvent(Event event) {
-
         PdfDocumentEvent docEvent = (PdfDocumentEvent) event;
         PdfDocument pdfDoc = docEvent.getDocument();
         PdfPage page = docEvent.getPage();
@@ -32,6 +31,5 @@ public class Pagination implements IEventHandler {
         float x = (pageSize.getLeft() + pageSize.getRight()) / 2;
         float y = pageSize.getBottom() + 15;
         canvas.showTextAligned(String.valueOf(pdfDoc.getPageNumber(page)), x, y, TextAlignment.CENTER);
-
     }
 }

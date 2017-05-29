@@ -1,27 +1,36 @@
 package be.leerstad.eindwerk.business.report;
 
-import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
 public class SessionReportTest {
-    @Before
-    public void setUp() {
+
+    @Test
+    public void testGetListName() {
+        assertEquals(SessionReport.USER_BYTES_BY_MONTH.getListName(), "User Bytes By Month");
+        assertEquals(SessionReport.USER_TIME_BY_MONTH.getListName(), "User Time By Month");
     }
 
     @Test
-    public void testGtListName() {
+    public void testGetFileName() {
+        assertEquals(SessionReport.MONTHlY_BYTES_BY_YEAR.getFileName(), "MonthlyBytesByYear");
+        assertEquals(SessionReport.values()[3].getFileName(), "TopSitesByVisits");
     }
 
     @Test
-    public void testGtFileName() {
+    public void testGetDescription() {
+        assertEquals(SessionReport.valueOf("TOP_SITES_BY_TIME").getDescription(),
+                "This report gives an overview of the most visited sites in number of total visit time.");
     }
 
     @Test
-    public void testGtDescription() {
-    }
-
-    @Test
-    public void testGtSelector() {
+    public void testGetSelector() {
+        assertEquals(SessionReport.USER_BYTES_BY_MONTH.getSelector(),"month");
+        assertNull(SessionReport.TOP_SITES_BY_BYTES.getSelector());
+        assertNull(SessionReport.TOP_SITES_BY_TIME.getSelector());
+        assertNull(SessionReport.TOP_SITES_BY_VISITS.getSelector());
     }
 
 }

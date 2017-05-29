@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalTime;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -29,7 +30,7 @@ public class VisitParser extends Parser<Visit> {
                 "(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])) " +                      // Group 1: IP address
                 "(\\S+) " +                                                                // Group 2: username
                 "(\\S+) " +                                                                // Group 3: remote user
-                "\\[[\\w/]+:((?:2[0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]) -?\\d{4}\\] " +  // Group 4: time
+                "\\[[\\w/]+:(\\d{2}:\\d{2}:\\d{2}) -?\\d{4}\\] " +                         // Group 4: time
                 "(?:\\\"\\S+ (\\S*) HTTP\\/\\d\\.\\d\\\") " +                              // Group 5: site-app
                 "(?:\\d{3}) " +                                                            // No group: status
                 "(\\d+|-)";                                                                // Group 6: transferred bytes
@@ -60,34 +61,30 @@ public class VisitParser extends Parser<Visit> {
             LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + visits.size() + " visits.");
 
         } catch (IOException e) {
-            LOG.log(Level.ERROR, "Unable to read " + fileName, e);
+            LOG.log(Level.ERROR, "Unable to read " + e.getMessage());
         }
         return visits;
     }
 
     @Override
-    public Visit parseLogLine(String logline){
-        Matcher m = PATTERN.matcher(logline);
-        Visit visit;
-
+    public Visit parseLogLine(String logLine){
+        Matcher m = PATTERN.matcher(logLine);
         if (!m.find()) {
-            LOG.log(Level.ERROR, "Cannot parse logline: " + logline);
-            throw new RuntimeException("Error parsing logline");
+            LOG.log(Level.ERROR, "Cannot parse logLine: " + logLine);
+            return null;
+        } else {
+            try {
+                return new Visit(getLogfile(), m.group(1), LocalTime.parse(m.group(4)),
+                        (m.group(6).equals("-") ? 0 : new Integer(m.group(6))), m.group(2),
+                        SiteApplicationCache.getInstance().getSiteApplication(RegexUtil.getApplication(m.group(5))),
+                        SchoolCache.getInstance().getSchool(RegexUtil.getNetworkAddress(m.group(1))));
+            } catch (NullPointerException e) {
+                LOG.log(Level.WARN, "Cannot parse school: " + m.group(1));
+                return null;
+            } catch (DateTimeParseException e) {
+                LOG.log(Level.WARN, "Cannot parse time: " + e.getMessage());
+                return null;
+            }
         }
-
-        try {
-            visit = new Visit(getLogfile(), m.group(1), LocalTime.parse(m.group(4)),
-                    (m.group(6).equals("-") ? 0 : new Integer(m.group(6))),
-                    m.group(2),
-                    SiteApplicationCache.getInstance().getSiteApplication(RegexUtil.getApplication(m.group(5))),
-                    SchoolCache.getInstance().getSchool(RegexUtil.getNetworkAddress(m.group(1))));
-
-        } catch (NullPointerException e) {
-            LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
-            visit = null;
-        }
-
-        return visit;
     }
-
 }

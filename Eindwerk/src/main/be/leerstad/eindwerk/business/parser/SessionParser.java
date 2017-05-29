@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.time.LocalTime;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -74,7 +75,7 @@ public class SessionParser extends Parser<Session> {
             LOG.log(Level.DEBUG, "Parsed logfile " + fileName +": " + sessions.size() + " sessions.");
 
         } catch (IOException e) {
-            LOG.log(Level.ERROR, "Unable to read " + fileName, e);
+            LOG.log(Level.ERROR, "Unable to read " + e.getMessage());
         }
         return sessions;
     }
@@ -82,24 +83,22 @@ public class SessionParser extends Parser<Session> {
     @Override
     public Session parseLogLine(String logLine) {
         Matcher m = PATTERN.matcher(logLine);
-        Session session;
-
         if (!m.find()) {
-            LOG.log(Level.ERROR, "Cannot parse logline: " + logLine);
-            throw new RuntimeException("Error parsing logline");
+            LOG.log(Level.WARN, "Cannot parse logline: " + logLine);
+            return null;
+        } else {
+            try {
+                return new Session(getLogfile(), m.group(1), LocalTime.parse(m.group(3)),
+                        new Integer(m.group(5)) + new Integer(m.group(6)),
+                        UserCache.getInstance().getUser(m.group(2)),
+                        SiteCache.getInstance().getSite(RegexUtil.getDomainName(m.group(7))));
+            } catch (URISyntaxException | NullPointerException e) {
+                LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
+                return null;
+            } catch (DateTimeParseException e) {
+                LOG.log(Level.WARN, "Cannot parse time: " + e.getMessage());
+                return null;
+            }
         }
-
-        try {
-            session = new Session(getLogfile(), m.group(1), LocalTime.parse(m.group(3)),
-                    new Integer(m.group(5)) + new Integer(m.group(6)),
-                    UserCache.getInstance().getUser(m.group(2)),
-                    SiteCache.getInstance().getSite(RegexUtil.getDomainName(m.group(7))));
-        } catch (URISyntaxException | NullPointerException e) {
-            LOG.log(Level.WARN, "Cannot parse URL: " + m.group(7));
-            session = null;
-        }
-
-        return session;
     }
-
 }

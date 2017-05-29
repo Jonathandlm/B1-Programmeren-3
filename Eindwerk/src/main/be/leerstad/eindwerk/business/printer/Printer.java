@@ -19,6 +19,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.border.Border;
 import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Image;
+import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.property.HorizontalAlignment;
 import com.itextpdf.layout.property.TextAlignment;
@@ -61,15 +62,26 @@ public class Printer {
         doc.setRenderer(new ColumnDocumentRenderer(doc, new Rectangle[]{bodyRectangle}));
 
         Table table = getData(data);
-
-        doc.add(table);
+        if (table != null) {
+            doc.add(table);
+        } else {
+            LOG.log(Level.ERROR, "Unable to create tables and charts from " + data);
+            doc.add(new Paragraph("NO DATA FOUND").setFontSize(36).setBold().setFontColor(Color.RED)
+                    .setTextAlignment(TextAlignment.CENTER));
+        }
 
         doc.close();
 
     }
 
     private Table getData(Map<String, ?> data) {
-        if (data.values().toArray()[0] instanceof Integer) {
+        Object object;
+        try {
+            object = data.values().toArray()[0];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return null;
+        }
+        if (object instanceof Integer) {
             Color headerColor = new DeviceRgb(230,232,105);
             Color cellColor = new DeviceRgb(247,247,247);
             Table table = new Table(new float[]{3,1});
@@ -87,7 +99,7 @@ public class Printer {
 
             return table;
 
-        } else if (data.values().toArray()[0] instanceof Map) {
+        } else if (object instanceof Map) {
             Color titleColor = new DeviceRgb(0,80,91);
             Table table = new Table(new float[]{1});
             table.setWidthPercent(100);
@@ -114,7 +126,7 @@ public class Printer {
 
             return table;
         }
-        return new Table(new float[]{1});
+        return null;
     }
 
     private Image getChart(Map<String, Number> data) {
