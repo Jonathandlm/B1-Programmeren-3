@@ -17,7 +17,7 @@ public class BaseDAO implements DAO {
             connection = PropertyUtil.getConnectionProperties();
         } catch (Exception e) {
             LOG.log(Level.ERROR, "Unable to create connection: " + e);
-            throw new DAOException();
+            throw new DAOException(e.getMessage());
         }
 
         return connection;

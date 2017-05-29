@@ -41,7 +41,7 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
     @Override
     public List<Interaction> getInteractions() {
         List<Interaction> interactions = new ArrayList<>();
-
+        int counter;
         try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatementVisits = connection.prepareStatement(GET_ALL_VISITS);
@@ -49,18 +49,19 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
                 PreparedStatement preparedStatementSessions = connection.prepareStatement(GET_ALL_SESSIONS);
                 ResultSet resultSetSessions = preparedStatementSessions.executeQuery()
         ) {
-
+            counter = 0;
             while (resultSetVisits.next()) {
                 interactions.add(MySqlUtil.getVisitResult(resultSetVisits));
+                counter++;
             }
+            LOG.log(Level.DEBUG, "Successfully retrieved all " + counter + " visits");
 
-            LOG.log(Level.DEBUG, "Successfully retrieved all visits");
-
+            counter = 0;
             while (resultSetSessions.next()) {
                 interactions.add(MySqlUtil.getSessionResult(resultSetSessions));
+                counter++;
             }
-
-            LOG.log(Level.DEBUG, "Successfully retrieved all sessions");
+            LOG.log(Level.DEBUG, "Successfully retrieved all " + counter + " sessions");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);
@@ -116,7 +117,7 @@ public class InteractionDAOImpl extends BaseDAO implements InteractionDAO<Intera
                 preparedStatementVisits.executeUpdate();
             }
 
-            LOG.log(Level.DEBUG, "Successfully deleted interactions from " + logfiles.size() + " logfiles.");
+            LOG.log(Level.DEBUG, "Successfully deleted interactions from " + logfiles.size() + " logfiles");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);

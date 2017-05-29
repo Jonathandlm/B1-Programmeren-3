@@ -115,7 +115,7 @@ public class SessionDAOImpl extends BaseDAO implements SessionDAO {
                 preparedSessionStatement.executeUpdate();
             }
 
-            LOG.log(Level.DEBUG, "Successfully inserted " + sessions.size() + " sessions.");
+            LOG.log(Level.DEBUG, "Successfully inserted " + sessions.size() + " sessions");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);

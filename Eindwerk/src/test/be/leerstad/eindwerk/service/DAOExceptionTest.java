@@ -12,6 +12,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
@@ -43,6 +44,9 @@ public class DAOExceptionTest {
             fail("DAOException expected");
         } catch(DAOException e) {
             // This exception is expected.
+            assertEquals(e.getMessage(), "Unable to configure connection.");
+            e.setMessage("This is a new DAOException message!");
+            assertEquals(e.toString(), "This is a new DAOException message!");
         }
     }
 }

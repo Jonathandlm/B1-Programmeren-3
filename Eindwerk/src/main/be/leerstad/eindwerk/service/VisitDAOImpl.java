@@ -115,7 +115,7 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
                 preparedVisitStatement.executeUpdate();
             }
 
-            LOG.log(Level.DEBUG, "Successfully inserted " + visits.size() + " visits.");
+            LOG.log(Level.DEBUG, "Successfully inserted " + visits.size() + " visits");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement(s) ", e);

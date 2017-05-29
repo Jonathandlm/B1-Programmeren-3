@@ -2,22 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/dbLog.log" afterPath="$PROJECT_DIR$/log/dbLog.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/mainLog.log" afterPath="$PROJECT_DIR$/log/mainLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/SessionParser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/SessionParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/VisitParser.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/VisitParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Pagination.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Pagination.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/SessionReportTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/SessionReportTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/VisitReportTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/VisitReportTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" />
     </list>
     <list id="59dbbfd2-df14-4c1a-9bd6-1fd2b30db9ba" name="Rejected commit: Default" comment="connectionfactory, refactored loggers, generics in parsers and interactions, interactions concatenate" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,6 +46,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$PrinterTest.coverage" NAME="PrinterTest Coverage Results" MODIFIED="1496014083779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.printer.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Eindwerk$DAOExceptionTest.coverage" NAME="DAOExceptionTest Coverage Results" MODIFIED="1496049386611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>be.leerstad.eindwerk.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$SiteCacheTest.coverage" NAME="SiteCacheTest Coverage Results" MODIFIED="1495930413438" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.cache.*</FILTER>
@@ -95,6 +92,9 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$VisitParserTest.coverage" NAME="VisitParserTest Coverage Results" MODIFIED="1496021778219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.parser.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Eindwerk$InteractionDAOImplTest.coverage" NAME="InteractionDAOImplTest Coverage Results" MODIFIED="1496052636194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>be.leerstad.eindwerk.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$LogfileTest.coverage" NAME="LogfileTest Coverage Results" MODIFIED="1495967625077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.model.*</FILTER>
@@ -276,7 +276,189 @@
     <option name="OUTPUT_DIRECTORY" value="D:\Downloads\code coverage" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="ServiceTests.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="136">
+                  <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MySqlUtilTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/MySqlUtilTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="method#setUp#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#getStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testPrivateConstructor#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedLogfileStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedSchoolStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedSessionStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedSiteStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedSiteApplicationStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedUserStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testSetPreparedVisitStatement#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetLogfileResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetSchoolResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetSessionResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetSiteResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetSiteApplicationResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetUserResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <element signature="method#testGetVisitResult#0;class#MySqlUtilTest#0" expanded="false" />
+                    <marker date="1496006773600" expanded="true" signature="1649:1705" ph="INSERT INTO logfiles... " />
+                    <marker date="1496006773600" expanded="true" signature="2193:2268" ph="INSERT INTO logfiles... " />
+                    <marker date="1496006773600" expanded="true" signature="2834:3010" ph="INSERT INTO sessions... " />
+                    <marker date="1496006773600" expanded="true" signature="3892:3937" ph="INSERT INTO sites... " />
+                    <marker date="1496006773600" expanded="true" signature="4374:4444" ph="INSERT INTO siteapplications... " />
+                    <marker date="1496006773600" expanded="true" signature="4936:5001" ph="INSERT INTO users... " />
+                    <marker date="1496006773600" expanded="true" signature="5484:5675" ph="INSERT INTO visits... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DAOExceptionTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="544">
+                  <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DAOException.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/DAOException.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="InteractionDAOImplTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="35" />
+                  <folding>
+                    <element signature="method#resetSingleton#0;class#InteractionDAOImplTest#0" expanded="false" />
+                    <element signature="method#testPrivateConstructor#0;class#InteractionDAOImplTest#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CacheUtilTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="101">
+                  <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#1208#1209#0" expanded="true" />
+                    <element signature="e#1272#1273#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="InteractionDAOImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1309">
+                  <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+                  <folding>
+                    <marker date="1496052603087" expanded="true" signature="763:888" ph="SELECT * FRO... sessions" />
+                    <marker date="1496052603087" expanded="true" signature="941:1109" ph="SELECT * FRO... visits" />
+                    <marker date="1496052603087" expanded="true" signature="1162:1200" ph="DELETE FROM " />
+                    <marker date="1496052603087" expanded="true" signature="1251:1287" ph="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LogAnalyserDAOImpl.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAOImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+                  <folding>
+                    <marker date="1495229153682" expanded="true" signature="457:471" ph="TRUNCATE TAB... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VisitDAOImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="117" column="84" lean-forward="false" selection-start-line="117" selection-start-column="84" selection-end-line="117" selection-end-column="84" />
+                  <folding>
+                    <marker date="1496052602986" expanded="true" signature="652:820" ph="SELECT * FRO... visits" />
+                    <marker date="1496052602986" expanded="true" signature="873:994" ph="INSERT INTO logfiles... " />
+                    <marker date="1496052602986" expanded="true" signature="1055:1189" ph="INSERT INTO siteapplications... " />
+                    <marker date="1496052602986" expanded="true" signature="1241:1367" ph="INSERT INTO schools... " />
+                    <marker date="1496052602986" expanded="true" signature="1418:1605" ph="INSERT INTO visits... " />
+                    <marker date="1496052602986" expanded="true" signature="1656:1692" ph="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SessionDAOImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="287">
+                  <caret line="117" column="88" lean-forward="true" selection-start-line="117" selection-start-column="88" selection-end-line="117" selection-end-column="88" />
+                  <folding>
+                    <marker date="1496052603033" expanded="true" signature="662:787" ph="SELECT * FRO... sessions" />
+                    <marker date="1496052603033" expanded="true" signature="840:961" ph="INSERT INTO logfiles... " />
+                    <marker date="1496052603033" expanded="true" signature="1011:1127" ph="INSERT INTO users... " />
+                    <marker date="1496052603033" expanded="true" signature="1177:1273" ph="INSERT INTO sites... " />
+                    <marker date="1496052603033" expanded="true" signature="1326:1498" ph="INSERT INTO sessions... " />
+                    <marker date="1496052603033" expanded="true" signature="1551:1589" ph="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SessionParserTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="41" column="61" lean-forward="true" selection-start-line="40" selection-start-column="70" selection-end-line="41" selection-end-column="61" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -290,7 +472,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sessionName</find>
       <find>&quot;&quot;</find>
       <find>session3</find>
       <find>mockUuid</find>
@@ -320,6 +501,7 @@
       <find>void get</find>
       <find>, null</find>
       <find>throws Exception</find>
+      <find>insertList</find>
     </findStrings>
     <replaceStrings>
       <replace>user</replace>
@@ -366,14 +548,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SchoolDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SchoolDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/UserDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/SiteCacheTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/SiteApplicationCacheTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/CacheTests.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/User.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/SessionCacheTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/VisitCacheTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/CacheTests.java" />
@@ -390,7 +564,6 @@
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/UserCacheTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/MySqlUtil.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
         <option value="$PROJECT_DIR$/resources/config.properties" />
@@ -417,6 +590,15 @@
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/BaseDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" />
       </list>
     </option>
   </component>
@@ -557,92 +739,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="report" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eindwerk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="printer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -842,10 +938,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="be.leerstad.eindwerk.service" />
       <recent name="be.leerstad.eindwerk.util" />
       <recent name="be.leerstad.eindwerk.model" />
       <recent name="be.leerstad.eindwerk.business.cache" />
-      <recent name="be.leerstad.eindwerk.service" />
       <recent name="be.leerstad.eindwerk.business.report" />
     </key>
     <key name="ImportMappingsDialog.RecentPackages">
@@ -899,19 +995,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.QueryTest">
-    <configuration default="false" name="VisitParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.InteractionDAOImplTest">
+    <configuration default="false" name="BaseDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.business.parser.*" />
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Eindwerk" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.business.parser" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.business.parser.VisitParserTest" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.BaseDAOTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -926,20 +1022,20 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SessionReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="InteractionDAOImplTest.testGetConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.business.report.*" />
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Eindwerk" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.business.report" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.business.report.SessionReportTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.InteractionDAOImplTest" />
+      <option name="METHOD_NAME" value="testGetConnection" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -952,20 +1048,20 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="VisitReportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="InteractionDAOImplTest.testGetInteractions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.business.report.*" />
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Eindwerk" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.business.report" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.business.report.VisitReportTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.InteractionDAOImplTest" />
+      <option name="METHOD_NAME" value="testGetInteractions" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -978,20 +1074,20 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ChartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="InteractionDAOImplTest.testAllInteractions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.business.report.*" />
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Eindwerk" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.business.report" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.business.report.ChartTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.InteractionDAOImplTest" />
+      <option name="METHOD_NAME" value="testAllInteractions" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -1004,18 +1100,18 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="QueryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="InteractionDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.business.report.*" />
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="Eindwerk" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.business.report" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.business.report.QueryTest" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.InteractionDAOImplTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1445,19 +1541,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in Eindwerk" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.VisitParserTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SessionReportTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.VisitReportTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ChartTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.QueryTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BaseDAOTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testGetConnection" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testGetInteractions" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testAllInteractions" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.QueryTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ChartTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.VisitReportTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SessionReportTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.VisitParserTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testAllInteractions" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testGetInteractions" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.InteractionDAOImplTest.testGetConnection" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BaseDAOTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1497,7 +1593,7 @@
       <workItem from="1494528456451" duration="191622000" />
       <workItem from="1495309851626" duration="32000" />
       <workItem from="1495309936319" duration="105431000" />
-      <workItem from="1495543727624" duration="217751000" />
+      <workItem from="1495543727624" duration="223987000" />
     </task>
     <task id="LOCAL-00001" summary="config file">
       <created>1488058462084</created>
@@ -1625,46 +1721,54 @@
       <option name="project" value="LOCAL" />
       <updated>1496009931354</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added:&#10; - nothing&#10;&#10;Updated:&#10; - test: parser, printer, report&#10; - business: parser, printer, report">
+      <created>1496027482856</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1496027482856</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChartTest - 2017.05.29 at 04h 33m 16s.xml">
-      <configuration name="ChartTest" configurationId="JUnit" />
+    <history-entry file="BaseDAOTest - 2017.05.29 at 11h 21m 12s.xml">
+      <configuration name="BaseDAOTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChartTest - 2017.05.29 at 04h 33m 22s.xml">
-      <configuration name="ChartTest" configurationId="JUnit" />
+    <history-entry file="BaseDAOTest_testGetConnection - 2017.05.29 at 11h 20m 41s.xml">
+      <configuration name="BaseDAOTest.testGetConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChartTest - 2017.05.29 at 04h 34m 43s.xml">
-      <configuration name="ChartTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest - 2017.05.29 at 12h 10m 37s.xml">
+      <configuration name="InteractionDAOImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ChartTest - 2017.05.29 at 04h 36m 41s.xml">
-      <configuration name="ChartTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testAllInteractions - 2017.05.29 at 11h 54m 25s.xml">
+      <configuration name="InteractionDAOImplTest.testAllInteractions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QueryTest - 2017.05.29 at 05h 08m 23s.xml">
-      <configuration name="QueryTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testAllInteractions - 2017.05.29 at 11h 57m 15s.xml">
+      <configuration name="InteractionDAOImplTest.testAllInteractions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QueryTest - 2017.05.29 at 05h 09m 00s.xml">
-      <configuration name="QueryTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testAllInteractions - 2017.05.29 at 12h 05m 39s.xml">
+      <configuration name="InteractionDAOImplTest.testAllInteractions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SessionReportTest - 2017.05.29 at 04h 13m 02s.xml">
-      <configuration name="SessionReportTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testAllInteractions - 2017.05.29 at 12h 08m 20s.xml">
+      <configuration name="InteractionDAOImplTest.testAllInteractions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SessionReportTest - 2017.05.29 at 04h 13m 29s.xml">
-      <configuration name="SessionReportTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testAllInteractions - 2017.05.29 at 12h 10m 05s.xml">
+      <configuration name="InteractionDAOImplTest.testAllInteractions" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VisitReportTest - 2017.05.29 at 04h 18m 36s.xml">
-      <configuration name="VisitReportTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testGetConnection - 2017.05.29 at 11h 23m 15s.xml">
+      <configuration name="InteractionDAOImplTest.testGetConnection" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="VisitReportTest - 2017.05.29 at 04h 19m 17s.xml">
-      <configuration name="VisitReportTest" configurationId="JUnit" />
+    <history-entry file="InteractionDAOImplTest_testGetInteractions - 2017.05.29 at 11h 28m 38s.xml">
+      <configuration name="InteractionDAOImplTest.testGetInteractions" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="739703000" />
+    <option name="totallyTimeSpent" value="745939000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1727,7 +1831,8 @@
     <MESSAGE value="Added:&#10; - test: 4 cache, 1 model&#10;&#10;Updated:&#10; - test: added new tests to cache suite&#10; - import: optimised&#10; - model: added apostrophes to logfile, removed unused setter&#10; - service: DAOException, fillCache&#10; &#10; Moved:&#10;  - test: suites to their package" />
     <MESSAGE value="Added:&#10; - test: 4 model, 1 util&#10;&#10;Updated:&#10; - test: added new tests to model suite&#10; - model: added setters for better code coverage, optimised school&#10; - service: DAOException, fillCache" />
     <MESSAGE value="Added:&#10; - test: 2 util&#10;&#10;Updated:&#10; - test: added new tests to util suite&#10; - util: final class and private constructor&#10; &#10;Renamed:&#10; - RegexTest to RegexUtilTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10; - test: 2 util&#10;&#10;Updated:&#10; - test: added new tests to util suite&#10; - util: final class and private constructor&#10; &#10;Renamed:&#10; - RegexTest to RegexUtilTest" />
+    <MESSAGE value="Added:&#10; - nothing&#10;&#10;Updated:&#10; - test: parser, printer, report&#10; - business: parser, printer, report" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10; - nothing&#10;&#10;Updated:&#10; - test: parser, printer, report&#10; - business: parser, printer, report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1742,7 +1847,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="84" />
+      <option name="time" value="86" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1751,84 +1856,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/ModelTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/SessionCacheTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="61" column="83" lean-forward="false" selection-start-line="61" selection-start-column="83" selection-end-line="61" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1452#1453#0" expanded="true" />
-            <element signature="e#1516#1517#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
-          <folding>
-            <marker date="1495925541119" expanded="true" signature="604:623" ph="SELECT * FRO... users" />
-            <marker date="1495925541119" expanded="true" signature="670:706" ph="SELECT * FRO... users" />
-            <marker date="1495925541119" expanded="true" signature="756:821" ph="INSERT INTO users... " />
-            <marker date="1495925541119" expanded="true" signature="871:905" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/UserCacheTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-924">
-          <caret line="184" column="8" lean-forward="true" selection-start-line="184" selection-start-column="8" selection-end-line="184" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SchoolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SchoolDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <marker date="1495925541088" expanded="true" signature="614:635" ph="SELECT * FRO... schools" />
-            <marker date="1495925541088" expanded="true" signature="684:725" ph="SELECT * FRO... schools" />
-            <marker date="1495925541088" expanded="true" signature="777:868" ph="INSERT INTO schools... " />
-            <marker date="1495925541088" expanded="true" signature="920:959" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SiteApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SiteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SessionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -1881,21 +1908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="112" lean-forward="true" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="112" />
-          <folding>
-            <marker date="1495880211571" expanded="true" signature="662:787" ph="SELECT * FRO... sessions" />
-            <marker date="1495880211571" expanded="true" signature="840:961" ph="INSERT INTO logfiles... " />
-            <marker date="1495880211571" expanded="true" signature="1011:1127" ph="INSERT INTO users... " />
-            <marker date="1495880211571" expanded="true" signature="1177:1273" ph="INSERT INTO sites... " />
-            <marker date="1495880211571" expanded="true" signature="1326:1498" ph="INSERT INTO sessions... " />
-            <marker date="1495880211571" expanded="true" signature="1551:1589" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1925,40 +1937,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/MySqlUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setUp#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#getStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testPrivateConstructor#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedLogfileStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedSchoolStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedSessionStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedSiteStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedSiteApplicationStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedUserStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testSetPreparedVisitStatement#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetLogfileResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetSchoolResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetSessionResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetSiteResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetSiteApplicationResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetUserResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <element signature="method#testGetVisitResult#0;class#MySqlUtilTest#0" expanded="false" />
-            <marker date="1496006773600" expanded="true" signature="1649:1705" ph="INSERT INTO logfiles... " />
-            <marker date="1496006773600" expanded="true" signature="2193:2268" ph="INSERT INTO logfiles... " />
-            <marker date="1496006773600" expanded="true" signature="2834:3010" ph="INSERT INTO sessions... " />
-            <marker date="1496006773600" expanded="true" signature="3892:3937" ph="INSERT INTO sites... " />
-            <marker date="1496006773600" expanded="true" signature="4374:4444" ph="INSERT INTO siteapplications... " />
-            <marker date="1496006773600" expanded="true" signature="4936:5001" ph="INSERT INTO users... " />
-            <marker date="1496006773600" expanded="true" signature="5484:5675" ph="INSERT INTO visits... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2066,14 +2044,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
@@ -2130,14 +2100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/VisitReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2151,7 +2113,7 @@
         <state relative-caret-position="476">
           <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2161,7 +2123,7 @@
         <state relative-caret-position="408">
           <caret line="25" column="4" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="25" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2190,21 +2152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="25" column="25" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <marker date="1495962990783" expanded="true" signature="652:820" ph="SELECT * FRO... visits" />
-            <marker date="1495962990783" expanded="true" signature="873:994" ph="INSERT INTO logfiles... " />
-            <marker date="1495962990783" expanded="true" signature="1055:1189" ph="INSERT INTO siteapplications... " />
-            <marker date="1495962990783" expanded="true" signature="1241:1367" ph="INSERT INTO schools... " />
-            <marker date="1495962990783" expanded="true" signature="1418:1605" ph="INSERT INTO visits... " />
-            <marker date="1495962990783" expanded="true" signature="1656:1692" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -2228,8 +2175,8 @@
         <state relative-caret-position="1428">
           <caret line="105" column="23" lean-forward="false" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
           <folding>
-            <element signature="e#2091#2092#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="false" />
+            <element signature="e#2155#2156#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2246,6 +2193,166 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1272#1273#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/MySqlUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#getStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testPrivateConstructor#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedLogfileStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedSchoolStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedSessionStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedSiteStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedSiteApplicationStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedUserStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testSetPreparedVisitStatement#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetLogfileResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetSchoolResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetSessionResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetSiteResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetSiteApplicationResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetUserResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <element signature="method#testGetVisitResult#0;class#MySqlUtilTest#0" expanded="false" />
+            <marker date="1496006773600" expanded="true" signature="1649:1705" ph="INSERT INTO logfiles... " />
+            <marker date="1496006773600" expanded="true" signature="2193:2268" ph="INSERT INTO logfiles... " />
+            <marker date="1496006773600" expanded="true" signature="2834:3010" ph="INSERT INTO sessions... " />
+            <marker date="1496006773600" expanded="true" signature="3892:3937" ph="INSERT INTO sites... " />
+            <marker date="1496006773600" expanded="true" signature="4374:4444" ph="INSERT INTO siteapplications... " />
+            <marker date="1496006773600" expanded="true" signature="4936:5001" ph="INSERT INTO users... " />
+            <marker date="1496006773600" expanded="true" signature="5484:5675" ph="INSERT INTO visits... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/DAOException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="48" column="37" lean-forward="false" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/BaseDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="method#setUp#0;class#BaseDAOTest#0" expanded="false" />
+            <element signature="method#tearDown#0;class#BaseDAOTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="41" column="61" lean-forward="true" selection-start-line="40" selection-start-column="70" selection-end-line="41" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="117" column="88" lean-forward="true" selection-start-line="117" selection-start-column="88" selection-end-line="117" selection-end-column="88" />
+          <folding>
+            <marker date="1496052603033" expanded="true" signature="662:787" ph="SELECT * FRO... sessions" />
+            <marker date="1496052603033" expanded="true" signature="840:961" ph="INSERT INTO logfiles... " />
+            <marker date="1496052603033" expanded="true" signature="1011:1127" ph="INSERT INTO users... " />
+            <marker date="1496052603033" expanded="true" signature="1177:1273" ph="INSERT INTO sites... " />
+            <marker date="1496052603033" expanded="true" signature="1326:1498" ph="INSERT INTO sessions... " />
+            <marker date="1496052603033" expanded="true" signature="1551:1589" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="117" column="84" lean-forward="false" selection-start-line="117" selection-start-column="84" selection-end-line="117" selection-end-column="84" />
+          <folding>
+            <marker date="1496052602986" expanded="true" signature="652:820" ph="SELECT * FRO... visits" />
+            <marker date="1496052602986" expanded="true" signature="873:994" ph="INSERT INTO logfiles... " />
+            <marker date="1496052602986" expanded="true" signature="1055:1189" ph="INSERT INTO siteapplications... " />
+            <marker date="1496052602986" expanded="true" signature="1241:1367" ph="INSERT INTO schools... " />
+            <marker date="1496052602986" expanded="true" signature="1418:1605" ph="INSERT INTO visits... " />
+            <marker date="1496052602986" expanded="true" signature="1656:1692" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1309">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <marker date="1496052603087" expanded="true" signature="763:888" ph="SELECT * FRO... sessions" />
+            <marker date="1496052603087" expanded="true" signature="941:1109" ph="SELECT * FRO... visits" />
+            <marker date="1496052603087" expanded="true" signature="1162:1200" ph="DELETE FROM " />
+            <marker date="1496052603087" expanded="true" signature="1251:1287" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1495229153682" expanded="true" signature="457:471" ph="TRUNCATE TAB... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="method#resetSingleton#0;class#InteractionDAOImplTest#0" expanded="false" />
+            <element signature="method#testPrivateConstructor#0;class#InteractionDAOImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
           <folding />
         </state>
       </provider>
