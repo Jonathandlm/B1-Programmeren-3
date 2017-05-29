@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SessionDAOImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteApplicationDAOImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteDAOImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/VisitDAOImplTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/Browser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/LogfileDAOImplTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SchoolDAOImplTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/UserDAOImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/dbLog.log" afterPath="$PROJECT_DIR$/log/dbLog.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/mainLog.log" afterPath="$PROJECT_DIR$/log/mainLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" />
     </list>
     <list id="59dbbfd2-df14-4c1a-9bd6-1fd2b30db9ba" name="Rejected commit: Default" comment="connectionfactory, refactored loggers, generics in parsers and interactions, interactions concatenate" />
@@ -132,6 +137,9 @@
     <SUITE FILE_PATH="coverage/Eindwerk$SchoolCacheTest.coverage" NAME="SchoolCacheTest Coverage Results" MODIFIED="1495924267249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.cache.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/Eindwerk$SchoolDAOImplTest.coverage" NAME="SchoolDAOImplTest Coverage Results" MODIFIED="1496060540684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>be.leerstad.eindwerk.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$main_be_leerstad_eindwerk_business_in_Eindwerk.coverage" NAME="main.be.leerstad.eindwerk.business in Eindwerk Coverage Results" MODIFIED="1488664320634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.*</FILTER>
     </SUITE>
@@ -165,6 +173,12 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$CacheTests.coverage" NAME="CacheTests Coverage Results" MODIFIED="1495930497874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Eindwerk$UserDAOImplTest.coverage" NAME="UserDAOImplTest Coverage Results" MODIFIED="1496060809657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>be.leerstad.eindwerk.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Eindwerk$LogfileDAOImplTest.coverage" NAME="LogfileDAOImplTest Coverage Results" MODIFIED="1496059321878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>be.leerstad.eindwerk.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Eindwerk$VisitCacheTest.coverage" NAME="VisitCacheTest Coverage Results" MODIFIED="1495936893205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>be.leerstad.eindwerk.business.cache.*</FILTER>
@@ -291,170 +305,118 @@
     <option name="OUTPUT_DIRECTORY" value="D:\Downloads\code coverage" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="AllTests.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/AllTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SiteDAOImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteDAOImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1241">
-                  <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#826#827#0" expanded="true" />
-                    <element signature="e#890#891#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CacheUtilTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="232">
-                  <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ServiceTests.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="InteractionDAOImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="113">
-                  <caret line="69" column="54" lean-forward="true" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-                  <folding>
-                    <element signature="method#resetSingleton#0;class#InteractionDAOImplTest#0" expanded="false" />
-                    <element signature="method#testPrivateConstructor#0;class#InteractionDAOImplTest#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="VisitDAOImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/VisitDAOImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-                  <folding>
-                    <element signature="method#resetSingleton#0;class#VisitDAOImplTest#0" expanded="false" />
-                    <element signature="method#testPrivateConstructor#0;class#VisitDAOImplTest#0" expanded="false" />
-                    <element signature="method#testGetConnection#0;class#VisitDAOImplTest#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SiteApplicationDAOImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-                  <folding>
-                    <element signature="method#SiteApplicationDAOImpl#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-                    <element signature="method#getInstance#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-                    <element signature="method#insertSiteApplication#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-                    <element signature="method#insertSiteApplications#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-                    <element signature="method#fillCache#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-                    <marker date="1496058316630" expanded="false" signature="659:689" ph="SELECT * FRO... siteApplications" />
-                    <marker date="1496058316630" expanded="false" signature="747:801" ph="SELECT * FRO... siteApplications" />
-                    <marker date="1496058316630" expanded="false" signature="862:948" ph="INSERT INTO siteApplications... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SiteDAOImpl.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-598">
-                  <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-                  <folding>
-                    <marker date="1496058845774" expanded="true" signature="604:623" ph="SELECT * FRO... sites" />
-                    <marker date="1496058845774" expanded="true" signature="670:706" ph="SELECT * FRO... sites" />
-                    <marker date="1496058845774" expanded="true" signature="756:801" ph="INSERT INTO sites... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SiteApplicationDAOImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteApplicationDAOImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SessionDAOImplTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SessionDAOImplTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-                  <folding>
-                    <element signature="method#resetSingleton#0;class#SessionDAOImplTest#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
+              <folding>
+                <element signature="docComment;method#showReportChooser#0;class#App#0" expanded="false" />
+                <element signature="docComment;method#showStatistics#0;class#App#0" expanded="false" />
+                <element signature="method#showStatistics#0;class#App#0" expanded="false" />
+                <element signature="method#showInformation#0;class#App#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogAnalyserView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootLayoutController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootLayout.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Browser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/Browser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#1017#1018#0" expanded="true" />
+                <element signature="e#1043#1044#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogfileOverviewController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogfileOverview.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportChooserController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Session</find>
-      <find>sessionEmptyConstructor</find>
-      <find>visitBasicConstructor</find>
       <find>;</find>
       <find>filename</find>
       <find>getSchoolDate()</find>
@@ -482,16 +444,16 @@
       <find>Interaction</find>
       <find>applicationId</find>
       <find>getApplicationIdg</find>
+      <find>SiteApplication</find>
+      <find>Logfile</find>
+      <find>School</find>
     </findStrings>
     <replaceStrings>
-      <replace>sessionId</replace>
-      <replace>mockUuid</replace>
       <replace>session2</replace>
       <replace>mockId</replace>
       <replace>void test</replace>
       <replace>LocalDate</replace>
       <replace>logfileCompleteConstructor</replace>
-      <replace>Logfile</replace>
       <replace>logfileEmptyConstructor</replace>
       <replace>logfileBasicConstructor</replace>
       <replace>= &quot;&quot;;</replace>
@@ -514,6 +476,9 @@
       <replace>SiteApplication</replace>
       <replace>siteId</replace>
       <replace>Site</replace>
+      <replace>Logfile</replace>
+      <replace>School</replace>
+      <replace>User</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -528,18 +493,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/LogfileTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SchoolTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SiteTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SiteApplicationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/ModelTests.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/CacheUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/UserCacheTest.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/MySqlUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/DateUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
         <option value="$PROJECT_DIR$/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/RegexTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/DateUtilTest.java" />
@@ -550,7 +503,6 @@
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/RegexUtil.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/PropertyUtil.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Pagination.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/Parser.java" />
@@ -563,7 +515,6 @@
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/DAOExceptionTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java" />
@@ -577,8 +528,22 @@
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteApplicationDAOImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteDAOImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/LogfileDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/UserDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SchoolDAOImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java" />
+        <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/MyBrowser.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowser.fxml" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowserController.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/Browser.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
       </list>
     </option>
   </component>
@@ -718,7 +683,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -818,7 +783,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -844,11 +809,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="report" />
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -901,7 +862,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.27011493" />
     <property name="last_opened_file_path" value="D:/Downloads/code coverage" />
@@ -975,111 +936,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ServiceTests">
-    <configuration default="false" name="SiteApplicationDAOImplTest.testSiteApplication" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Eindwerk" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SiteApplicationDAOImplTest" />
-      <option name="METHOD_NAME" value="testSiteApplication" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SiteApplicationDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Eindwerk" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SiteApplicationDAOImplTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SiteApplicationDAOImplTest.testSiteApplications" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Eindwerk" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SiteApplicationDAOImplTest" />
-      <option name="METHOD_NAME" value="testSiteApplications" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="SiteDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Eindwerk" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
-      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SiteDAOImplTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.App">
     <configuration default="false" name="ServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1104,6 +961,104 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SchoolDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Eindwerk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SchoolDAOImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SchoolDAOImplTest.testSchool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Eindwerk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.SchoolDAOImplTest" />
+      <option name="METHOD_NAME" value="testSchool" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.leerstad.eindwerk.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Eindwerk" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="be.leerstad.eindwerk.service" />
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.service.UserDAOImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="be.leerstad.eindwerk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="be.leerstad.eindwerk.App" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Eindwerk" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1521,19 +1476,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in Eindwerk" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest.testSiteApplication" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest.testSiteApplications" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SiteDAOImplTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ServiceTests" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ServiceTests" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SchoolDAOImplTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SchoolDAOImplTest.testSchool" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.App" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ServiceTests" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SiteDAOImplTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest.testSiteApplications" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SiteApplicationDAOImplTest.testSiteApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ServiceTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SchoolDAOImplTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserDAOImplTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SchoolDAOImplTest.testSchool" />
       </list>
     </recent_temporary>
   </component>
@@ -1573,7 +1528,7 @@
       <workItem from="1494528456451" duration="191622000" />
       <workItem from="1495309851626" duration="32000" />
       <workItem from="1495309936319" duration="105431000" />
-      <workItem from="1495543727624" duration="229990000" />
+      <workItem from="1495543727624" duration="256884000" />
     </task>
     <task id="LOCAL-00001" summary="config file">
       <created>1488058462084</created>
@@ -1715,46 +1670,54 @@
       <option name="project" value="LOCAL" />
       <updated>1496052887061</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Added:&#10; - test: 4 service&#10;&#10;Updated:&#10; - test: 2 service&#10; - service: 4">
+      <created>1496058892290</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1496058892290</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ServiceTests - 2017.05.29 at 13h 50m 55s.xml">
-      <configuration name="ServiceTests" configurationId="JUnit" />
+    <history-entry file="LogfileDAOImplTest - 2017.05.29 at 14h 02m 03s.xml">
+      <configuration name="LogfileDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SchoolDAOImplTest - 2017.05.29 at 14h 14m 11s.xml">
+      <configuration name="SchoolDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SchoolDAOImplTest - 2017.05.29 at 14h 22m 21s.xml">
+      <configuration name="SchoolDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SchoolDAOImplTest - 2017.05.29 at 14h 28m 08s.xml">
+      <configuration name="SchoolDAOImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SchoolDAOImplTest_testSchool - 2017.05.29 at 14h 21m 55s.xml">
+      <configuration name="SchoolDAOImplTest.testSchool" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ServiceTests - 2017.05.29 at 13h 53m 41s.xml">
       <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SiteApplicationDAOImplTest - 2017.05.29 at 13h 41m 07s.xml">
-      <configuration name="SiteApplicationDAOImplTest" configurationId="JUnit" />
+    <history-entry file="ServiceTests - 2017.05.29 at 14h 31m 41s.xml">
+      <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SiteApplicationDAOImplTest_testSiteApplication - 2017.05.29 at 13h 28m 11s.xml">
-      <configuration name="SiteApplicationDAOImplTest.testSiteApplication" configurationId="JUnit" />
+    <history-entry file="ServiceTests - 2017.05.29 at 17h 49m 56s.xml">
+      <configuration name="ServiceTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SiteApplicationDAOImplTest_testSiteApplication - 2017.05.29 at 13h 32m 38s.xml">
-      <configuration name="SiteApplicationDAOImplTest.testSiteApplication" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest - 2017.05.29 at 14h 26m 50s.xml">
+      <configuration name="UserDAOImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SiteApplicationDAOImplTest_testSiteApplication - 2017.05.29 at 13h 37m 11s.xml">
-      <configuration name="SiteApplicationDAOImplTest.testSiteApplication" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SiteApplicationDAOImplTest_testSiteApplications - 2017.05.29 at 13h 45m 18s.xml">
-      <configuration name="SiteApplicationDAOImplTest.testSiteApplications" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SiteDAOImplTest - 2017.05.29 at 13h 46m 40s.xml">
-      <configuration name="SiteDAOImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SiteDAOImplTest - 2017.05.29 at 13h 47m 55s.xml">
-      <configuration name="SiteDAOImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SiteDAOImplTest - 2017.05.29 at 13h 49m 38s.xml">
-      <configuration name="SiteDAOImplTest" configurationId="JUnit" />
+    <history-entry file="UserDAOImplTest - 2017.05.29 at 14h 27m 36s.xml">
+      <configuration name="UserDAOImplTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="751942000" />
+    <option name="totallyTimeSpent" value="778836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1776,9 +1739,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969433" sideWeight="0.49761903" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30549684" sideWeight="0.4921875" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19947916" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19947916" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16197917" sideWeight="0.48471615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24791667" sideWeight="0.48471615" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3128964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1819,7 +1782,8 @@
     <MESSAGE value="Added:&#10; - test: 2 util&#10;&#10;Updated:&#10; - test: added new tests to util suite&#10; - util: final class and private constructor&#10; &#10;Renamed:&#10; - RegexTest to RegexUtilTest" />
     <MESSAGE value="Added:&#10; - nothing&#10;&#10;Updated:&#10; - test: parser, printer, report&#10; - business: parser, printer, report" />
     <MESSAGE value="Added:&#10; - test: 1 service&#10;&#10;Updated:&#10; - test: service&#10; - service: 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10; - test: 1 service&#10;&#10;Updated:&#10; - test: service&#10; - service: 4" />
+    <MESSAGE value="Added:&#10; - test: 4 service&#10;&#10;Updated:&#10; - test: 2 service&#10; - service: 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10; - test: 4 service&#10;&#10;Updated:&#10; - test: 2 service&#10; - service: 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1843,271 +1807,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/RegexUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding>
-            <element signature="method#testPrivateConstructor#0;class#RegexUtilTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/PropertyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/UtilTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/DateUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/CacheUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1652">
-          <caret line="33" column="13" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Pagination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/ParseFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/RegexUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="67" column="78" lean-forward="false" selection-start-line="67" selection-start-column="78" selection-end-line="67" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/ParseFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/CacheTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/ParserTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/SessionParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="22" lean-forward="true" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/VisitParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/VisitReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/VisitReportTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/SessionReportTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/SessionReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="100" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="129" column="52" lean-forward="true" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="32" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1136">
-          <caret line="76" column="87" lean-forward="true" selection-start-line="76" selection-start-column="87" selection-end-line="76" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="105" column="23" lean-forward="false" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
-          <folding>
-            <element signature="e#2091#2092#0" expanded="false" />
-            <element signature="e#2155#2156#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ReportTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/DAOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/BaseDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -2135,9 +1834,343 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="155" column="99" lean-forward="false" selection-start-line="155" selection-start-column="99" selection-end-line="155" selection-end-column="99" />
+          <folding>
+            <element signature="method#getInteractions#0;class#VisitDAOImpl#0" expanded="false" />
+            <element signature="method#insertVisit#0;class#VisitDAOImpl#0" expanded="false" />
+            <element signature="method#insertVisits#0;class#VisitDAOImpl#0" expanded="false" />
+            <element signature="method#fillCache#0;class#VisitDAOImpl#0" expanded="false" />
+            <marker date="1496054638923" expanded="true" signature="652:820" ph="SELECT * FRO... visits" />
+            <marker date="1496054638923" expanded="true" signature="873:994" ph="INSERT INTO logfiles... " />
+            <marker date="1496054638923" expanded="true" signature="1055:1189" ph="INSERT INTO siteapplications... " />
+            <marker date="1496054638923" expanded="true" signature="1241:1367" ph="INSERT INTO schools... " />
+            <marker date="1496054638923" expanded="true" signature="1418:1605" ph="INSERT INTO visits... " />
+            <marker date="1496054638923" expanded="true" signature="1656:1692" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+          <folding>
+            <marker date="1496052603087" expanded="true" signature="763:888" ph="SELECT * FRO... sessions" />
+            <marker date="1496052603087" expanded="true" signature="941:1109" ph="SELECT * FRO... visits" />
+            <marker date="1496052603087" expanded="true" signature="1162:1200" ph="DELETE FROM " />
+            <marker date="1496052603087" expanded="true" signature="1251:1287" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2074">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <marker date="1496054638987" expanded="true" signature="662:787" ph="SELECT * FRO... sessions" />
+            <marker date="1496054638987" expanded="true" signature="840:961" ph="INSERT INTO logfiles... " />
+            <marker date="1496054638987" expanded="true" signature="1011:1127" ph="INSERT INTO users... " />
+            <marker date="1496054638987" expanded="true" signature="1177:1273" ph="INSERT INTO sites... " />
+            <marker date="1496054638987" expanded="true" signature="1326:1498" ph="INSERT INTO sessions... " />
+            <marker date="1496054638987" expanded="true" signature="1551:1589" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SessionDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1496055865972" expanded="false" signature="46:655" ph="..." />
+            <marker date="1496055865972" expanded="false" signature="789:959" ph="{...}" />
+            <marker date="1496055865972" expanded="false" signature="1004:1015" ph=" { " />
+            <marker date="1496055865972" expanded="false" signature="1064:1070" ph=" }" />
+            <marker date="1496055865972" expanded="true" signature="1140:1403" ph="{...}" />
+            <marker date="1496055865972" expanded="true" signature="1453:3942" ph="{...}" />
+            <marker date="1496055865972" expanded="true" signature="4010:4130" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="method#SiteApplicationDAOImpl#0;class#SiteApplicationDAOImpl#0" expanded="false" />
+            <element signature="method#getInstance#0;class#SiteApplicationDAOImpl#0" expanded="false" />
+            <element signature="method#insertSiteApplication#0;class#SiteApplicationDAOImpl#0" expanded="false" />
+            <element signature="method#insertSiteApplications#0;class#SiteApplicationDAOImpl#0" expanded="false" />
+            <element signature="method#fillCache#0;class#SiteApplicationDAOImpl#0" expanded="false" />
+            <marker date="1496058316630" expanded="false" signature="659:689" ph="SELECT * FRO... siteApplications" />
+            <marker date="1496058316630" expanded="false" signature="747:801" ph="SELECT * FRO... siteApplications" />
+            <marker date="1496058316630" expanded="false" signature="862:948" ph="INSERT INTO siteApplications... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#826#827#0" expanded="false" />
+            <element signature="e#890#891#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="100" column="66" lean-forward="true" selection-start-line="99" selection-start-column="46" selection-end-line="100" selection-end-column="66" />
+          <folding>
+            <marker date="1496058845774" expanded="true" signature="604:623" ph="SELECT * FRO... sites" />
+            <marker date="1496058845774" expanded="true" signature="670:706" ph="SELECT * FRO... sites" />
+            <marker date="1496058845774" expanded="true" signature="756:801" ph="INSERT INTO sites... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogfileDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1085">
+          <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+          <folding>
+            <marker date="1496060049509" expanded="true" signature="618:666" ph="SELECT * FRO... logfiles" />
+            <marker date="1496060049509" expanded="true" signature="719:775" ph="INSERT INTO logfiles... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/LogfileDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1167">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#856#857#0" expanded="false" />
+            <element signature="e#920#921#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/SchoolCacheTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testGetSchool#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testContainsKey#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testContainsValue#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testGet#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testValues#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testPut#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testSize#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testIsEmpty#0;class#SchoolCacheTest#0" expanded="false" />
+            <element signature="method#testFill#0;class#SchoolCacheTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SchoolDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/UserDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <marker date="1496060854588" expanded="true" signature="46:440" ph="..." />
+            <marker date="1496060854588" expanded="true" signature="688:855" ph="{...}" />
+            <marker date="1496060854588" expanded="true" signature="910:1080" ph="{...}" />
+            <marker date="1496060854588" expanded="true" signature="1150:1410" ph="{...}" />
+            <marker date="1496060854588" expanded="true" signature="1466:2758" ph="{...}" />
+            <marker date="1496060854588" expanded="true" signature="2826:2943" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/VisitDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
+          <folding>
+            <element signature="method#resetSingleton#0;class#VisitDAOImplTest#0" expanded="false" />
+            <element signature="method#testPrivateConstructor#0;class#VisitDAOImplTest#0" expanded="false" />
+            <element signature="method#testGetConnection#0;class#VisitDAOImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteApplicationDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SchoolDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="method#SchoolDAOImpl#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#getInstance#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#getSchools#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#getSchool#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#insertSchool#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#deleteSchool#0;class#SchoolDAOImpl#0" expanded="false" />
+            <element signature="method#fillCache#0;class#SchoolDAOImpl#0" expanded="false" />
+            <marker date="1495925541088" expanded="false" signature="614:635" ph="SELECT * FRO... schools" />
+            <marker date="1495925541088" expanded="false" signature="684:725" ph="SELECT * FRO... schools" />
+            <marker date="1495925541088" expanded="false" signature="777:868" ph="INSERT INTO schools... " />
+            <marker date="1495925541088" expanded="false" signature="920:959" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding>
+            <marker date="1495925541119" expanded="true" signature="604:623" ph="SELECT * FRO... users" />
+            <marker date="1495925541119" expanded="true" signature="670:706" ph="SELECT * FRO... users" />
+            <marker date="1495925541119" expanded="true" signature="756:821" ph="INSERT INTO users... " />
+            <marker date="1495925541119" expanded="true" signature="871:905" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SchoolDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <marker date="1495229153682" expanded="true" signature="457:471" ph="TRUNCATE TAB... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="54" selection-end-column="82" />
+          <folding>
+            <element signature="method#resetSingleton#0;class#InteractionDAOImplTest#0" expanded="false" />
+            <element signature="method#testPrivateConstructor#0;class#InteractionDAOImplTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/CacheTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/ModelTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/ParserTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ReportTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/AllTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/MySqlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/MySqlUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="317">
           <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -2169,183 +2202,183 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/VisitDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="155" column="99" lean-forward="false" selection-start-line="155" selection-start-column="99" selection-end-line="155" selection-end-column="99" />
+        <state relative-caret-position="362">
+          <caret line="48" column="9" lean-forward="false" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/VisitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/SessionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="method#getInteractions#0;class#VisitDAOImpl#0" expanded="false" />
-            <element signature="method#insertVisit#0;class#VisitDAOImpl#0" expanded="false" />
-            <element signature="method#insertVisits#0;class#VisitDAOImpl#0" expanded="false" />
-            <element signature="method#fillCache#0;class#VisitDAOImpl#0" expanded="false" />
-            <marker date="1496054638923" expanded="true" signature="652:820" ph="SELECT * FRO... visits" />
-            <marker date="1496054638923" expanded="true" signature="873:994" ph="INSERT INTO logfiles... " />
-            <marker date="1496054638923" expanded="true" signature="1055:1189" ph="INSERT INTO siteapplications... " />
-            <marker date="1496054638923" expanded="true" signature="1241:1367" ph="INSERT INTO schools... " />
-            <marker date="1496054638923" expanded="true" signature="1418:1605" ph="INSERT INTO visits... " />
-            <marker date="1496054638923" expanded="true" signature="1656:1692" ph="DELETE FROM " />
+            <element signature="imports" expanded="true" />
+            <element signature="method#testGetLogfile#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetLogfile#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetIpAddress#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetIpAddress#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetTime#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetTime#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetTotalTimeInSec#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetTotalTimeInSec#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetTransferredBytes#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetTransferredBytes#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetNumberOfRequests#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetNumberOfRequests#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetUser#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testGetSite#0;class#SessionTest#0" expanded="false" />
+            <element signature="method#testSetSite#0;class#SessionTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/LogAnalyserDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="40" column="65" lean-forward="true" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ChartChooserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="71" lean-forward="false" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/PropertyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/PropertyUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <marker date="1495229153682" expanded="true" signature="457:471" ph="TRUNCATE TAB... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/InteractionDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-326">
-          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-          <folding>
-            <marker date="1496052603087" expanded="true" signature="763:888" ph="SELECT * FRO... sessions" />
-            <marker date="1496052603087" expanded="true" signature="941:1109" ph="SELECT * FRO... visits" />
-            <marker date="1496052603087" expanded="true" signature="1162:1200" ph="DELETE FROM " />
-            <marker date="1496052603087" expanded="true" signature="1251:1287" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/AllTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/CacheUtilTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/UtilTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="153">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SessionDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2074">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <marker date="1496054638987" expanded="true" signature="662:787" ph="SELECT * FRO... sessions" />
-            <marker date="1496054638987" expanded="true" signature="840:961" ph="INSERT INTO logfiles... " />
-            <marker date="1496054638987" expanded="true" signature="1011:1127" ph="INSERT INTO users... " />
-            <marker date="1496054638987" expanded="true" signature="1177:1273" ph="INSERT INTO sites... " />
-            <marker date="1496054638987" expanded="true" signature="1326:1498" ph="INSERT INTO sessions... " />
-            <marker date="1496054638987" expanded="true" signature="1551:1589" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/InteractionDAOImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="69" column="54" lean-forward="true" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
-          <folding>
-            <element signature="method#resetSingleton#0;class#InteractionDAOImplTest#0" expanded="false" />
-            <element signature="method#testPrivateConstructor#0;class#InteractionDAOImplTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SessionDAOImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="method#resetSingleton#0;class#SessionDAOImplTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/VisitDAOImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-          <folding>
-            <element signature="method#resetSingleton#0;class#VisitDAOImplTest#0" expanded="false" />
-            <element signature="method#testPrivateConstructor#0;class#VisitDAOImplTest#0" expanded="false" />
-            <element signature="method#testGetConnection#0;class#VisitDAOImplTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/MySqlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteDAOImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="75" column="46" lean-forward="false" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/SiteApplicationDAOImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="952">
+          <caret line="56" column="56" lean-forward="false" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/service/ServiceTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteApplicationDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="27" column="24" lean-forward="true" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowser.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/Browser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="method#SiteApplicationDAOImpl#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-            <element signature="method#getInstance#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-            <element signature="method#insertSiteApplication#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-            <element signature="method#insertSiteApplications#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-            <element signature="method#fillCache#0;class#SiteApplicationDAOImpl#0" expanded="false" />
-            <marker date="1496058316630" expanded="false" signature="659:689" ph="SELECT * FRO... siteApplications" />
-            <marker date="1496058316630" expanded="false" signature="747:801" ph="SELECT * FRO... siteApplications" />
-            <marker date="1496058316630" expanded="false" signature="862:948" ph="INSERT INTO siteApplications... " />
+            <element signature="imports" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/SiteDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-598">
-          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="544">
+          <caret line="63" column="61" lean-forward="true" selection-start-line="63" selection-start-column="61" selection-end-line="63" selection-end-column="61" />
           <folding>
-            <marker date="1496058845774" expanded="true" signature="604:623" ph="SELECT * FRO... sites" />
-            <marker date="1496058845774" expanded="true" signature="670:706" ph="SELECT * FRO... sites" />
-            <marker date="1496058845774" expanded="true" signature="756:801" ph="INSERT INTO sites... " />
+            <element signature="docComment;method#showReportChooser#0;class#App#0" expanded="false" />
+            <element signature="docComment;method#showStatistics#0;class#App#0" expanded="false" />
+            <element signature="method#showStatistics#0;class#App#0" expanded="false" />
+            <element signature="method#showInformation#0;class#App#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/service/BaseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="232">
+          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -2359,7 +2392,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27011493" />
               </list>
             </option>
           </splitter-proportions>
@@ -2371,7 +2404,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27011493" />
               </list>
             </option>
           </splitter-proportions>
@@ -2395,7 +2428,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27011493" />
               </list>
             </option>
           </splitter-proportions>
@@ -2407,7 +2440,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.27011493" />
               </list>
             </option>
           </splitter-proportions>

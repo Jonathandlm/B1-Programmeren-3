@@ -62,6 +62,7 @@ public class LogfileDAOImpl extends BaseDAO implements LogfileDAO {
         ) {
             MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
             preparedStatement.executeUpdate();
+            LOG.log(Level.DEBUG, "Successfully inserted " + logfile);
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + INSERT_LOGFILE, e);

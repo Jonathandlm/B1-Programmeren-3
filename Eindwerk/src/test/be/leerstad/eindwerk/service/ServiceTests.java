@@ -8,9 +8,12 @@ import org.junit.runners.Suite;
         BaseDAOTest.class,
         DAOExceptionTest.class,
         InteractionDAOImplTest.class,
+        LogfileDAOImplTest.class,
+        SchoolDAOImplTest.class,
         SessionDAOImplTest.class,
         SiteApplicationDAOImplTest.class,
         SiteDAOImplTest.class,
+        UserDAOImplTest.class,
         VisitDAOImplTest.class
 })
 

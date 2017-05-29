@@ -29,8 +29,6 @@ public class QueryTest {
     private VisitCache visitCache = VisitCache.getInstance();
     private SessionCache sessionCache = SessionCache.getInstance();
     private SiteApplicationCache siteApplicationCache = SiteApplicationCache.getInstance();
-    private int visitCount;
-    private int sessionCount;
     private int siteApplicationCount;
 
 
@@ -49,8 +47,6 @@ public class QueryTest {
             SessionDAOImpl.getInstance().insertSessions(parser.parseLogfile(file));
             sessionCache.fill();
         }
-        visitCount = visitCache.size();
-        sessionCount = sessionCache.size();
         siteApplicationCount = siteApplicationCache.size();
     }
 

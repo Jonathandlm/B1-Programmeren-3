@@ -57,7 +57,7 @@ public class RootLayoutController {
         List<File> files = fileChooser.showOpenMultipleDialog(app.getPrimaryStage().getScene().getWindow());
         if (files != null) {
             InteractionDAOImpl.getInstance().insertInteractions(parse(files));
-            //LogAnalyser.getInstance().refreshCaches();
+            LogfileCache.getInstance().fill();
             statusBar.setText("File(s) successfully opened!");
         }
     }
@@ -70,7 +70,7 @@ public class RootLayoutController {
         if (directory != null) {
             File[] files = directory.listFiles();
             InteractionDAOImpl.getInstance().insertInteractions(parse(Arrays.asList(files)));
-            //LogAnalyser.getInstance().refreshCaches();
+            LogfileCache.getInstance().fill();
             statusBar.setText("Directory successfully opened!");
         }
     }
@@ -100,7 +100,10 @@ public class RootLayoutController {
         Platform.exit();
     }
 
-    // TODO
+    public void showLogfiles() {
+        app.showLogfileOverview();
+    }
+
     public void generateReports() {
         app.showReportChooser();
     }
@@ -110,12 +113,10 @@ public class RootLayoutController {
         app.showStatistics();
     }
 
-    // TODO
     public void openInfo() {
         app.showInformation();
     }
 
-    // TODO
     public void openHelp() {
         app.showHelp();
     }

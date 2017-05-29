@@ -35,7 +35,6 @@ public class VisitTest {
     private String user;
     private SiteApplication siteApplication;
     private School school;
-    private Field timeoutField;
     private int timeout;
 
     @Before
@@ -68,7 +67,7 @@ public class VisitTest {
         visitCompleteConstructor = new Visit(specificUuid.toString(), logfile, ipAddress, time, totalTimeInSec,
                 transferredBytes, numberOfRequests, user, siteApplication, school);
 
-        timeoutField = visitBasicConstructor.getClass().getSuperclass().getDeclaredField("TIMEOUT_IN_MINUTES");
+        Field timeoutField = visitBasicConstructor.getClass().getSuperclass().getDeclaredField("TIMEOUT_IN_MINUTES");
         timeoutField.setAccessible(true);
         timeout = timeoutField.getInt(visitBasicConstructor);
     }
