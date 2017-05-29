@@ -57,25 +57,29 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
     }
 
     @Override
-    public Site getSite(int applicationId) {
-        Site site = new Site();
+    public Site getSite(int siteId) {
+        Site site = null;
 
         try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(GET_SITE)
         ) {
-            preparedStatement.setInt(1, applicationId);
+            preparedStatement.setInt(1, siteId);
 
             try (
                     ResultSet resultSet = preparedStatement.executeQuery()
             ) {
+
                 while (resultSet.next()) {
                     site = MySqlUtil.getSiteResult(resultSet);
+                    LOG.log(Level.DEBUG, "Successfully retrieved site with ID: " + siteId);
                 }
-                LOG.log(Level.DEBUG, "Successfully retrieved site with IP Address: " + applicationId);
 
+                if (site == null) {
+                    LOG.log(Level.ERROR, "Unable to get site with ID: " + siteId);
+                    return null;
+                }
             }
-
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement " + GET_SITE, e);
         } catch (DAOException e) {
@@ -91,10 +95,9 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SITE)
         ) {
+
             MySqlUtil.setPreparedSiteStatement(site, preparedStatement);
-
             preparedStatement.executeUpdate();
-
             LOG.log(Level.DEBUG, "Successfully inserted " + site);
 
         } catch (SQLException e) {
@@ -110,12 +113,11 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_SITE)
         ) {
+
             for (Site site : sites) {
                 MySqlUtil.setPreparedSiteStatement(site, preparedStatement);
-
                 preparedStatement.executeUpdate();
             }
-
             LOG.log(Level.DEBUG, "Successfully inserted " + sites.size() + " sites.");
 
         } catch (SQLException e) {
@@ -128,7 +130,6 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
     @Override
     public Map<Integer,String> fillCache() {
         Map<Integer,String> cache = new HashMap<>();
-
         try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SITES);
@@ -147,5 +148,4 @@ public class SiteDAOImpl extends BaseDAO implements SiteDAO {
 
         return cache;
     }
-
 }

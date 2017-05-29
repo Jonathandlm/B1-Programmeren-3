@@ -130,9 +130,7 @@ public class SessionDAOImpl extends BaseDAO implements SessionDAO {
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(DELETE_SESSION)
         ) {
-
-            MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
-
+            preparedStatement.setString(1, logfile.getLogfile());
             preparedStatement.executeUpdate();
 
             LOG.log(Level.DEBUG, "Successfully deleted sessions in " + logfile);
@@ -151,12 +149,11 @@ public class SessionDAOImpl extends BaseDAO implements SessionDAO {
                 PreparedStatement preparedStatement = connection.prepareStatement(DELETE_SESSION)
         ) {
             for (Logfile logfile : logfiles) {
-                MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
-
+                preparedStatement.setString(1, logfile.getLogfile());
                 preparedStatement.executeUpdate();
             }
 
-            LOG.log(Level.DEBUG, "Successfully deleted sessions from " + logfiles.size() + " logfiles.");
+            LOG.log(Level.DEBUG, "Successfully deleted sessions from " + logfiles.size() + " logfiles");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);

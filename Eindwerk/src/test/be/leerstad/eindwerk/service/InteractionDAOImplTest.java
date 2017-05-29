@@ -43,7 +43,7 @@ public class InteractionDAOImplTest {
     }
 
     @Test
-    public void testAllInteractions() throws Exception {
+    public void testAllInteractions() {
         InteractionDAOImpl interactionDAO = InteractionDAOImpl.getInstance();
 
         // Setup
@@ -89,7 +89,7 @@ public class InteractionDAOImplTest {
     }
 
     @Test
-    public void testGetConnection() throws Exception {
+    public void testGetConnection() throws DAOException {
         Connection connection = InteractionDAOImpl.getInstance().getConnection();
         assertNotNull(connection);
     }

@@ -130,9 +130,7 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(DELETE_VISIT)
         ) {
-
-            MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
-
+            preparedStatement.setString(1, logfile.getLogfile());
             preparedStatement.executeUpdate();
 
             LOG.log(Level.DEBUG, "Successfully deleted visits in " + logfile);
@@ -151,12 +149,11 @@ public class VisitDAOImpl extends BaseDAO implements VisitDAO {
                 PreparedStatement preparedStatement = connection.prepareStatement(DELETE_VISIT)
         ) {
             for (Logfile logfile : logfiles) {
-                MySqlUtil.setPreparedLogfileStatement(logfile, preparedStatement);
-
+                preparedStatement.setString(1, logfile.getLogfile());
                 preparedStatement.executeUpdate();
             }
 
-            LOG.log(Level.DEBUG, "Successfully deleted visits from " + logfiles.size() + " logfiles.");
+            LOG.log(Level.DEBUG, "Successfully deleted visits from " + logfiles.size() + " logfiles");
 
         } catch (SQLException e) {
             LOG.log(Level.ERROR, "Unable to execute statement ", e);

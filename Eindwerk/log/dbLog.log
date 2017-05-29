@@ -18294,3 +18294,1588 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Dupl
 29 mei 2017 12:10 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from localhost_access_log.2016-12-06.txt
 29 mei 2017 12:10 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
 29 mei 2017 12:10 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:29 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:29 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:29 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 12:29 ERROR VisitDAOImpl:162 - Unable to execute statement 
+java.sql.SQLException: Parameter index out of range (2 > number of parameters, which is 1).
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.PreparedStatement.checkBounds(PreparedStatement.java:3319)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3304)
+	at com.mysql.jdbc.PreparedStatement.setInternal(PreparedStatement.java:3341)
+	at com.mysql.jdbc.PreparedStatement.setDate(PreparedStatement.java:3229)
+	at com.mysql.jdbc.PreparedStatement.setDate(PreparedStatement.java:3197)
+	at be.leerstad.eindwerk.util.MySqlUtil.setPreparedLogfileStatement(MySqlUtil.java:13)
+	at be.leerstad.eindwerk.service.VisitDAOImpl.deleteInteractions(VisitDAOImpl.java:154)
+	at be.leerstad.eindwerk.service.VisitDAOImplTest.testAllVisits(VisitDAOImplTest.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:51)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:32 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:32 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:32 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 12:32 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles.
+29 mei 2017 12:32 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='c37637ad-d9d8-4f99-a90b-f434e7d8df92', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:32 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='00bee190-3ecf-4ef7-b276-ae88754384f0', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:32 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 12:32 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:44 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:44 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:44 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='8ed1f852-151f-4156-9098-5f6a7079f226', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:44 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='a3bd2691-1419-44c5-8e71-5e2d3b18297b', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:44 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:44 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:44 ERROR BaseDAO:19 - Unable to create connection: Unable to configure connection.
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:44 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:44 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 12:44 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:120 - Successfully deleted interactions from 2 logfiles
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:44 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 12:44 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from ProxyLog_2016-11-04.log
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from localhost_access_log.2016-12-06.txt
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:44 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:44 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:44 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='43d30c69-546e-4352-836e-cad5491c6d97', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:44 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='56ac12ec-2171-4e3d-b91b-f77e0aeb9569', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:44 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:44 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 12:44 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles
+29 mei 2017 12:44 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='141168f7-e799-4a7d-b28e-c6c387a34587', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:44 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='420a6aa5-0383-483f-bddc-2e7d5be43d03', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:44 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 12:44 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:44 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogfileDAOImpl:84 - Successfully inserted 3 logfiles.
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:100 - Successfully inserted School{UNKNOWN (10.2.c.d)}
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:100 - Successfully inserted School{UNKNOWN (10.2.c.d)}
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG SchoolDAOImpl:119 - Successfully deleted school with network address 10.2.c.d
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='12345678-1234-1234-1234-1234567890ab', logfile='ProxyLog_2016-11-04.log', ipAddress='192.168.1.1', time=12:34:56, totalTimeInSec=60, transferredBytes=123456, numberOfRequests=42}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID 
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID 
+29 mei 2017 12:46 DEBUG UserDAOImpl:99 - Successfully inserted User{XXX}
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:99 - Successfully inserted User{XXX}
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID XXX
+29 mei 2017 12:46 DEBUG UserDAOImpl:118 - Successfully deleted user with User ID 
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='12345678-1234-1234-1234-1234567890ab', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.110.1.1', time=12:34:56, totalTimeInSec=60, transferredBytes=123456, numberOfRequests=42}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{UNKNOWN (10.110.c.d)}'}
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{microsoft.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{vacature.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{windowsupdate.microsoft.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{216.239.35.206}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gs.gator.com}
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{Occupation}
+29 mei 2017 12:46 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{css}
+29 mei 2017 12:46 DEBUG VisitDAOImpl:118 - Successfully inserted 19 visits
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{pi.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{planetinternet.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{sitestat.pi.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{line04.metriweb.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{admanager.beweb.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{image.planetinternet.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{redcorp.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{canon.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{canonstats.vin.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nl.canon.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{canonshop.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{212.206.26.61}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nytimes.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{graphics.nytimes.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{graphics4.nytimes.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ads.nytimes.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{webmail.wanadoo.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{classic.adlink.de}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ad.be.doubleclick.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{wanadoo.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{wanadoo.int.estat.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{jars.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{onjava.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{oreillynet.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ad.doubleclick.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{guiffy.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{quakemap.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{server.quakemap.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{mute.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{fadgadget.co.uk}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www2.sys-con.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{sys-con.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{headlinewatch.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{s0b.bluestreak.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{cvilm.gs.army.mil.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{padeg.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{webdonline.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a12.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{babelfish.altavista.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{fr.hercule.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hercule.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{mri.francenet.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{fr.hercules.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{pixel.gaumont.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hercules.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{refactorit.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{db1.sitestats.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{cofidis.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{jamesmail.emmhost.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www5.kranten.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{kranten.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hetvolk.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{netdirect.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{clickx.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{line01.metriweb.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{212.3.248.138}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nieuwsblad.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nieuws.clickx.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hetnieuwsblad.clickx.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ie.search.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{altoentertainment.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{altosport.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{dedigitalerevolutie.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{clickxchange.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ads.affiliates.match.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{adserver.gorillanation.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{js1.hitbox.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{planetlucky.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nedstat.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hg1.hitbox.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{stats.hitbox.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{qksrv.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{allwall.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a1261.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a1259.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{commission-junction.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{half.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ads.web.aol.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{half.ebay.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a1692.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gva.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{line09.metriweb.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{west.adlink.de}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{192.85.241.143}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{zinema.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hotmail.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{lc2.law13.hotmail.passport.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{64.4.20.24}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{aodweb.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{h.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{64.4.22.24}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{arc5.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{lw15fd.law15.hotmail.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{global.msads.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{216.33.240.24}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{lc1.law13.hotmail.passport.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{sea1fd.sea1.hotmail.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{207.68.162.24}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{peta.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{vmware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gimmick.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{t1.extreme-dm.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{t0.extreme-dm.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{broodjeaap.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{banners.resultonline.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{banners1.resultonline.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nl.nedstatbasic.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ati.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hercules.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{europe.hercules.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{download.guillemot.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{monsieurprix.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a333.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{loga.xiti.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{standaard.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{activepartner.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{download.ati.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{mirror.qkimg.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ftp.hercules.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{cmail.justforyou.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{line06.metriweb.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{yip.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{counter.aaddzz.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{livejournal.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{c.microsoft.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{computing.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{images.pricegrabber.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{i70.netscape.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{javaworld.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{eleves.mines.u-nancy.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{kliks.nl}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ac-poitiers.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{translate.google.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{216.239.37.120}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{appuntilinux.prosa.it}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{216.239.35.247}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www3.ad.tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www12.tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{cmi.univ-mrs.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ad.tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www6.tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www6.ad.tomshardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{festo.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{oasis.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ecom.or.jp}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{etronics.free.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{forsvaret.bergersen.no}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{redcross.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{nvidia.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{oasis.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{oasis-open.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{overclockercafe.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{hothardware.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ads.ad-flow.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ads1.ad-flow.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{sources.redhat.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{activex.microsoft.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{codecs.microsoft.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{pionner.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{lop.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{babylon.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{a1709.g.akamai.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{online.babylon.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{info.babylon.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{c.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{msimg.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{di.image.eshop.msn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gifwizard.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{optiview.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{cache.c.optiview.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{animfactory.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{osdn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{mb-images.osdn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{banner.arttoday.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{images.animfactory.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{images.osdn.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{incredimail.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{www2.incredimail.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{tech-report.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{mediamgr.ugo.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{image.ugo.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{tomshardware.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{script.weborama.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gold.weborama.fr}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{gel.ulaval.ca}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{stl-online.net}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{thebody.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{alsirat.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{immunize.org}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{bigtower.be}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{perso.estat.com}
+29 mei 2017 12:46 DEBUG SiteDAOImpl:98 - Successfully inserted Site{java.sun.com}
+29 mei 2017 12:46 DEBUG SessionDAOImpl:118 - Successfully inserted 227 sessions
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 ERROR BaseDAO:19 - Unable to create connection: Unable to configure connection.
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:46 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 12:46 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:120 - Successfully deleted interactions from 2 logfiles
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:46 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 12:46 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from ProxyLog_2016-11-04.log
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from localhost_access_log.2016-12-06.txt
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 12:46 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:46 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:46 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='786db756-ce19-4a5b-9b73-c3996d740d02', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:46 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='d3887a37-d0f0-47ef-a34f-ab4c404f9f58', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:46 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:46 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 12:46 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles
+29 mei 2017 12:46 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='d0fa29e5-7529-4659-8537-0ebcf2007925', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:46 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='c38001e7-30b7-4c6d-a6e8-726876ab2293', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:46 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 12:46 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:47 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:52 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:52 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:52 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='e19c7b2d-220d-401f-9254-d2f1b83921fc', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='33b6e0e4-66c3-45c3-a652-1e3b1b6b212c', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:52 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:52 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:52 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:52 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:52 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='e140fa45-ecf0-4ad5-bd0d-7bf453baac5f', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='a2b48d20-911c-439f-b17a-3239726f2b98', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:52 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:52 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:55 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:55 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:55 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:56 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:56 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 12:56 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 12:56 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 12:56 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='8a7b57c2-a0d6-404f-86c8-3111c093cd57', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:56 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='3c73f8a1-2e28-4a55-82f0-83a7119de321', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 12:56 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 12:56 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:59 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 12:59 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 12:59 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles
+29 mei 2017 12:59 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='97d13154-34d1-4ff7-b9d8-679294be4350', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:59 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='4520f570-b13d-4417-8df0-02c4c535a631', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 12:59 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 12:59 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 12:59 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:04 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:04 DEBUG SiteDAOImpl:98 - Successfully inserted Site{google.com}
+29 mei 2017 13:04 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 13:04 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 13:04 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='f9145099-6b1e-4f16-85c7-8a1cbcb855c6', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:04 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='8d4ee2cc-add7-42ef-b56e-b4629467457c', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:04 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 13:04 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:25 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:25 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with IP Address: 1
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:27 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:27 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:28 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:28 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:28 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:28 DEBUG SiteApplicationDAOImpl:99 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 13:28 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:28 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 2
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:32 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:32 ERROR SiteApplicationDAOImpl:83 - Unable to execute statement SELECT * FROM siteApplications WHERE ApplicationID = ?
+java.sql.SQLException: Illegal operation on empty result set.
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:957)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.ResultSetImpl.checkRowPos(ResultSetImpl.java:790)
+	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2469)
+	at com.mysql.jdbc.ResultSetImpl.getInt(ResultSetImpl.java:2580)
+	at be.leerstad.eindwerk.util.MySqlUtil.getSiteApplicationResult(MySqlUtil.java:96)
+	at be.leerstad.eindwerk.service.SiteApplicationDAOImpl.getSiteApplication(SiteApplicationDAOImpl.java:73)
+	at be.leerstad.eindwerk.service.SiteApplicationDAOImplTest.testSiteApplication(SiteApplicationDAOImplTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:51)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:37 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:37 ERROR SiteApplicationDAOImpl:80 - Unable to get siteApplication with ID: 1
+29 mei 2017 13:37 DEBUG SiteApplicationDAOImpl:103 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:37 DEBUG SiteApplicationDAOImpl:103 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 13:37 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:37 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 2
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:41 DEBUG SiteApplicationDAOImpl:124 - Successfully inserted 2 siteApplications.
+29 mei 2017 13:41 ERROR SiteApplicationDAOImpl:106 - Unable to execute statement INSERT INTO siteApplications (ApplicationID, Application)VALUES (?,?)
+com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:932)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3878)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3814)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2478)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2625)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2551)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1861)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2073)
+	at com.mysql.jdbc.PreparedStatement.executeUpdateInternal(PreparedStatement.java:2009)
+	at com.mysql.jdbc.PreparedStatement.executeLargeUpdate(PreparedStatement.java:5094)
+	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:1994)
+	at be.leerstad.eindwerk.service.SiteApplicationDAOImpl.insertSiteApplication(SiteApplicationDAOImpl.java:101)
+	at be.leerstad.eindwerk.service.SiteApplicationDAOImplTest.testSiteApplications(SiteApplicationDAOImplTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:51)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:41 ERROR SiteApplicationDAOImpl:80 - Unable to get siteApplication with ID: 1
+29 mei 2017 13:41 DEBUG SiteApplicationDAOImpl:103 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:41 DEBUG SiteApplicationDAOImpl:103 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 13:41 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:41 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 2
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:41 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:45 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:45 DEBUG SiteApplicationDAOImpl:125 - Successfully inserted 2 siteApplications.
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:46 DEBUG SiteDAOImpl:123 - Successfully inserted 2 sites.
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:46 ERROR SiteDAOImpl:79 - Unable to get site with ID: 1
+29 mei 2017 13:46 DEBUG SiteDAOImpl:102 - Successfully inserted Site{ELO}
+29 mei 2017 13:46 DEBUG SiteDAOImpl:102 - Successfully inserted Site{HOI}
+29 mei 2017 13:46 DEBUG SiteDAOImpl:75 - Successfully retrieved site with ID: 1
+29 mei 2017 13:46 DEBUG SiteDAOImpl:75 - Successfully retrieved site with ID: 2
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:46 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:47 DEBUG SiteDAOImpl:119 - Successfully inserted 2 sites.
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:47 ERROR SiteDAOImpl:76 - Unable to get site with ID: 1
+29 mei 2017 13:47 DEBUG SiteDAOImpl:98 - Successfully inserted Site{ELO}
+29 mei 2017 13:47 DEBUG SiteDAOImpl:98 - Successfully inserted Site{HOI}
+29 mei 2017 13:47 DEBUG SiteDAOImpl:73 - Successfully retrieved site with ID: 1
+29 mei 2017 13:47 DEBUG SiteDAOImpl:73 - Successfully retrieved site with ID: 2
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:47 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:49 DEBUG SiteDAOImpl:109 - Successfully inserted 2 sites.
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:49 ERROR SiteDAOImpl:71 - Unable to get site with ID: 1
+29 mei 2017 13:49 DEBUG SiteDAOImpl:91 - Successfully inserted Site{ELO}
+29 mei 2017 13:49 DEBUG SiteDAOImpl:91 - Successfully inserted Site{HOI}
+29 mei 2017 13:49 DEBUG SiteDAOImpl:68 - Successfully retrieved site with ID: 1
+29 mei 2017 13:49 DEBUG SiteDAOImpl:68 - Successfully retrieved site with ID: 2
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:49 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 ERROR BaseDAO:19 - Unable to create connection: Unable to configure connection.
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG SiteDAOImpl:91 - Successfully inserted Site{google.com}
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:50 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 13:50 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:120 - Successfully deleted interactions from 2 logfiles
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:50 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 13:50 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from ProxyLog_2016-11-04.log
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from localhost_access_log.2016-12-06.txt
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:50 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 13:50 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 13:50 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='4b207caf-a5c2-4d26-9605-95eb81a424c7', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:50 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='8c24a59a-30fd-4145-b8dc-c239ae37f040', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:50 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 13:50 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:125 - Successfully inserted 2 siteApplications.
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 ERROR SiteApplicationDAOImpl:80 - Unable to get siteApplication with ID: 1
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:50 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 2
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG SiteDAOImpl:109 - Successfully inserted 2 sites.
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 ERROR SiteDAOImpl:71 - Unable to get site with ID: 1
+29 mei 2017 13:50 DEBUG SiteDAOImpl:91 - Successfully inserted Site{ELO}
+29 mei 2017 13:50 DEBUG SiteDAOImpl:91 - Successfully inserted Site{HOI}
+29 mei 2017 13:50 DEBUG SiteDAOImpl:68 - Successfully retrieved site with ID: 1
+29 mei 2017 13:50 DEBUG SiteDAOImpl:68 - Successfully retrieved site with ID: 2
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 13:50 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles
+29 mei 2017 13:50 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='438dcb77-10d9-4b57-b5af-cadbcead1ee8', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 13:50 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='d2fbda3f-5b4e-4393-9f33-14417d74c3e4', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 13:50 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 13:50 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:50 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 ERROR BaseDAO:19 - Unable to create connection: Unable to configure connection.
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG SiteDAOImpl:101 - Successfully inserted Site{google.com}
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:53 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 13:53 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:120 - Successfully deleted interactions from 2 logfiles
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:53 DEBUG SessionDAOImpl:118 - Successfully inserted 1 sessions
+29 mei 2017 13:53 DEBUG VisitDAOImpl:118 - Successfully inserted 1 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 1 sessions
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from ProxyLog_2016-11-04.log
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 1 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:93 - Successfully deleted all interactions from localhost_access_log.2016-12-06.txt
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:57 - Successfully retrieved all 0 visits
+29 mei 2017 13:53 DEBUG InteractionDAOImpl:64 - Successfully retrieved all 0 sessions
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG SessionDAOImpl:118 - Successfully inserted 2 sessions
+29 mei 2017 13:53 DEBUG SessionDAOImpl:156 - Successfully deleted sessions from 2 logfiles
+29 mei 2017 13:53 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='9b498666-65dd-44ea-834b-8d233421838e', logfile='ProxyLog_2016-11-04.log', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:53 DEBUG SessionDAOImpl:88 - Successfully inserted Interaction{id='62ca2cf0-5851-4d4b-ace9-1a88bd66cfe9', logfile='ProxyLog_2016-12-06.log', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Session{user='User{HKJ}', site='Site{google.com}'}
+29 mei 2017 13:53 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-11-04.log
+29 mei 2017 13:53 DEBUG SessionDAOImpl:136 - Successfully deleted sessions in ProxyLog_2016-12-06.log
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:125 - Successfully inserted 2 siteApplications.
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 ERROR SiteApplicationDAOImpl:80 - Unable to get siteApplication with ID: 1
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{ELO}
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:104 - Successfully inserted SiteApplication{HOI}
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 1
+29 mei 2017 13:53 DEBUG SiteApplicationDAOImpl:76 - Successfully retrieved siteApplication with ID: 2
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG SiteDAOImpl:121 - Successfully inserted 2 sites.
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 ERROR SiteDAOImpl:79 - Unable to get site with ID: 1
+29 mei 2017 13:53 DEBUG SiteDAOImpl:101 - Successfully inserted Site{ELO}
+29 mei 2017 13:53 DEBUG SiteDAOImpl:101 - Successfully inserted Site{HOI}
+29 mei 2017 13:53 DEBUG SiteDAOImpl:75 - Successfully retrieved site with ID: 1
+29 mei 2017 13:53 DEBUG SiteDAOImpl:75 - Successfully retrieved site with ID: 2
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG VisitDAOImpl:118 - Successfully inserted 2 visits
+29 mei 2017 13:53 DEBUG VisitDAOImpl:156 - Successfully deleted visits from 2 logfiles
+29 mei 2017 13:53 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='eaf26287-dd68-4199-a26f-bfb821696f83', logfile='localhost_access_log.2016-12-05.txt', ipAddress='10.120.230.78', time=01:23:45, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 13:53 DEBUG VisitDAOImpl:88 - Successfully inserted Interaction{id='cb73ca11-c550-49c2-beba-dc76ed30e249', logfile='localhost_access_log.2016-12-06.txt', ipAddress='10.120.230.78', time=12:34:56, totalTimeInSec=1, transferredBytes=123456, numberOfRequests=1}
+	Visit{user='-', siteApplication='SiteApplication{ELO}', school='School{CVO Leerstad (10.120.c.d)}'}
+29 mei 2017 13:53 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-05.txt
+29 mei 2017 13:53 DEBUG VisitDAOImpl:136 - Successfully deleted visits in localhost_access_log.2016-12-06.txt
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table logfiles cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sessions cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table visits cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table sites cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:39 - Database table siteapplications cleared
+29 mei 2017 13:53 DEBUG LogAnalyserDAOImpl:41 - All database tables cleared

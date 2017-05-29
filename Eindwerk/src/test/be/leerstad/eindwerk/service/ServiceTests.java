@@ -8,6 +8,10 @@ import org.junit.runners.Suite;
         BaseDAOTest.class,
         DAOExceptionTest.class,
         InteractionDAOImplTest.class,
+        SessionDAOImplTest.class,
+        SiteApplicationDAOImplTest.class,
+        SiteDAOImplTest.class,
+        VisitDAOImplTest.class
 })
 
 public class ServiceTests {

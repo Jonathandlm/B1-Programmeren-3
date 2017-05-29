@@ -59,7 +59,7 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
 
     @Override
     public SiteApplication getSiteApplication(int applicationId) {
-        SiteApplication siteApplication = new SiteApplication();
+        SiteApplication siteApplication = null;
 
         try (
                 Connection connection = getConnection();
@@ -70,11 +70,16 @@ public class SiteApplicationDAOImpl extends BaseDAO implements SiteApplicationDA
             try (
                     ResultSet resultSet = preparedStatement.executeQuery()
             ) {
+
                 while (resultSet.next()) {
                     siteApplication = MySqlUtil.getSiteApplicationResult(resultSet);
+                    LOG.log(Level.DEBUG, "Successfully retrieved siteApplication with ID: " + applicationId);
                 }
-                LOG.log(Level.DEBUG, "Successfully retrieved siteApplication with IP Address: " + applicationId);
 
+                if (siteApplication == null) {
+                    LOG.log(Level.ERROR, "Unable to get siteApplication with ID: " + applicationId);
+                    return null;
+                }
             }
 
         } catch (SQLException e) {
