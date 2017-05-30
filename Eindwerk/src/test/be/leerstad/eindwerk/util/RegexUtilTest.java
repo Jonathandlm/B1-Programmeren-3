@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 
 import static be.leerstad.eindwerk.util.RegexUtil.*;
@@ -21,11 +22,12 @@ public class RegexUtilTest {
     }
     
     @Test
-    public void testGetDomainName() throws URISyntaxException {
+    public void testGetDomainName() throws URISyntaxException, MalformedURLException {
         assertEquals(getDomainName("http://10.10.10.10"), "10.10.10.10");
         assertEquals(getDomainName("http://www.google.com"), "google.com");
         assertEquals(getDomainName("http://maps.google.com"), "maps.google.com");
         assertEquals(getDomainName("http://www.google.com/search?q=google"), "google.com");
+        assertEquals(getDomainName("vip.megaproxy.com:443"), "vip.megaproxy.com");
         try {
             assertNull(getDomainName("http://www.google;com"));
             fail("NullPointerException expected");

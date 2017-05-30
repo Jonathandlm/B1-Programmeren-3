@@ -1,15 +1,13 @@
 package be.leerstad.eindwerk;
 
-import be.leerstad.eindwerk.business.cache.LogfileCache;
+import be.leerstad.eindwerk.business.cache.*;
 import be.leerstad.eindwerk.view.Browser;
 import be.leerstad.eindwerk.view.LogfileOverviewController;
 import be.leerstad.eindwerk.view.ReportChooserController;
 import be.leerstad.eindwerk.view.RootLayoutController;
 import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
-import be.leerstad.eindwerk.viewmodel.LogfileView;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -31,8 +29,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-import static javafx.collections.FXCollections.observableArrayList;
-
 /**
  * <h1>LogAnalyser</h1>
  * <p>This class is the main entry point to the application.</p>
@@ -51,17 +47,11 @@ public class App extends Application {
     private BorderPane rootLayout;
 
     /**
-     * The data as an observable list of {@link be.leerstad.eindwerk.model.Logfile logfiles}.
-     */
-    private ObservableList<LogfileView> logfileData;
-
-    /**
      * Constructor
      * fills the list of logfiles.
      */
     public App() {
         logAnalyserView = LogAnalyserView.getInstance();
-        logfileData = observableArrayList(logAnalyserView.getAllLogfileViews());
     }
 
     public static void main(String[] args) {
@@ -70,10 +60,6 @@ public class App extends Application {
 
     public Stage getPrimaryStage() {
         return primaryStage;
-    }
-
-    public ObservableList<LogfileView> getLogfileData() {
-        return logfileData;
     }
 
     @Override
@@ -144,7 +130,14 @@ public class App extends Application {
      */
     public void showReportChooser() {
         if (LogfileCache.getInstance().isEmpty()) {
-            showAlert("reports");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("No logfiles found!");
+            alert.initOwner(primaryStage);
+            alert.setHeaderText("Unable to create reports");
+            alert.setContentText("No logfiles are found. Please parse some files first.\n" +
+                    "To open the dialog box, click 'File' in the menu and then 'Open...'\n");
+
+            alert.showAndWait();
         } else {
             try {
                 // Load the fxml file and create a new stage for the popup dialog.
@@ -152,38 +145,18 @@ public class App extends Application {
                 loader.setLocation(App.class.getResource("/be/leerstad/eindwerk/view/ReportChooser.fxml"));
                 AnchorPane reportChooser = loader.load();
 
-                // Get the report chooser dialog Stage.
-                Stage dialogStage = new Stage();
-                dialogStage.setTitle("Choose report");
-                dialogStage.getIcons().add(new Image("/logo.png"));
-                dialogStage.initOwner(primaryStage);
-                dialogStage.initModality(Modality.WINDOW_MODAL);
-                Scene scene = new Scene(reportChooser);
-                dialogStage.setScene(scene);
+                // Set report chooser into the center of root layout.
+                rootLayout.setCenter(reportChooser);
 
                 // Give the controller access to the dialog stage.
                 ReportChooserController controller = loader.getController();
-                controller.setDialogStage(dialogStage);
-
-                // Show the dialog and wait until the user closes it
-                dialogStage.showAndWait();
+                controller.setApp(this);
 
             } catch (IOException e) {
                 LOG.log(Level.FATAL, "Unable to load report chooser", e);
             }
         }
 
-    }
-
-    /**
-     * Shows the dialog screen with the statistics on top of the primary stage.
-     */
-    public void showStatistics() {
-        if (LogfileCache.getInstance().isEmpty()) {
-            showAlert("statistics");
-        } else {
-            // TODO
-        }
     }
 
     /**
@@ -257,19 +230,18 @@ public class App extends Application {
     }
 
     /**
-     * Show an alert pop-up to tell that no logfiles have been found in the logfile list.
-     *
-     * @param type the intended type of dialog to be opened, e.g. report for the report chooser
+     * Resets the internal caches containing the data from the database.
+     * The caches are emptied and refilled with new data from the database.
+     * The overview of the logfiles also gets renewed.
      */
-    private void showAlert(String type) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("No logfiles found!");
-        alert.initOwner(primaryStage);
-        alert.setHeaderText("Unable to create " + type);
-        alert.setContentText("No logfiles are found. Please parse some files first.\n" +
-                "To open the dialog box, click 'File' in the menu and then 'Open...'\n");
-
-        alert.showAndWait();
+    public void resetCaches() {
+        LogfileCache.getInstance().fill();
+        SchoolCache.getInstance().fill();
+        SessionCache.getInstance().fill();
+        SiteApplicationCache.getInstance().fill();
+        SiteCache.getInstance().fill();
+        UserCache.getInstance().fill();
+        VisitCache.getInstance().fill();
+        showLogfileOverview();
     }
-
 }

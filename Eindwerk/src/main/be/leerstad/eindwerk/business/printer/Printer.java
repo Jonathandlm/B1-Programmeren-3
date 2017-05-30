@@ -29,6 +29,7 @@ import org.jfree.chart.ChartUtilities;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Printer {
@@ -36,7 +37,7 @@ public class Printer {
     private static final Logger LOG = Logger.getLogger(Printer.class.getName());
     private static final String TEMPLATE_FILENAME = PropertyUtil.getFileLocation("PDF_TEMPLATE_LOCATION").getPath();
 
-    public void createPdfFromTemplate(String destination, String title, Map<String, ?> data) throws Exception {
+    public void createPdfFromTemplate(String destination, String title, LinkedHashMap<String, ?> data) throws Exception {
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
@@ -74,7 +75,7 @@ public class Printer {
 
     }
 
-    private Table getData(Map<String, ?> data) {
+    private Table getData(LinkedHashMap<String, ?> data) {
         Object object;
         try {
             object = data.values().toArray()[0];
@@ -94,12 +95,12 @@ public class Printer {
                 table.addCell(String.valueOf(v)).setBackgroundColor(cellColor);
             });
 
-            Cell chartCell = new Cell(1, 2).add(getChart((Map<String, Number>) data));
+            Cell chartCell = new Cell(1, 2).add(getChart((LinkedHashMap<String, Number>) data));
             table.addCell(chartCell);
 
             return table;
 
-        } else if (object instanceof Map) {
+        } else if (object instanceof LinkedHashMap) {
             Color titleColor = new DeviceRgb(0,80,91);
             Table table = new Table(new float[]{1});
             table.setWidthPercent(100);
@@ -110,7 +111,7 @@ public class Printer {
                 table.addCell(titleCell.add(k));
                 Cell tableCell = new Cell().setTextAlignment(TextAlignment.CENTER)
                         .setMarginBottom(10).setBorder(Border.NO_BORDER);
-                table.addCell(tableCell.add(getData((Map)v)));
+                table.addCell(tableCell.add(getData((LinkedHashMap)v)));
             } );
 
             Table chartTable = new Table(new float[]{1});
@@ -119,7 +120,7 @@ public class Printer {
                     .setTextAlignment(TextAlignment.CENTER).setMarginTop(10).setBorder(Border.NO_BORDER);
             chartTable.addCell(titleCell.add("Overview chart"));
             Cell chartCell = new Cell(1, 2)
-                    .add(getCompleteChart((Map<String, Map<String, Number>>) data)).setBorder(Border.NO_BORDER);
+                    .add(getCompleteChart((LinkedHashMap<String, LinkedHashMap<String, Number>>) data)).setBorder(Border.NO_BORDER);
             chartTable.addCell(chartCell);
 
             table.addCell(chartTable);
@@ -129,7 +130,7 @@ public class Printer {
         return null;
     }
 
-    private Image getChart(Map<String, Number> data) {
+    private Image getChart(LinkedHashMap<String, Number> data) {
         byte[] image = null;
 
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
@@ -143,7 +144,7 @@ public class Printer {
         return new Image(ImageDataFactory.createPng(image));
     }
 
-    private Image getCompleteChart(Map<String, Map<String, Number>> data) {
+    private Image getCompleteChart(LinkedHashMap<String, LinkedHashMap<String, Number>> data) {
         byte[] image = null;
 
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {

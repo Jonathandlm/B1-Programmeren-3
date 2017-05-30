@@ -17,11 +17,10 @@ import org.junit.Test;
 import java.io.File;
 import java.time.Year;
 import java.time.YearMonth;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class QueryTest {
 
@@ -57,11 +56,11 @@ public class QueryTest {
 
     @Test
     public void testGetMonthlyApplicationTotals() {
-        Map<String, Map<String, Integer>> monthlyApplicationRequests = query.getMonthlyApplicationTotals(Visit::getNumberOfRequests);
+        LinkedHashMap<String, LinkedHashMap<String, Integer>> monthlyApplicationRequests = query.getMonthlyApplicationTotals(Visit::getNumberOfRequests);
         assertNotNull(monthlyApplicationRequests);
         assertEquals(monthlyApplicationRequests.size(), siteApplicationCount);
 
-        Map<String, Map<String, Integer>> monthlyApplicationBytes = query.getMonthlyApplicationTotals(Visit::getTransferredBytes);
+        LinkedHashMap<String, LinkedHashMap<String, Integer>> monthlyApplicationBytes = query.getMonthlyApplicationTotals(Visit::getTransferredBytes);
         assertNotNull(monthlyApplicationBytes);
         assertEquals(monthlyApplicationRequests.size(), siteApplicationCount);
     }

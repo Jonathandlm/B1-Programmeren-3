@@ -18,6 +18,9 @@ public final class RegexUtil {
     }
 
     public static String getDomainName(String url) throws URISyntaxException {
+        if (url.endsWith(":443")) {
+            url = "https://" + url.substring(0, url.length() - 4);
+        }
         URI uri = new URI(url);
         String domain = uri.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;

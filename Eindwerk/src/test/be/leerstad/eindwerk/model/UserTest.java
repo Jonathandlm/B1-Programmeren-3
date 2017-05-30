@@ -143,6 +143,21 @@ public class UserTest {
     }
 
     @Test
+    public void testGetFullName() throws NoSuchFieldException, IllegalAccessException {
+        final Field nameField = userEmptyConstructor.getClass().getDeclaredField("name");
+        final Field firstNameField = userEmptyConstructor.getClass().getDeclaredField("firstName");
+        nameField.setAccessible(true);
+        firstNameField.setAccessible(true);
+        nameField.set(userEmptyConstructor, name);
+        firstNameField.set(userEmptyConstructor, firstName);
+
+        final String result = userEmptyConstructor.getFullName();
+
+        assertEquals("field wasn't retrieved properly", result, firstName + ' ' + name);
+        assertEquals("field wasn't retrieved properly", result, userCompleteConstructor.getFullName());
+    }
+
+    @Test
     public void testEquals() {
         User userEmptyConstructor2 = new User();
         User userEmptyConstructor3 = new User();

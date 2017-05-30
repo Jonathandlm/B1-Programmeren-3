@@ -96,7 +96,9 @@ public abstract class Interaction<T extends Interaction> {
 
         Interaction interaction = (Interaction) o;
 
-        return Duration.between(this.getTime().plusSeconds(this.getTotalTimeInSec()), interaction.getTime()).toMinutes()
+        if (!ipAddress.equals(interaction.ipAddress)) return false;
+
+        return Duration.between(interaction.getTime().plusSeconds(interaction.getTotalTimeInSec()), this.getTime()).toMinutes()
                 <= TIMEOUT_IN_MINUTES;
     }
 

@@ -37,10 +37,19 @@ public class VisitParserTest {
     @Test
     public void testParseLogfile() {
         List<Visit> visits = visitParser.parseLogfile(path.toFile());
-        assertEquals(19, visits.size());
-        Visit firstVisit = new Visit(visitParser.getLogfile(), "10.120.230.53", LocalTime.parse("07:22:29"), 12413475,
+        assertEquals(117, visits.size());
+        Visit firstVisit = new Visit(visitParser.getLogfile(), "10.120.230.53", LocalTime.parse("07:22:29"), 24222,
                 "-", siteApplication, school);
-        assertEquals(firstVisit, visits.get(0));
+        assertEquals(visits.get(0), firstVisit);
+        assertEquals(visits.get(0).getLogfile(), firstVisit.getLogfile());
+        assertEquals(visits.get(0).getIpAddress(), firstVisit.getIpAddress());
+        assertEquals(visits.get(0).getTime(), firstVisit.getTime());
+        assertEquals(visits.get(0).getTransferredBytes(), firstVisit.getTransferredBytes());
+        assertEquals(visits.get(0).getTotalTimeInSec(), new Integer(3));
+        assertEquals(visits.get(0).getNumberOfRequests(), new Integer(2));
+        assertEquals(visits.get(0).getUser(), firstVisit.getUser());
+        assertEquals(visits.get(0).getSiteApplication(), firstVisit.getSiteApplication());
+        assertEquals(visits.get(0).getSchool(), firstVisit.getSchool());
 
         // Wrong path
         visits = visitParser.parseLogfile(file);

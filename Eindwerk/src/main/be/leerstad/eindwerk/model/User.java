@@ -49,6 +49,10 @@ public class User {
         this.cat = cat;
     }
 
+    public String getFullName() {
+        return firstName + ' ' + name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -10,7 +10,7 @@ import com.itextpdf.kernel.pdf.canvas.parser.listener.LocationTextExtractionStra
 import org.junit.Test;
 
 import java.io.File;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertNotNull;
@@ -24,10 +24,10 @@ public class PrinterTest {
         String faultDestination = "./test/testFault.pdf";
         String smallDestination = "./test/testSmall.pdf";
         String nestedDestination = "./test/testNested.pdf";
-        Map<String, Integer> emptyMap = new HashMap<>();
-        Map<String, String> faultMap = new HashMap<>();
-        Map<String, Integer> smallMap = new HashMap<>();
-        Map<String, Map<String, Integer>> nestedMap = new HashMap<>();
+        LinkedHashMap<String, Integer> emptyMap = new LinkedHashMap<>();
+        LinkedHashMap<String, String> faultMap = new LinkedHashMap<>();
+        LinkedHashMap<String, Integer> smallMap = new LinkedHashMap<>();
+        LinkedHashMap<String, Map<String, Integer>> nestedMap = new LinkedHashMap<>();
         faultMap.put("Fault","Fault");
         smallMap.put("Small 1", 1);
         smallMap.put("Small 2", 2);

@@ -30,7 +30,7 @@ public class RootLayoutController {
     private LogAnalyserView logAnalyserView;
 
     @FXML
-    private StatusBar statusBar;
+    public StatusBar statusBar;
 
     public void setApp(App app) {
         this.app = app;
@@ -57,7 +57,7 @@ public class RootLayoutController {
         List<File> files = fileChooser.showOpenMultipleDialog(app.getPrimaryStage().getScene().getWindow());
         if (files != null) {
             InteractionDAOImpl.getInstance().insertInteractions(parse(files));
-            LogfileCache.getInstance().fill();
+            app.resetCaches();
             statusBar.setText("File(s) successfully opened!");
         }
     }
@@ -70,7 +70,7 @@ public class RootLayoutController {
         if (directory != null) {
             File[] files = directory.listFiles();
             InteractionDAOImpl.getInstance().insertInteractions(parse(Arrays.asList(files)));
-            LogfileCache.getInstance().fill();
+            app.resetCaches();
             statusBar.setText("Directory successfully opened!");
         }
     }
@@ -87,8 +87,9 @@ public class RootLayoutController {
         alert.getButtonTypes().setAll(buttonTypeOk, buttonTypeCancel);
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == buttonTypeOk) {
+        if (result.isPresent() && result.get() == buttonTypeOk) {
             LogAnalyserDAOImpl.getInstance().clearDatabase();
+            app.resetCaches();
             statusBar.setText("Database has been cleared!");
         } else {
             statusBar.setText("Clear database cancelled");
@@ -106,11 +107,6 @@ public class RootLayoutController {
 
     public void generateReports() {
         app.showReportChooser();
-    }
-
-    // TODO
-    public void generateStats() {
-        app.showStatistics();
     }
 
     public void openInfo() {
@@ -153,7 +149,7 @@ public class RootLayoutController {
 
         Optional<ButtonType> result = alert.showAndWait();
 
-        return result.get() == buttonTypeOk;
+        return result.isPresent() && result.get() == buttonTypeOk;
 
     }
 

@@ -23,9 +23,9 @@ public class Query {
 
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM yyyy");
 
-    public Map<String, Map<String, Integer>> getMonthlyApplicationTotals(ToIntFunction<? super Visit> mapper) {
-        Map<String, Map<String, Integer>> result = new LinkedHashMap<>();
-        Map<String, Integer> monthlyVisits;
+    public LinkedHashMap<String, LinkedHashMap<String, Integer>> getMonthlyApplicationTotals(ToIntFunction<? super Visit> mapper) {
+        LinkedHashMap<String, LinkedHashMap<String, Integer>> result = new LinkedHashMap<>();
+        LinkedHashMap<String, Integer> monthlyVisits;
         VisitCache visitCache = VisitCache.getInstance();
         SiteApplicationCache siteApplicationCache = SiteApplicationCache.getInstance();
         Set<YearMonth> months = CacheUtil.getMonthsFromCache(visitCache);
@@ -44,8 +44,8 @@ public class Query {
         return result;
     }
 
-    public Map<String, Integer> getSchoolVisitsByMonth(YearMonth yearMonth) {
-        Map<String, Integer> result = new LinkedHashMap<>();
+    public LinkedHashMap<String, Integer> getSchoolVisitsByMonth(YearMonth yearMonth) {
+        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
         VisitCache visitCache = VisitCache.getInstance();
 
         visitCache.values().stream().filter(visit -> yearMonth.equals(YearMonth.from(visit.getLogfile().getLogfileDate())))
@@ -56,20 +56,20 @@ public class Query {
         return result;
     }
 
-    public Map<String, Integer> getUserTotalsByMonth(YearMonth yearMonth, ToIntFunction<? super Session> mapper) {
-        Map<String, Integer> result = new LinkedHashMap<>();
+    public LinkedHashMap<String, Integer> getUserTotalsByMonth(YearMonth yearMonth, ToIntFunction<? super Session> mapper) {
+        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
         SessionCache sessionCache = SessionCache.getInstance();
 
         sessionCache.values().stream().filter(session -> yearMonth.equals(YearMonth.from(session.getLogfile().getLogfileDate())))
                 .collect(groupingBy(Session::getUser, summingInt(mapper)))
                 .entrySet().stream().sorted(Map.Entry.comparingByValue(reverseOrder())).limit(10)
-                .forEachOrdered(x -> result.put(x.getKey().toString(), x.getValue()));
+                .forEachOrdered(x -> result.put(x.getKey().getFullName(), x.getValue()));
 
         return result;
     }
 
-    public Map<String, Integer> getMonthTotalsByYear(Year year, ToIntFunction<? super Session> mapper) {
-        Map<String, Integer> result = new LinkedHashMap<>();
+    public LinkedHashMap<String, Integer> getMonthTotalsByYear(Year year, ToIntFunction<? super Session> mapper) {
+        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
         SessionCache sessionCache = SessionCache.getInstance();
 
         sessionCache.values().stream().filter(session -> year.equals(Year.from(session.getLogfile().getLogfileDate())))
@@ -80,8 +80,8 @@ public class Query {
         return result;
     }
 
-    public Map<String, Integer> getSiteTotals(ToIntFunction<? super Session> mapper) {
-        Map<String, Integer> result = new LinkedHashMap<>();
+    public LinkedHashMap<String, Integer> getSiteTotals(ToIntFunction<? super Session> mapper) {
+        LinkedHashMap<String, Integer> result = new LinkedHashMap<>();
         SessionCache sessionCache = SessionCache.getInstance();
 
         sessionCache.values().stream()

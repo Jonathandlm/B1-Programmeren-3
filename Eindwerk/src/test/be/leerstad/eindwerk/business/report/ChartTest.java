@@ -4,21 +4,20 @@ import org.jfree.chart.JFreeChart;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedHashMap;
 
 import static org.junit.Assert.assertNotNull;
 
 public class ChartTest {
 
-    private Map<String, Number> smallMap;
-    private Map<String, Map<String, Number>> nestedMap;
+    private LinkedHashMap<String, Number> smallMap;
+    private LinkedHashMap<String, LinkedHashMap<String, Number>> nestedMap;
     private JFreeChart jFreeChart;
 
     @Before
     public void setUp() {
-        smallMap = new HashMap<>();
-        nestedMap = new HashMap<>();
+        smallMap = new LinkedHashMap<>();
+        nestedMap = new LinkedHashMap<>();
         smallMap.put("Small 1", 1);
         smallMap.put("Small 2", 2);
         smallMap.put("Small 3", 3);

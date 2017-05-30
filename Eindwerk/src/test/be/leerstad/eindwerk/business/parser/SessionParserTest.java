@@ -59,17 +59,23 @@ public class SessionParserTest {
                         user, site));
 
         assertNull(sessionParser.parseLogLine(""));
+        // IpAddress incomplete
         assertNull(sessionParser.parseLogLine(".120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t")); // IpAddress incomplete
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t"));
+        // Incorrect username
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HAKA\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t")); // Incorrect username
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t"));
+        // Incorrect time
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t25:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t")); // Incorrect time
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t"));
+        // Incorrect IpAddress
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.320.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t")); // Incorrect IpAddress
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft.com/\tUpstream\t304\t"));
+        // Incorrect url
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft;com/\tUpstream\t304\t")); // Incorrect url
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft;com/\tUpstream\t304\t"));
+        // Incorrect url
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\tvip.megaproxy.com:443\tUpstream\t304\t"));  // Incorrect url
+                "\t-\t80\t0\t561.0\t1266\thttp\t-\tvip.megaproxy.com:443\tUpstream\t304\t"));
     }
 }

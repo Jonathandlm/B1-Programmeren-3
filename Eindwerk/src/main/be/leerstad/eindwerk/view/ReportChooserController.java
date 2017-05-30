@@ -1,5 +1,6 @@
 package be.leerstad.eindwerk.view;
 
+import be.leerstad.eindwerk.App;
 import be.leerstad.eindwerk.business.cache.SessionCache;
 import be.leerstad.eindwerk.business.cache.VisitCache;
 import be.leerstad.eindwerk.business.printer.Printer;
@@ -10,7 +11,10 @@ import be.leerstad.eindwerk.model.Session;
 import be.leerstad.eindwerk.model.Visit;
 import be.leerstad.eindwerk.util.CacheUtil;
 import be.leerstad.eindwerk.util.PropertyUtil;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -23,20 +27,26 @@ import java.awt.*;
 import java.io.File;
 import java.time.Year;
 import java.time.YearMonth;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class ReportChooserController {
 
     private static final Logger LOG = Logger.getLogger(ReportChooserController.class.getName());
 
     private Stage dialogStage;
+    private App app;
     private Printer printer;
     private Query query;
     private VisitReport selectedVisitReport;
     private SessionReport selectedSessionReport;
     private String fileNameSuggestion;
     private String reportTitle;
+    private String errorMessage;
+    private boolean complexChart;
 
     @FXML
     private ListView<String> visitReportListView;
@@ -56,6 +66,10 @@ public class ReportChooserController {
     private ComboBox<String> sessionReportMonthCombobox;
     @FXML
     private ComboBox<String> sessionReportYearCombobox;
+    @FXML
+    private BarChart<String, Number> visitBarChart;
+    @FXML
+    private BarChart<String, Number> sessionBarChart;
 
     /**
      * The constructor.
@@ -74,10 +88,13 @@ public class ReportChooserController {
     private void initialize() {
 
         visitReportListView.getSelectionModel().selectedItemProperty().addListener(ob -> changeVisitReport());
+        visitReportCombobox.getSelectionModel().selectedItemProperty().addListener(ob -> changeVisitReport());
         loadVisitReportList();
         loadVisitReportDropdown();
 
         sessionReportListView.getSelectionModel().selectedItemProperty().addListener(ob -> changeSessionReport());
+        sessionReportMonthCombobox.getSelectionModel().selectedItemProperty().addListener(ob -> changeSessionReport());
+        sessionReportYearCombobox.getSelectionModel().selectedItemProperty().addListener(ob -> changeSessionReport());
         loadSessionReportList();
         loadSessionReportDropdown();
 
@@ -92,6 +109,9 @@ public class ReportChooserController {
         this.dialogStage = dialogStage;
     }
 
+    public void setApp(App app) {
+        this.app = app;
+    }
 
     /**
      * Called when the user clicks ok in the visits tab.
@@ -118,6 +138,8 @@ public class ReportChooserController {
             } else {
                 LOG.log(Level.DEBUG, "Unable to print report: no file chosen");
             }
+        } else {
+            showInvalidSelectionAlert(errorMessage);
         }
     }
 
@@ -146,15 +168,17 @@ public class ReportChooserController {
             } else {
                 LOG.log(Level.DEBUG, "Unable to print report: no file chosen");
             }
+        } else {
+            showInvalidSelectionAlert(errorMessage);
         }
     }
 
     /**
-     * Called when the user clicks cancel.
+     * Gets called when the user clicks cancel. Reverts the screen to the logfile overview.
      */
     @FXML
     private void handleCancel() {
-        dialogStage.close();
+        app.showLogfileOverview();
     }
 
     /**
@@ -163,7 +187,7 @@ public class ReportChooserController {
      * @return true if the input is valid
      */
     private boolean isVisitInputValid() {
-        String errorMessage = "";
+        errorMessage = "";
 
         if (visitReportListView.getSelectionModel().isEmpty()) {
             errorMessage += "Please select a report from list first!\n";
@@ -183,7 +207,6 @@ public class ReportChooserController {
             return true;
 
         } else {
-            showInvalidSelectionAlert(errorMessage);
             return false;
         }
     }
@@ -193,6 +216,10 @@ public class ReportChooserController {
         visitReportTitleLabel.setText(selectedVisitReport.getListName());
         visitReportDescriptionTextArea.setText(selectedVisitReport.getDescription());
         visitReportCombobox.setVisible(selectedVisitReport.getSelector());
+        if (isVisitInputValid()) {
+            visitBarChart.setData(getBarChart(getVisitData()));
+            visitBarChart.setLegendVisible(complexChart);
+        }
     }
 
     private void loadVisitReportList() {
@@ -210,7 +237,7 @@ public class ReportChooserController {
         }
     }
 
-    private Map<String, ?> getVisitData() {
+    private LinkedHashMap<String, ?> getVisitData() {
 
         switch (selectedVisitReport) {
             case MONTHLY_APPLICATION_VISITS:
@@ -231,7 +258,7 @@ public class ReportChooserController {
      * @return true if the input is valid
      */
     private boolean isSessionInputValid() {
-        String errorMessage = "";
+        errorMessage = "";
 
         if (sessionReportListView.getSelectionModel().isEmpty()) {
             errorMessage += "Please select a report from list first!\n";
@@ -245,7 +272,7 @@ public class ReportChooserController {
 
         if (errorMessage.length() == 0) {
             fileNameSuggestion = selectedSessionReport.getFileName();
-            if (selectedSessionReport.getSelector() != null) {
+            if ( !selectedSessionReport.getSelector().equals("") ) {
                 if (selectedSessionReport.getSelector().equals("month")) {
                     fileNameSuggestion += "_" + sessionReportMonthCombobox.getSelectionModel().getSelectedItem();
                 } else {
@@ -258,7 +285,6 @@ public class ReportChooserController {
             return true;
 
         } else {
-            showInvalidSelectionAlert(errorMessage);
             return false;
         }
     }
@@ -270,9 +296,14 @@ public class ReportChooserController {
         sessionReportMonthCombobox.setVisible(selectedSessionReport == SessionReport.USER_BYTES_BY_MONTH
                 || selectedSessionReport == SessionReport.USER_TIME_BY_MONTH);
         sessionReportYearCombobox.setVisible(selectedSessionReport == SessionReport.MONTHlY_BYTES_BY_YEAR);
-        // Combobox sessionReportMonthCombobox excluded from its parents layout calculations when not visible,
-        // so sessionReportYearCombobox can take its place
-        sessionReportMonthCombobox.managedProperty().bind(visitReportCombobox.visibleProperty());
+        // Combobox sessionReportMonthCombobox and sessionReportYearCombobox are excluded from their parents layout
+        // calculations when not visible
+        sessionReportMonthCombobox.managedProperty().bind(sessionReportMonthCombobox.visibleProperty());
+        sessionReportYearCombobox.managedProperty().bind(sessionReportYearCombobox.visibleProperty());
+        if (isSessionInputValid()) {
+            sessionBarChart.setData(getBarChart(getSessionData()));
+            sessionBarChart.setLegendVisible(complexChart);
+        }
     }
 
     private void loadSessionReportList() {
@@ -295,7 +326,7 @@ public class ReportChooserController {
         }
     }
 
-    private Map<String, ?> getSessionData() {
+    private LinkedHashMap<String, ?> getSessionData() {
 
         switch (selectedSessionReport) {
             case USER_BYTES_BY_MONTH:
@@ -322,15 +353,63 @@ public class ReportChooserController {
         }
     }
 
+    private ObservableList<XYChart.Series<String, Number>> getBarChart(LinkedHashMap<String, ?> data) {
+        Object object;
+        try {
+            object = data.values().toArray()[0];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return null;
+        }
+        if (object instanceof Integer) {
+            complexChart = false;
+            return getSimpleChart((LinkedHashMap<String, Number>) data);
+        } else if (object instanceof Map) {
+            complexChart = true;
+            return getComplexChart((LinkedHashMap<String, LinkedHashMap<String, Number> >) data);
+        }
+        return null;
+    }
+
+    private ObservableList<XYChart.Series<String, Number>> getSimpleChart(LinkedHashMap<String, Number> data) {
+
+        ObservableList<XYChart.Series<String, Number>> result = observableArrayList();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+
+        for (Map.Entry<String, Number> entry : data.entrySet()) {
+            series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue()));
+        }
+        result.add(series);
+
+        return result;
+    }
+
+    private ObservableList<XYChart.Series<String, Number>> getComplexChart(LinkedHashMap<String, LinkedHashMap<String, Number>> data) {
+
+        ObservableList<XYChart.Series<String, Number>> result = observableArrayList();
+        XYChart.Series<String, Number> series;
+
+        for (Map.Entry<String, LinkedHashMap<String, Number>> entry : data.entrySet()) {
+            series = new XYChart.Series<>();
+            series.setName(entry.getKey());
+
+            for (Map.Entry<String, Number> innerEntry : entry.getValue().entrySet()) {
+                series.getData().add(new XYChart.Data<>(innerEntry.getKey(), innerEntry.getValue()));
+            }
+
+            result.add(series);
+        }
+
+        return result;
+    }
+
     private void showInvalidSelectionAlert(String errorMessage) {
         // Show the error message.
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.initOwner(dialogStage);
+        alert.initOwner(app.getPrimaryStage());
         alert.setTitle("Invalid selection");
         alert.setHeaderText("Please correct your selection");
         alert.setContentText(errorMessage);
 
         alert.showAndWait();
     }
-
 }

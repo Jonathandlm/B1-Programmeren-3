@@ -1,69 +1,96 @@
 package be.leerstad.eindwerk.view;
 
 import be.leerstad.eindwerk.App;
+import be.leerstad.eindwerk.business.cache.LogfileCache;
+import be.leerstad.eindwerk.model.Logfile;
 import be.leerstad.eindwerk.util.DateUtil;
 import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
-import be.leerstad.eindwerk.viewmodel.LogfileView;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-import java.time.LocalDate;
+import java.util.Comparator;
+
+import static javafx.collections.FXCollections.observableArrayList;
 
 public class LogfileOverviewController {
 
-    @FXML
-    private TableView<LogfileView> logfileTable;
-    @FXML
-    private TableColumn<LogfileView, String> nameColumn;
-    @FXML
-    private TableColumn<LogfileView, LocalDate> dateColumn;
+    public ListView<Logfile> logfileListView;
     @FXML
     private Label nameLabel;
     @FXML
     private Label dateLabel;
+    @FXML
+    private ImageView iconImageView;
 
 
     private App app;
 
     private LogAnalyserView logAnalyserView;
 
-    public LogfileOverviewController() {
-    }
+    public LogfileOverviewController() {}
 
     @FXML
     private void initialize() {
-        // Initialize the logfile table with the two columns.
-        nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
-        dateColumn.setCellValueFactory(cellData -> cellData.getValue().dateProperty());
+        // Add sorted observable list data to the listView
+        ObservableList<Logfile> logfileObservableList = observableArrayList(LogfileCache.getInstance().values());
+        FXCollections.sort(logfileObservableList, Comparator.comparing(Logfile::getLogfile));
+        logfileListView.setItems(logfileObservableList);
+
+        // Initialize the logfile listView
+        logfileListView.setCellFactory(param -> new ListCell<Logfile>() {
+            @Override
+            protected void updateItem(Logfile logfile, boolean empty) {
+                super.updateItem(logfile, empty);
+                if (empty || logfile == null || logfile.getLogfile() == null) {
+                    setText(null);
+                } else {
+                    setText(logfile.getLogfile());
+                }
+            }
+        });
 
         // Clear logfile details.
         showLogfileDetails(null);
 
         // Listen for selection changes and show the logfile details when changed.
-        logfileTable.getSelectionModel().selectedItemProperty().addListener(
+        logfileListView.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showLogfileDetails(newValue));
     }
 
     public void setApp(App app) {
         this.app = app;
 
-        // Add observable list data to the table
-        logfileTable.setItems(app.getLogfileData());
+
     }
 
     public void setLogAnalyserView (LogAnalyserView logAnalyserView) {
         this.logAnalyserView = logAnalyserView;
     }
 
-    private void showLogfileDetails(LogfileView logfileView) {
-        if (logfileView != null) {
-            nameLabel.setText(logfileView.getName());
-            dateLabel.setText(DateUtil.format(logfileView.getDate()));
+    private void showLogfileDetails(Logfile logfile) {
+        if (logfile != null) {
+            nameLabel.setText(logfile.getLogfile());
+            dateLabel.setText(DateUtil.format(logfile.getLogfileDate()));
+            showImageFromFileType(getExtensionFromLogfile(logfile));
         } else {
             nameLabel.setText("");
             dateLabel.setText("");
+            iconImageView.setImage(null);
         }
     }
+
+    private String getExtensionFromLogfile(Logfile logfile) {
+        return logfile.getLogfile().substring(logfile.getLogfile().lastIndexOf('.') + 1);
+    }
+
+    private void showImageFromFileType(String extension) {
+        iconImageView.setImage(new Image("/icons/" + extension + ".png"));
+    }
+
 }

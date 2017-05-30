@@ -8,11 +8,11 @@ public enum SessionReport {
     MONTHlY_BYTES_BY_YEAR("Monthly Bytes By Year", "MonthlyBytesByYear",
             "This report gives the total transferred bytes per month, for any given year.", "year"),
     TOP_SITES_BY_VISITS("Top Sites By Visits", "TopSitesByVisits",
-            "This report gives an overview of the most visited sites in number of requests.", null),
+            "This report gives an overview of the most visited sites in number of requests.", ""),
     TOP_SITES_BY_TIME("Top Sites By Total Time", "TopSitesByTotalTime",
-            "This report gives an overview of the most visited sites in number of total visit time.", null),
+            "This report gives an overview of the most visited sites in number of total visit time.", ""),
     TOP_SITES_BY_BYTES("Top Sites By Bytes", "TopSitesByBytes",
-            "This report gives an overview of the most visited sites in number of transferred bytes.", null);
+            "This report gives an overview of the most visited sites in number of transferred bytes.", "");
 
     private final String listName;
     private final String fileName;
