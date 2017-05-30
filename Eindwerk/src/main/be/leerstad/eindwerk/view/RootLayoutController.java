@@ -8,7 +8,6 @@ import be.leerstad.eindwerk.model.Interaction;
 import be.leerstad.eindwerk.service.InteractionDAOImpl;
 import be.leerstad.eindwerk.service.LogAnalyserDAOImpl;
 import be.leerstad.eindwerk.util.PropertyUtil;
-import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -27,7 +26,6 @@ import java.util.Optional;
 public class RootLayoutController {
 
     private App app;
-    private LogAnalyserView logAnalyserView;
 
     @FXML
     public StatusBar statusBar;
@@ -36,13 +34,8 @@ public class RootLayoutController {
         this.app = app;
     }
 
-    public void setLogAnalyserView (LogAnalyserView logAnalyserView) {
-        this.logAnalyserView = logAnalyserView;
-    }
-
     @FXML
     private void initialize() {
-
     }
 
     public void openFile() {

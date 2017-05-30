@@ -4,34 +4,13 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="Added:&#10; - test: 3 service&#10; - view: help browser, info dialog&#10;&#10;Updated:&#10; - test: 2 service and all suites&#10; - view: rootlayout to access help, info and logfiles">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/icons/logfile.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/testLog.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ChartChooserController.java" afterPath="" />
+    <list default="true" id="413a7996-8b9f-4a3f-be74-63dde6a4741b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogfileView.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/dbLog.log" afterPath="$PROJECT_DIR$/log/dbLog.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/mainLog.log" afterPath="$PROJECT_DIR$/log/mainLog.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/printer/Printer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Chart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/SessionReport.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/SessionReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/User.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/RegexUtil.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/RegexUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooser.fxml" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooser.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayout.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" afterPath="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/printer/PrinterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/UserTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/UserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/RegexUtilTest.java" afterPath="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/RegexUtilTest.java" />
     </list>
     <list id="59dbbfd2-df14-4c1a-9bd6-1fd2b30db9ba" name="Rejected commit: Default" comment="connectionfactory, refactored loggers, generics in parsers and interactions, interactions concatenate" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -318,17 +297,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="230" column="0" lean-forward="true" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+            <state relative-caret-position="621">
+              <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
               <folding>
-                <element signature="e#1744#1745#0" expanded="true" />
-                <element signature="e#1807#1808#0" expanded="true" />
                 <element signature="docComment;method#showReportChooser#0;class#App#0" expanded="false" />
                 <element signature="method#showInformation#0;class#App#0" expanded="false" />
                 <element signature="method#showHelp#0;class#App#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogfileOverviewController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#1306#1708#0" expanded="true" />
+                <element signature="e#1707#1708#0" expanded="true" />
+                <element signature="e#2066#2067#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -449,7 +441,6 @@
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowser.fxml" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/DocumentationBrowserController.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/Browser.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ChartChooser.fxml" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ChartChooserController.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/SessionReport.java" />
@@ -459,12 +450,10 @@
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Visit.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/model/Interaction.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/VisitParserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/parser/SessionParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/parser/SessionParser.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/util/RegexUtil.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/util/RegexUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooser.fxml" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/business/report/Query.java" />
@@ -474,7 +463,10 @@
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/QueryTest.java" />
         <option value="$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/report/ChartTest.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ReportChooserController.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java" />
         <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java" />
+        <option value="$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java" />
       </list>
     </option>
   </component>
@@ -1540,7 +1532,7 @@
       <workItem from="1495309851626" duration="32000" />
       <workItem from="1495309936319" duration="105431000" />
       <workItem from="1495543727624" duration="268798000" />
-      <workItem from="1496136583446" duration="15983000" />
+      <workItem from="1496136583446" duration="16565000" />
     </task>
     <task id="LOCAL-00001" summary="config file">
       <created>1488058462084</created>
@@ -1696,7 +1688,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496090357888</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Final updates">
+      <created>1496153287061</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1496153287061</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1732,7 +1731,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="806733000" />
+    <option name="totallyTimeSpent" value="807315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1803,7 +1802,8 @@
     <MESSAGE value="Added:&#10; - test: 1 service&#10;&#10;Updated:&#10; - test: service&#10; - service: 4" />
     <MESSAGE value="Added:&#10; - test: 4 service&#10;&#10;Updated:&#10; - test: 2 service&#10; - service: 4" />
     <MESSAGE value="Added:&#10; - test: 3 service&#10; - view: help browser, info dialog&#10;&#10;Updated:&#10; - test: 2 service and all suites&#10; - view: rootlayout to access help, info and logfiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added:&#10; - test: 3 service&#10; - view: help browser, info dialog&#10;&#10;Updated:&#10; - test: 2 service and all suites&#10; - view: rootlayout to access help, info and logfiles" />
+    <MESSAGE value="Final updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1833,14 +1833,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/business/cache/CacheTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/ModelTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1957,16 +1949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/ChartChooser.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -2074,14 +2056,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="70" column="49" lean-forward="true" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/be/leerstad/eindwerk/model/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -2172,14 +2146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="88" column="87" lean-forward="false" selection-start-line="88" selection-start-column="87" selection-end-line="88" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverview.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="393">
@@ -2258,16 +2224,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogAnalyserView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/RootLayoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-935">
+          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="230" column="0" lean-forward="true" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+        <state relative-caret-position="621">
+          <caret line="107" column="22" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="22" />
           <folding>
-            <element signature="e#1744#1745#0" expanded="true" />
-            <element signature="e#1807#1808#0" expanded="true" />
             <element signature="docComment;method#showReportChooser#0;class#App#0" expanded="false" />
             <element signature="method#showInformation#0;class#App#0" expanded="false" />
             <element signature="method#showHelp#0;class#App#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/viewmodel/LogfileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/be/leerstad/eindwerk/view/LogfileOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#1306#1708#0" expanded="true" />
+            <element signature="e#1707#1708#0" expanded="true" />
+            <element signature="e#2066#2067#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
           </folding>
         </state>
       </provider>

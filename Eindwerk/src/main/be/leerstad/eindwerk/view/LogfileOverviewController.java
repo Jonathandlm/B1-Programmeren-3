@@ -4,7 +4,6 @@ import be.leerstad.eindwerk.App;
 import be.leerstad.eindwerk.business.cache.LogfileCache;
 import be.leerstad.eindwerk.model.Logfile;
 import be.leerstad.eindwerk.util.DateUtil;
-import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -20,7 +19,8 @@ import static javafx.collections.FXCollections.observableArrayList;
 
 public class LogfileOverviewController {
 
-    public ListView<Logfile> logfileListView;
+    @FXML
+    private ListView<Logfile> logfileListView;
     @FXML
     private Label nameLabel;
     @FXML
@@ -28,12 +28,7 @@ public class LogfileOverviewController {
     @FXML
     private ImageView iconImageView;
 
-
     private App app;
-
-    private LogAnalyserView logAnalyserView;
-
-    public LogfileOverviewController() {}
 
     @FXML
     private void initialize() {
@@ -65,12 +60,6 @@ public class LogfileOverviewController {
 
     public void setApp(App app) {
         this.app = app;
-
-
-    }
-
-    public void setLogAnalyserView (LogAnalyserView logAnalyserView) {
-        this.logAnalyserView = logAnalyserView;
     }
 
     private void showLogfileDetails(Logfile logfile) {

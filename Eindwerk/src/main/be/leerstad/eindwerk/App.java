@@ -5,7 +5,6 @@ import be.leerstad.eindwerk.view.Browser;
 import be.leerstad.eindwerk.view.LogfileOverviewController;
 import be.leerstad.eindwerk.view.ReportChooserController;
 import be.leerstad.eindwerk.view.RootLayoutController;
-import be.leerstad.eindwerk.viewmodel.LogAnalyserView;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -42,17 +41,8 @@ public class App extends Application {
     private static final String VERSION = "Version 1.0";
     private static final Logger LOG = Logger.getLogger(App.class.getName());
 
-    private final LogAnalyserView logAnalyserView;
     private Stage primaryStage;
     private BorderPane rootLayout;
-
-    /**
-     * Constructor
-     * fills the list of logfiles.
-     */
-    public App() {
-        logAnalyserView = LogAnalyserView.getInstance();
-    }
 
     public static void main(String[] args) {
         launch(args);
@@ -96,7 +86,6 @@ public class App extends Application {
             // Give the controller access to the main app.
             RootLayoutController controller = loader.getController();
             controller.setApp(this);
-            controller.setLogAnalyserView(logAnalyserView);
 
         } catch (IOException e) {
             LOG.log(Level.FATAL, "Unable to load root layout", e);
@@ -118,7 +107,6 @@ public class App extends Application {
             // Give the controller access to the main app.
             LogfileOverviewController controller = loader.getController();
             controller.setApp(this);
-            controller.setLogAnalyserView(logAnalyserView);
 
         } catch (IOException e) {
             LOG.log(Level.FATAL, "Unable to load logfile overview", e);
