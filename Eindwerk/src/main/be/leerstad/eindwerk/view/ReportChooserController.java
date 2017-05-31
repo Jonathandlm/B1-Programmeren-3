@@ -19,7 +19,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
@@ -37,10 +36,9 @@ public class ReportChooserController {
 
     private static final Logger LOG = Logger.getLogger(ReportChooserController.class.getName());
 
-    private Stage dialogStage;
     private App app;
-    private Printer printer;
-    private Query query;
+    private final Printer printer;
+    private final Query query;
     private VisitReport selectedVisitReport;
     private SessionReport selectedSessionReport;
     private String fileNameSuggestion;
@@ -101,14 +99,10 @@ public class ReportChooserController {
     }
 
     /**
-     * Sets the stage of this dialog.
+     * Gives access to the main application. Is set when the controller is loaded.
      *
-     * @param dialogStage the stage to which this dialogs belongs
+     * @param app the app to which this controller is loaded
      */
-    public void setDialogStage(Stage dialogStage) {
-        this.dialogStage = dialogStage;
-    }
-
     public void setApp(App app) {
         this.app = app;
     }
@@ -126,7 +120,7 @@ public class ReportChooserController {
             fileChooser.setInitialFileName(fileNameSuggestion);
             fileChooser.getExtensionFilters().add(
                     new FileChooser.ExtensionFilter("Portable Document Format (*.pdf)", "*.pdf"));
-            File file = fileChooser.showSaveDialog(dialogStage);
+            File file = fileChooser.showSaveDialog(app.getPrimaryStage());
 
             if (file != null) {
                 try {
@@ -156,7 +150,7 @@ public class ReportChooserController {
             fileChooser.setInitialFileName(fileNameSuggestion);
             fileChooser.getExtensionFilters().add(
                     new FileChooser.ExtensionFilter("Portable Document Format (*.pdf)", "*.pdf"));
-            File file = fileChooser.showSaveDialog(dialogStage);
+            File file = fileChooser.showSaveDialog(app.getPrimaryStage());
 
             if (file != null) {
                 try {

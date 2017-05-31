@@ -12,7 +12,7 @@ import com.itextpdf.layout.Canvas;
 import com.itextpdf.layout.property.TextAlignment;
 
 public class Pagination implements IEventHandler {
-    protected PdfFormXObject background;
+    private final PdfFormXObject background;
 
     public Pagination(PdfFormXObject pdfFormXObject) {
         this.background = pdfFormXObject;

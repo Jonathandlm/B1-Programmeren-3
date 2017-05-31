@@ -74,8 +74,5 @@ public class SessionParserTest {
         // Incorrect url
         assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
                 "\t-\t80\t0\t561.0\t1266\thttp\t-\thttp://www.microsoft;com/\tUpstream\t304\t"));
-        // Incorrect url
-        assertNull(sessionParser.parseLogLine("10.120.230.172\tDOM1/HKJ\t-\t2016-11-04\t08:24:49\t-\t-\t10.120.12.16" +
-                "\t-\t80\t0\t561.0\t1266\thttp\t-\tvip.megaproxy.com:443\tUpstream\t304\t"));
     }
 }

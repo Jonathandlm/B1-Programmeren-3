@@ -30,20 +30,20 @@ public class CacheUtilTest {
     private Set<YearMonth> months;
     private Set<Year> years;
 
-    @Before
-    public void resetSingleton() throws NoSuchFieldException, IllegalAccessException {
+    private void resetSingleton() throws NoSuchFieldException, IllegalAccessException {
         Field instanceField = SessionCache.class.getDeclaredField("instance");
         instanceField.setAccessible(true);
         instanceField.set(null, null);
     }
 
-    @Before
-    public void resetDatabase() {
+    private void resetDatabase() {
         LogAnalyserDAOImpl.getInstance().clearDatabase();
     }
 
     @Before
-    public void setUp() {
+    public void setUp() throws NoSuchFieldException, IllegalAccessException {
+        resetDatabase();
+        resetSingleton();
         session1 = new Session(new Logfile("ProxyLog_2016-12-01.log"), "192.168.1.1", now(),
                 123456, new User("AAA"), new Site(1, "google.com"));
         session2 = new Session(new Logfile("ProxyLog_2017-01-01.log"), "192.168.1.2", now(),

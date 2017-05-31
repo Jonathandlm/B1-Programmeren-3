@@ -35,9 +35,7 @@ public class Site {
         Site that = (Site) o;
 
         if (siteId != that.siteId) return false;
-        if (site != null ? !site.equals(that.site) : that.site != null) return false;
-
-        return true;
+        return site != null ? site.equals(that.site) : that.site == null;
     }
 
     @Override

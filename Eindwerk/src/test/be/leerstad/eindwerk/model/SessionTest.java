@@ -377,8 +377,8 @@ public class SessionTest {
         LocalTime excessTime = limitTime.plusMinutes(1);
         sessionCompleteConstructor2.setTime(limitTime);
         sessionCompleteConstructor3.setTime(excessTime);
-        assertTrue(sessionCompleteConstructor.equals(sessionCompleteConstructor2));
-        assertFalse(sessionCompleteConstructor.equals(sessionCompleteConstructor3));
+        assertTrue(sessionCompleteConstructor2.equals(sessionCompleteConstructor));
+        assertFalse(sessionCompleteConstructor3.equals(sessionCompleteConstructor));
     }
 
     @Test

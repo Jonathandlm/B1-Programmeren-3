@@ -405,7 +405,7 @@ public class VisitTest {
         visitCompleteConstructor2.setTime(limitTime);
         visitCompleteConstructor3.setTime(excessTime);
         assertTrue(visitCompleteConstructor.equals(visitCompleteConstructor2));
-        assertFalse(visitCompleteConstructor.equals(visitCompleteConstructor3));
+        assertFalse(visitCompleteConstructor3.equals(visitCompleteConstructor));
     }
 
     @Test

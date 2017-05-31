@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <pattern value="be.leerstad.eindwerk.view.LogfileOverviewController" method="initialize" />
+    <pattern value="be.leerstad.eindwerk.view.ReportChooserController" method="initialize" />
+    <pattern value="be.leerstad.eindwerk.view.RootLayoutController" method="initialize" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/resources/docs" />
     <option name="OPTION_SCOPE" value="package" />

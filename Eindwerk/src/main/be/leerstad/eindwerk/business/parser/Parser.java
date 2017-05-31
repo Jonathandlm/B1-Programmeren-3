@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public abstract class Parser<T> {
-    protected String REGEX;
-    protected Pattern PATTERN;
+    String REGEX;
+    Pattern PATTERN;
     private Logfile logfile;
 
     public Logfile getLogfile() {

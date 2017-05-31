@@ -2,7 +2,6 @@ package be.leerstad.eindwerk;
 
 import be.leerstad.eindwerk.business.cache.*;
 import be.leerstad.eindwerk.view.Browser;
-import be.leerstad.eindwerk.view.LogfileOverviewController;
 import be.leerstad.eindwerk.view.ReportChooserController;
 import be.leerstad.eindwerk.view.RootLayoutController;
 import javafx.application.Application;
@@ -26,6 +25,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -52,6 +52,13 @@ public class App extends Application {
         return primaryStage;
     }
 
+    /**
+     * Starts the application.
+     * The primary stage gets set with the title, the root layout is initialised
+     * and the scene with the overview of the logfiles.
+     *
+     * @param primaryStage stage that acts as the primary stage for the application.
+     */
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -103,10 +110,6 @@ public class App extends Application {
 
             // Set logfile overview into the center of root layout.
             rootLayout.setCenter(logfileOverview);
-
-            // Give the controller access to the main app.
-            LogfileOverviewController controller = loader.getController();
-            controller.setApp(this);
 
         } catch (IOException e) {
             LOG.log(Level.FATAL, "Unable to load logfile overview", e);
@@ -198,6 +201,7 @@ public class App extends Application {
 
     /**
      * Shows the overview of the javadoc in a {@link WebView WebView} on top of the primary stage.
+     * The home page can be set with a {@link File file}.
      */
     public void showHelp() {
         try {
@@ -206,7 +210,10 @@ public class App extends Application {
             dialogStage.setTitle("Browse the documentation");
             dialogStage.getIcons().add(new Image("/logo.png"));
             dialogStage.initModality(Modality.WINDOW_MODAL);
-            Scene scene = new Scene(new Browser(), 1200, 800, Color.web("#666970"));
+
+            // Set up the browser scene with the location of the home page
+            File homePageFile = new File("resources/docs/be/leerstad/eindwerk/App.html");
+            Scene scene = new Scene(new Browser(homePageFile), 1200, 800, Color.web("#666970"));
             dialogStage.setScene(scene);
 
             // Show the dialog and wait until the user closes it

@@ -35,9 +35,7 @@ public class SiteApplication {
         SiteApplication that = (SiteApplication) o;
 
         if (applicationId != that.applicationId) return false;
-        if (application != null ? !application.equals(that.application) : that.application != null) return false;
-
-        return true;
+        return application != null ? application.equals(that.application) : that.application == null;
     }
 
     @Override

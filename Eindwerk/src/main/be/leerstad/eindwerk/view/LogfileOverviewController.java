@@ -1,6 +1,5 @@
 package be.leerstad.eindwerk.view;
 
-import be.leerstad.eindwerk.App;
 import be.leerstad.eindwerk.business.cache.LogfileCache;
 import be.leerstad.eindwerk.model.Logfile;
 import be.leerstad.eindwerk.util.DateUtil;
@@ -28,8 +27,6 @@ public class LogfileOverviewController {
     @FXML
     private ImageView iconImageView;
 
-    private App app;
-
     @FXML
     private void initialize() {
         // Add sorted observable list data to the listView
@@ -56,10 +53,6 @@ public class LogfileOverviewController {
         // Listen for selection changes and show the logfile details when changed.
         logfileListView.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showLogfileDetails(newValue));
-    }
-
-    public void setApp(App app) {
-        this.app = app;
     }
 
     private void showLogfileDetails(Logfile logfile) {

@@ -3,7 +3,6 @@ package be.leerstad.eindwerk.business.report;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public class SessionReportTest {
 
@@ -28,9 +27,9 @@ public class SessionReportTest {
     @Test
     public void testGetSelector() {
         assertEquals(SessionReport.USER_BYTES_BY_MONTH.getSelector(),"month");
-        assertNull(SessionReport.TOP_SITES_BY_BYTES.getSelector());
-        assertNull(SessionReport.TOP_SITES_BY_TIME.getSelector());
-        assertNull(SessionReport.TOP_SITES_BY_VISITS.getSelector());
+        assertEquals(SessionReport.TOP_SITES_BY_BYTES.getSelector(),"");
+        assertEquals(SessionReport.TOP_SITES_BY_TIME.getSelector(),"");
+        assertEquals(SessionReport.TOP_SITES_BY_VISITS.getSelector(),"");
     }
 
 }
